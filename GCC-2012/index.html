@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="My presentation at the 3. Galaxy Community Conference" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="BFG Workshop" />  
+        <title>Keeping track of Life Science Data</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./jquery.jqplot.css" />
+
+
+        <script>
+            $(document).ready(function(){
+            
+                /* PDB */
+                var s1 = [83106,78152,70064,62163,54778,47814,40615,34140,28778,23596,19429,16428].reverse();
+                var s2 = [4954,8088,7901,7385,6964,7199,6475,5362,5182,4167,3001,2831].reverse();
+                /*var s3 = [-260, -440, 320, 200];*/
+                // Can specify a custom tick Array.
+                // Ticks should match up one for each y value (category) in the series.
+                var ticks = ['2012','2011','2010','2009','2008','2007','2006','2005','2004','2003','2002','2001'].reverse();
+                 
+                var plot1 = $.jqplot('chart1', [s1, s2], {
+                    // The "seriesDefaults" option is an options object that will
+                    // be applied to all series in the chart.
+                    seriesDefaults:{
+                        renderer:$.jqplot.BarRenderer,
+                        /*pointLabels: { show: true, location: 'n', edgeTolerance: -155 },*/
+                        rendererOptions: {fillToZero: true}
+                    },
+                    // Custom labels for the series are specified with the "label"
+                    // option on the series option.  Here a series option object
+                    // is specified for each series.
+                    series:[
+                        {label:'Total'},
+                        {label:'Yearly'},
+                        /*{label:'Airfare'}*/
+                    ],
+                    // Show the legend and put it outside the grid, but inside the
+                    // plot container, shrinking the grid to accomodate the legend.
+                    // A value of "outside" would not shrink the grid and allow
+                    // the legend to overflow the container.
+                    legend: {
+                        show: true,
+                        placement: 'outsideGrid'
+                    },
+                    title: {
+                        show: false,
+                        text: 'Protein Data Bank',
+                    },
+                    axes: {
+                        // Use a category axis on the x axis and use our custom ticks.
+                        xaxis: {
+                            renderer: $.jqplot.CategoryAxisRenderer,
+                            ticks: ticks
+                        },
+                        // Pad the y axis just a little so bars can get close to, but
+                        // not touch, the grid boundaries.  1.2 is the default padding.
+                        yaxis: {
+                            pad: 1.05,
+                            tickOptions: {formatString: '%d'}
+                        }
+                    }
+                });
+                
+                
+                /* RefSeq */
+                var s1 = [10854,16248];
+                var s2 = [5585,10346];
+                var s3 = [2266,2654];
+                var s4 = [1447,1688];
+                var s5 = [2250,2745];
+                /*var s3 = [-260, -440, 320, 200];*/
+                // Can specify a custom tick Array.
+                // Ticks should match up one for each y value (category) in the series.
+                var ticks = ['Release 43 (Sep. 2010)', 'Release 49 (Sep. 2011)'];
+                 
+                var plot1 = $.jqplot('chart2', [s1, s2, s3, s4, s5], {
+                    // The "seriesDefaults" option is an options object that will
+                    // be applied to all series in the chart.
+                    seriesDefaults:{
+                        renderer:$.jqplot.BarRenderer,
+                        /*pointLabels: { show: true, location: 'n', edgeTolerance: -15 },*/
+                        rendererOptions: {fillToZero: true}
+                    },
+                    // Custom labels for the series are specified with the "label"
+                    // option on the series option.  Here a series option object
+                    // is specified for each series.
+                    series:[
+                        {label:'Total'},
+                        {label:'Microbial'},
+                        {label:'Mitochondrion'},
+                        {label:'Vertebrate'},
+                        {label:'Viral'},
+                    ],
+                    // Show the legend and put it outside the grid, but inside the
+                    // plot container, shrinking the grid to accomodate the legend.
+                    // A value of "outside" would not shrink the grid and allow
+                    // the legend to overflow the container.
+                    legend: {
+                        show: true,
+                        placement: 'outsideGrid'
+                    },
+                    title: {
+                        show: false,
+                        text: 'RefSeq : Number of organisms',
+                    },
+                    axes: {
+                        // Use a category axis on the x axis and use our custom ticks.
+                        xaxis: {
+                            renderer: $.jqplot.CategoryAxisRenderer,
+                            ticks: ticks
+                        },
+                        // Pad the y axis just a little so bars can get close to, but
+                        // not touch, the grid boundaries.  1.2 is the default padding.
+                        yaxis: {
+                            pad: 1.05,
+                            tickOptions: {formatString: '%d'}
+                        }
+                    }
+                });
+                
+                /* own PDB stats */
+                var s1 = [213,737,598,616,703,622,703,634,814,602,883,541,690,435];
+                //var s2 = [161, 538, 523,535, 979,  563,  979, 697, 602, 23372, 924, 595,655, 1188];
+                var s2 = [161, 538, 523,535, 979,  563,  979, 697, 602, 2372, 924, 595,655, 1188];
+                
+                /*var s3 = [-260, -440, 320, 200];*/
+                // Can specify a custom tick Array.
+                // Ticks should match up one for each y value (category) in the series.
+                var ticks = ['Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'];
+                 
+                var plot1 = $.jqplot('chart3', [s1, s2], {
+                    // The "seriesDefaults" option is an options object that will
+                    // be applied to all series in the chart.
+                    seriesDefaults:{
+                        renderer:$.jqplot.BarRenderer,
+                        /*pointLabels: { show: true, location: 'n', edgeTolerance: -15 },*/
+                        rendererOptions: {fillToZero: true}
+                    },
+                    // Custom labels for the series are specified with the "label"
+                    // option on the series option.  Here a series option object
+                    // is specified for each series.
+                    series:[
+                        {label:'New'},
+                        {label:'Modified'},
+                    ],
+                    // Show the legend and put it outside the grid, but inside the
+                    // plot container, shrinking the grid to accomodate the legend.
+                    // A value of "outside" would not shrink the grid and allow
+                    // the legend to overflow the container.
+                    legend: {
+                        show: true,
+                        placement: 'outsideGrid'
+                    },
+                    title: {
+                        show: false,
+                        text: 'PDB : monthly changes',
+                    },
+                    axes: {
+                        // Use a category axis on the x axis and use our custom ticks.
+                        xaxis: {
+                            renderer: $.jqplot.CategoryAxisRenderer,
+                            ticks: ticks
+                        },
+                        // Pad the y axis just a little so bars can get close to, but
+                        // not touch, the grid boundaries.  1.2 is the default padding.
+                        yaxis: {
+                            pad: 1.05,
+                            tickOptions: {formatString: '%d'}
+                        }
+                    }
+                });
+                
+            });
+        </script>
+
+
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="9">
+                <div class="title">
+                    Keeping track of Life Science Data
+                </div>
+                <div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>
+                <div id="slide_details">
+                    <p>July 2012&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+            <!-- accessible, reproducible, transparent -->
+            <div id="accessible-reproducible-transparent" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    "Enable accessible, reproducible, and transparent computational research."
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- accessible, reproducible, transparent -->
+            <div id="accessible-reproducible-transparent_strong" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    "Enable accessible, <em>reproducible</em>, and transparent computational research."
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+                <div id="reproducible" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - reload experiments
+                    </div>
+                    <div>
+                        <div id="wrap" style="text-align:left; width:250px; float:left;">
+                            <!--<iframe name='iframe-history' id="iframe" src="http://localhost:8080/history" 
+                                frameborder="0" cellspacing="0" style="height: 1000px;">
+                            </iframe>-->
+                            <figure>
+                                <img src="./resources/img/history.png">
+                            </figure> 
+                        </div>
+                        <div style=" margin-left: 250px; width:300px;">
+                            <figure>
+                                <img src="./resources/img/filter_tool_new_version.png" alt="different Tool-Version" />
+                            </figure> 
+                        </div>
+                        </div>
+                </div>
+
+
+                <div id="what-if" class="step slide" data-x="8000" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>But</em> what if ...
+                    </div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    Blast+
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Gene-Predictions
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    InterproScan
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- accessible, reproducible, transparent2 -->
+                <div id="life-science-data-headache" class="step slide" data-x="10000" data-y="-500" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        <em>Life science data</em> can cause headaches!
+                    </div>
+                </div>
+                <!-- EOF  -->
+
+
+
+                <!-- accessible, reproducible, transparent2 -->
+                <div id="life-science-data" class="step slide" data-x="10000" data-y="-500" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        <em>Life science data</em> can cause headaches!
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    Incompleteness
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Error-prone
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Complexity
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Constantly changing
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- EOF  -->
+
+
+            <div id="pdb_growing" class="step slide" data-x="10000" data-y="1000" data-scale="3">
+                <div class="slide-title">
+                    <em>Protein Data Bank</em> statistics
+                </div>
+                <div class="slide-content">
+                    <div id="chart1" style="width:1000px; height:500px;"></div>
+                </div>
+            </div>
+
+            <div id="refseq_organisms" class="step slide" data-x="10000" data-y="2500" data-scale="3">
+                <div class="slide-title">
+                    <em>refseq</em> number of organisms
+                </div>
+                <div class="slide-content">
+                    <div id="chart2" style="width:1000px; height:500px;"></div>
+                </div>
+            </div>
+
+            <div id="Update_stradegy" class="step slide" data-x="10000" data-y="4000" data-scale="3">
+                <div class="title">
+                    Needed: Update strategy!
+                </div>
+            </div>
+            <div id="Update_stradegy2" class="step slide" data-x="10000" data-y="4000" data-scale="3">
+                <div class="title">
+                    Needed: Update strategy!
+                </div>
+                <div class="slide-content">
+                    <br><br><br><br><br><br>
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    FTP, ftp, File Transfer Protocol ... FTP
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    rsync ...
+                                </p>
+                            </li>
+                        </ul>
+                        ... is <em>not</em> enough
+                    </div>
+            </div>
+
+
+
+
+
+            <div id="error-prone" class="step slide" data-x="10000" data-y="5500" data-scale="3">
+                <div class="slide-title">
+                    <em>Error-prone</em>
+                </div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    server downtimes
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    errors in flat-files
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    undocumented format changes
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    content errors
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+
+
+
+            <div id="solution" class="step slide" data-x="8000" data-y="7000" data-scale="4">
+                <div class="slide-title">
+                    our solution :: <em>DVCS</em>
+                </div>
+                <div class="slide-content" align="center">
+                    a distributed version control system for <em>life science data</em>
+                </div>
+            </div>
+
+
+
+            <div id="user-advantages" class="step slide" data-x="8000" data-y="8500" data-scale="4">
+                <div class="slide-title">
+                    advantages for <em>users</em> of life science data
+                </div>
+                <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    easy updating
+                                </p>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div id="user-advantages2" class="step slide" data-x="8000" data-y="8500" data-scale="4">
+                <div class="slide-title">
+                    advantages for <em>users</em> of life science data
+                </div>
+                <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    easy updating
+                                </p>
+                                <ul class="lv1_indent">
+                                    <li>
+                                        <p>
+                                            <i>git pull</i>
+                                         </p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                </div>
+            </div>
+            <div id="user-advantages3" class="step slide" data-x="8000" data-y="8500" data-scale="4">
+                <div class="slide-title">
+                    advantages for <em>users</em> of life science data
+                </div>
+                <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    easy updating
+                                </p>
+                                <ul class="lv1_indent">
+                                    <li>
+                                        <p>
+                                            <i>git pull</i>
+                                         </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>
+                                    dataset revisions
+                                </p>
+                                <ul class="lv1_indent">
+                                    <li>
+                                        <p>
+                                            <i>rollback to a specific version</i>
+                                         </p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div id="user-advantages4" class="step slide" data-x="8000" data-y="8500" data-scale="4">
+                <div class="slide-title">
+                    advantages for <em>users</em> of life science data
+                </div>
+                <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    easy updating
+                                </p>
+                                <ul class="lv1_indent">
+                                    <li>
+                                        <p>
+                                            <i>git pull</i>
+                                         </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>
+                                    dataset revisions
+                                </p>
+                                <ul class="lv1_indent">
+                                    <li>
+                                        <p>
+                                            <i>rollback to a specific version</i>
+                                         </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>
+                                    branches for production and development 
+                                </p>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div id="user-advantages5" class="step slide" data-x="8000" data-y="8500" data-scale="4">
+                <div class="slide-title">
+                    advantages for <em>users</em> of life science data
+                </div>
+                <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    easy updating
+                                </p>
+                                <ul class="lv1_indent">
+                                    <li>
+                                        <p>
+                                            <i>git pull</i>
+                                         </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>
+                                    dataset revisions
+                                </p>
+                                <ul class="lv1_indent">
+                                    <li>
+                                        <p>
+                                            <i>rollback to a specific version</i>
+                                         </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>
+                                    branches for production and development 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Update / Post-Commit Hooks
+                                </p>
+                               <ul class="lv1_indent">
+                                    <li>
+                                        <p>
+                                            <i>postprocessing scripts</i>
+                                         </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <i>reload tools and services</i>
+                                         </p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+
+
+
+
+            <div id="producer-advantages" class="step slide" data-x="11000" data-y="8500" data-scale="4">
+                <div class="slide-title">
+                    advantages for <em>producers</em> of life science data
+                </div>
+                <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    easy distribution and mirroring
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    traceability of changes
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    diff, patch, blame
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    easy user contribution
+                                </p>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+
+            <div id="case-study-pdb" class="step slide" data-x="11000" data-y="9000" data-scale="3">
+                <div class="slide-title">
+                    <em>case study</em> Protein Data Bank
+                </div>
+                <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    tracking weekly changes of the PDB
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    added update hooks
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    running own filter and statistic scripts
+                                </p>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+
+
+
+            <div id="pdb-monthly" class="step slide" data-x="13000" data-y="9000" data-scale="3">
+                <div class="slide-title">
+                    <em>Protein Data Bank</em> monthly changes
+                </div>
+                <div class="slide-content" align="center">
+                    <div id="chart3" style="width:1000px; height:500px;"></div>
+                </div>
+            </div>
+
+
+            <div id="pdb-line-changes" class="step slide" data-x="15000" data-y="9000" data-scale="3">
+                <div class="slide-title">
+                    <em>Protein Data Bank</em> line changes
+                </div>
+                <div class="slide-content" align="center">
+                <ul class="lv0_indent">
+                <li>
+                    <p>September 2011</p>
+                    HETATM:&nbsp;&nbsp;<em>-</em>5324<em>&nbsp;+</em>5004<br>
+                    COMPND:&nbsp;&nbsp;&nbsp;<em>-</em>122<em>&nbsp;+</em>140<br>
+                    ATOM:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>-</em>22765<em>&nbsp;+</em>23044<br>
+                </li>
+                <li>
+                    <p>October 2011</p>
+                    HETATM:&nbsp;&nbsp;<em>-</em>8541<em>&nbsp;+</em>8611<br>
+                    COMPND:&nbsp;&nbsp;&nbsp;<em>-</em>645<em>&nbsp;+</em>570<br>
+                    ATOM:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>-</em>30483<em>&nbsp;+</em>29138<br>
+                </li>
+                </ul>
+                </div>
+            </div>
+
+<!--
+Okt
+
+8541 8611
+645 570
+30483 29138
+
+Sep
+5324 5004
+122 140
+22765 23044
+-->
+
+
+            <div id="case-study-blastdbs" class="step slide" data-x="17000" data-y="9000" data-scale="3">
+                <div class="slide-title">
+                    <em>case study</em> BlastDB
+                </div>
+                <div class="slide-content" align="center">
+                        <p>Tracking of ...</p>
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    new sequencing data
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    new assembly
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    new annotations
+                                </p>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+
+
+
+            <div id="galaxy-integration-one" class="step slide" data-x="17000" data-y="9000" data-scale="4">
+                <div class="slide-title">
+                    <em>galaxy</em> integration
+                </div>
+                <div class="slide-content">
+                    <table style="width: 90%">
+                    <tr><td style="width: 40%" valign=top>
+                        <figure>
+                            <img src="./resources/img/gcc_code_example.png" alt="transparent"  />
+                        </figure>
+                    </td><td valign=center>
+                        <div id="wrap" style="text-align:left; ">
+                            <figure>
+                                <img src="./resources/img/tool.png">
+                            </figure> 
+                            <!--<iframe name='iframe-blast' id="iframe" src="http://localhost:8080/tool_runner?tool_id=ncbi_blastn_wrapper" 
+                                frameborder="0" cellspacing="0" style=" width: 700px; height: 1000px;">
+                            </iframe>-->
+                        </div>
+                    </td></tr></table>  
+                </div>
+            </div>
+
+
+            <div id="galaxy-integration-two" class="step slide" data-x="17000" data-y="11500" data-scale="4">
+                <div class="slide-title">
+                    <em>galaxy</em> integration
+                </div>
+                <div class="slide-content">
+                        <div id="wrap" style="text-align:left; ">
+                            <!--<iframe name='iframe-blast' id="iframe" src="http://localhost:8080/datasets/05cf8fc5764686de/show_params" 
+                                frameborder="0" cellspacing="0" style=" width: 1000px; height: 1000px;">
+                            </iframe>-->
+                            <figure>
+                                <img src="./resources/img/tool_detail.png">
+                            </figure> 
+                        </div>
+                </div>
+            </div>
+
+            <!--
+            <div id="galaxy-integration-three" class="step slide" data-x="17000" data-y="13000" data-scale="4">
+                <div class="slide-title">
+                    <em>galaxy</em> integration
+                </div>
+                <div class="slide-content">
+                        <div id="wrap" style="text-align:left; ">
+                            <iframe name='iframe-blast' id="iframe" src="http://localhost:8080/" 
+                                frameborder="0" cellspacing="0" style=" width: 1400px; height: 1000px;">
+                            </iframe>
+                        </div>
+                </div>
+            </div>
+            -->
+
+                <div id="downsides" class="step slide" data-x="15000" data-y="13000" data-scale="4">
+                    <div class="slide-title">
+                        downsides
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    rollback and cloning are expensive
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    large repositories?
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    memory consumption?
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+              <div id="what_else" class="step slide" data-x="13000" data-y="13000" data-scale="4">
+                <div class="slide-title">
+                    some last remarks
+                </div>
+                <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    git has problems with large files
+                                </p>
+                                    <ul class="lv1_indent">
+                                        <li>
+                                            <p>
+                                                two GSOC projects this summer
+                                            </p>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li>
+                                <p>
+                                    Perforce and others
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ZFS, btrfs
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                        
+            <!-- Questions? -->
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                </div>
+            </div>
+            <!-- EOF Questions? -->
+            
+            <!-- Thank You -->
+            <div id="thank-you" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    Thank You!
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+                    <p id="email">
+                        <a href="www.pharmaceutical-bioinformatics.org">www.pharmaceutical-bioinformatics.org</a>
+                    </p>
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+            
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
