@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="My presentation at the 3. Galaxy Community Conference" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="BFG Workshop" />  
+        <title>Keeping track of Life Science Data</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="9">
+                <div class="title">
+                    <em>ChemicalToolBoX</em> Cheminformatics inside the Galaxy
+                </div>
+                <!--<div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>-->
+                <div id="slide_details">
+                    <p>October 2012&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+            <!-- accessible, reproducible, transparent -->
+            <div id="accessible-reproducible-transparent_strong" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    "Enable accessible, reproducible, and transparent <em>computational research</em>."
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+
+                <div id="whatisworkflow" class="step slide" data-x="6400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy :: worflow managment system
+                    </div>
+                    <div>
+
+                        <figure align=center>
+                            <img src="./resources/img/GalaxyMainWorkflow.png" alt="transparent"  />
+                        </figure>
+
+                    </div>
+                </div>
+
+                <div id="whatisview" class="step slide" data-x="6400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy :: main view
+                    </div>
+                    <div>
+                        <figure align=center>
+                            <img src="./resources/img/galaxy_webinterface.png" alt="transparent"  />
+                        </figure>
+
+                    </div>
+                </div>
+
+                <div id="whatisview" class="step slide" data-x="6400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        reproducibility is key
+                    </div>
+                    <div>
+                        <figure align=center>
+                            <img src="./resources/img/citation.png" alt="transparent"  />
+                        </figure>
+                    </div>
+                </div>
+
+
+            <!-- was ist cheminformatics -->
+            <div id="what_is_cheminformatics" class="step slide" data-x="6000" data-y="2400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    "Cheminformatics is the use of computer and informational techniques, applied to a range of problems in the field of <em>chemistry</em>. 
+                    These <em>in silico</em> techniques are used in <em>pharmaceutical</em> companies in the process of <em>drug discovery</em>."
+                    <table width=100% align=right><tr><td align=right>Wikipedia</td></tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+            <!-- Paint a structure -->
+            <div id="features_01" class="step slide" data-x="6000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    <table width=100% align=right><tr>
+                        <td width=50% align=center valign=center>
+                            <img src="./resources/img/pencil.png"><br>
+                            <img src="./resources/img/morphine_2d.png">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 10px;">
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        paint your structure
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        upload molecule files
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        download pubchem
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+
+            <!-- was ist cheminformatics -->
+            <div id="features_02" class="step slide" data-x="5000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top align=center>
+                            <img src="./resources/img/morphine_2d.png" style="height:auto; width:40%">
+                            <img src="./resources/img/morphine_3d.png" style="height:auto; width:40%"><br>
+                            <font size="2">
+                            SMILES: CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O<br>
+                            InChI-Key: BQJCRHHNABKAKU-KBQPJGBKSA-N</font>
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;" align=left>
+                            molecule datatypes are first class citizen<br><br>
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        SMILES
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        InChI
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        MOL/SDF
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        MOL2
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        CML
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </td>
+                        
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+
+
+            <!-- was ist cheminformatics -->
+            <div id="features_03" class="step slide" data-x="4000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top align=center>
+                            <img src="./resources/img/fingerprint.png">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;">
+                            fingerprint generation<br><br>
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        Daylight Fingerprint
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        PubChem Fingerprint
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        MACCS
+                                    </p>
+                                </li>
+                                <li>
+                                    <p align=left>
+                                        :: insert your chemical fingerprint here ::
+                                    </p>
+                                </li>
+                            </ul>
+                            
+                        </td>
+                        
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+            <!-- was ist cheminformatics -->
+            <div id="features_04" class="step slide" data-x="3000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top>
+                            <img src="./resources/img/compounds.png" style="height:auto; width:90%">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;">
+                            large scale<br>
+                            postgresql :: pgchem
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- filtering -->
+            <div id="features_05" class="step slide" data-x="2000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top>
+                            <img src="./resources/img/compounds_filtered.png" style="height:auto; width:90%">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;" align=center>
+                            filtering
+                            <img src="./resources/img/slider.png" style="height:auto; width:90%">
+                            <div align=left width=100%>
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        predefined rules (drug-like, lead-like, lipinski-conform ...)
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        physicochemical properties
+                                    </p>
+                                </li>
+                            </ul>
+                            </div>
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- searching -->
+            <div id="features_06" class="step slide" data-x="1000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top>
+                            <img src="./resources/img/compounds_search.png" style="height:auto; width:90%">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;">
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        Similarity Search
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Substructure Search
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Pharmacophore Search
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Spectrophore Search
+                                    </p>
+                                </li>
+                            </ul>
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- searching -->
+            <div id="features_07" class="step slide" data-x="1000" data-y="3400" data-scale="3">
+                <div class="no-title">the big picture</div>
+                <div class="slide-content" align="center">
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        32 different tools
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        powered by open source projects
+                                        <ul class="lv1_indent">
+                                            <li>
+                                                <p>
+                                                    Open Babel
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    RDKit
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Galaxy
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    numpy, matplotlib ...
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        offer a community starting point
+                                    </p>
+                                </li>
+                            </ul>
+                   
+                </div>
+            </div>
+            <!-- EOF  -->
+
+            <!-- was ist cheminformatics 
+            <div id="features_07" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                <div class="no-title">convert</div>
+                <div class="slide-content" align="center">
+                    
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top>
+                            <img src="./resources/img/pencil.png" style="height:auto; width:10%">
+                            <img src="./resources/img/morphine_2d.png" style="height:auto; width:10%;">
+                            <img src="./resources/img/morphine_3d.png" style="height:auto; width:10%">
+                            <p><font size="2">CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O</font></p>
+                            <p><font size="2">BQJCRHHNABKAKU-KBQPJGBKSA-N</font></p>
+                            <img src="./resources/img/fingerprint.png" style="height:auto; width:10%">
+                            <img src="./resources/img/fingerprint.png">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;">
+                            paint your structure
+                            converting (InChI, InChI-Key, SMILES, MOL, MOL2)
+                            
+                            Filtering
+                            
+                            Predictions
+                            
+                            Searching
+                            
+                            Visualisation
+                            
+                            <br><br><br><br>
+                        </td>
+                        
+                        </tr></table>
+                </div>
+            </div>
+ EOF  -->
+
+
+
+                <div id="usecases" class="step slide" data-x="3400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        some <em>use cases</em> from our lab
+                    </div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p align=left>
+                                    building comprehensive and specialised compound libraries
+                                </p>
+                            </li>
+                            <li>
+                                <p align = left>
+                                    screening libraries for new drug candidates
+                                </p>
+                            </li>
+                            <li>
+                                <p align=left>
+                                    exploring of the chemical universe
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div id="chemicalbox" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>ChemicalBoX</em>
+                    </div>
+                    <div>
+                       "... is a <em>comprehensive</em> collection of small compounds, consisting of data from other repositories. 
+                       The focus of ChemicalBoX is to offer a ready- and <em>easy-to-use</em> compound library that extends current freely available compilations."
+                       <br><br>
+                            <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    reproducibility/transparency
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    completeness
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    free availability
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    automatization
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>39 million</em> filtered unique compounds
+                                </p>
+                            </li>
+                            </ul>
+                        <div id="slide_details">
+                            <p>
+                            ftp://pharmaceutical-bioinformatics.org/chemicalbox/</p>
+                            <p>git clone http://chemicalbox.pharmaceutical-bioinformatics.org/chemicalbox.git</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="pbox" class="step slide" data-x="5400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>PurchasableBoX</em>
+                    </div>
+                    <div>
+                       "... is a comprehensive collection of small compounds, <br>consisting of data from various <em>vendors</em>."
+                       <br><br>
+                            <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    <em>44,6 million</em> filtered unique compounds
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>43,6 million</em> drug like compounds (QED > 0.2)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    1,2 million cluster centers (similarity > 0.85)
+                                </p>
+                            </li>
+                            </ul>
+                        <div id="slide_details">
+                            <p>QED: G. Richard Bickerton et al. "Quantifying the chemical beauty of drugs";<br>Nature Chemistry 2012</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="beatbox" class="step slide" data-x="6400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                    </div>
+                    <div>
+                        Merging <em>ChemicalBoX</em> and <em>PurchasableBoX</em> offers a compilation<br>
+                        of <em>~70 million</em> of unique filtered compounds.
+                    </div>
+                </div>
+
+
+                <div id="beatbox2" class="step slide" data-x="6400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                    </div>
+                    <div>
+                        Merging <em>ChemicalBoX</em> and <em>PurchasableBoX</em> offers a compilation<br>
+                        of <em>~70 million</em> of unique filtered compounds.
+                        <br><br><br>
+                        <table>
+                            <tr>
+                                <td>
+                                    <figure align=center>
+                                        <img src="./resources/img/cas.gif" alt="transparent"  />
+                                    </figure>
+                                </td>
+                                <td>&nbsp;&nbsp;CAS, Chemical Abstracts Service: <br>&nbsp;&nbsp;"65 Million: It's more than just a number."
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="fragmenter-merger" class="step slide" data-x="7400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        Exploring new areas of the chemical universe.
+                    </div>
+                    <div>
+                            <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    <em>fragmentation</em> of 1.425 drugs
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    1.895 fragments
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>182.360</em> unique, merged compounds
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>150.642</em> are druglike (QED > 0,3)
+                                </p>
+                            </li>
+                            </ul>
+                        <div id="slide_details">
+                            <p>QED: G. Richard Bickerton et al. "Quantifying the chemical beauty of drugs";<br>Nature Chemistry 2012</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div id="fragmenter-merger" class="step slide" data-x="8400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        Other topics we are working on ...
+                    </div>
+                    <div>
+                            <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    methylation analysis of human immune cells
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <i>in silico</i> screening (Bromodomain inhibitors)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    genome analysis
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    text mining and data warehousing 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    systems-biology of streptomycetes
+                                </p>
+                            </li>
+                            </ul>
+                    </div>
+                </div>
+
+
+                        
+            <!-- Questions? -->
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                </div>
+            </div>
+            <!-- EOF Questions? -->
+            
+            <!-- Thank You -->
+            <div id="thank-you" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    Thank You!
+                </div>
+                    <figure align=center>
+                        <img src="./resources/img/lab_members_2012.png" alt="transparent"  />
+                    </figure>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Thank You -->
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    contact
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+                    <p id="email">
+                        <a href="www.pharmaceutical-bioinformatics.org">www.pharmaceutical-bioinformatics.org</a>
+                    </p>
+                    <p id="email">
+                        <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                        <a href="https://bitbucket.org/BjoernGruening">https://bitbucket.org/BjoernGruening</a>
+                    </p>
+                    
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
