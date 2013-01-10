@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="My presentation at the 8th-bfg-workshop." />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="BFG Workshop" />  
+        <title>Through the Galaxy into the bwGrid</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="9">
+                <div class="title">
+                    Through the Galaxy into the bwGrid
+                </div>
+                <div id="slide_details">
+                    <p>May 2012&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+
+            <!-- What is the Galaxy framework? -->
+            <div id="galaxy-framework" class="step slide" data-x="0" data-y="-1500" data-scale="3">
+                <div class="section-title with_logo">
+                    <h3>What is</h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/galaxyLogo360.png" alt="Galaxy" width="360" height="100" />
+                        </figure>
+                    <h3>?</h3>
+                </div>
+            </div>
+
+                <!--  -->
+                <div id="galaxy_meaning" class="step slide" data-x="3400" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    An <em>analysis and data integration</em> tool
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>Open source</em>, <em>community</em> driven software that makes integrating our own tools simple
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Part of <em>GMOD</em>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://galaxyproject.org</p>
+                    </div>
+                </div>
+                <!-- EOF  -->
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable <em>accessible</em>, <em>reproducible</em>, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+
+                <div id="accessible-webinterace" class="step slide" data-x="9000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>accessible</em> - Webinterface
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <iframe name='iframe-webinterace' id="iframe" src="http://galaxy.pharmaceutical-bioinformatics.de/" 
+                                frameborder="0" cellspacing="0" style=" width: 1400px; height: 1000px;">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="accessible-api" class="step slide" data-x="12000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>accessible</em> - REST API
+                    </div>
+                    <div class="slide-content" align="center">
+
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    <em>data</em> upload and download
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    create and delete <em>historys's</em>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    import and execute <em>workflows</em>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    connecting galaxy to your <em>sequencer</em>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    manage <em>user and roles</em>
+                                </p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent2" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable <em>accessible</em>, <em>reproducible</em>, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+
+
+                <div id="reproducible" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Reload experiments
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <iframe name='iframe-history' id="iframe" src="http://galaxy.pharmaceutical-bioinformatics.de/history" 
+                                frameborder="0" cellspacing="0" style=" width: 30%; height: 1000px;">
+                            </iframe>
+                        </div>
+                </div>
+
+
+                <div id="reproducible-blast" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Reload experiments
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <iframe name='iframe-history' id="iframe" src="http://galaxy.pharmaceutical-bioinformatics.de/history" 
+                                frameborder="0" cellspacing="0" style=" width: 30%; height: 1000px;">
+                            </iframe>
+
+                            <iframe name='iframe-blast' id="iframe" src="http://galaxy.pharmaceutical-bioinformatics.de/tool_runner?tool_id=ncbi_blastn_wrapper" 
+                                frameborder="0" cellspacing="0" style=" width: 40%; height: 1000px;">
+                            </iframe>
+                        </div>
+                </div>
+
+
+                <div id="reproducible-workflow" class="step slide" data-x="4400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Workflows
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <iframe name='iframe-workflow' id="iframe" src="http://galaxy.pharmaceutical-bioinformatics.de/workflow/editor?id=82b264d8c3d11790" 
+                                frameborder="0" cellspacing="0" style=" width: 100%; height: 1000px;">
+                            </iframe>
+                        </div>
+                </div>
+
+              <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent3" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable <em>accessible</em>, <em>reproducible</em>, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+
+
+                <div id="transparent-share" class="step slide" data-x="4400" data-y="3000" data-scale="3">
+                    <div class="slide-title">
+                        <em>transparent</em> - sharing everything
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/share.png" alt="share"  />
+                        </figure> 
+                    </div>
+                </div>
+
+                <div id="transparent-explain" class="step slide" data-x="4400" data-y="4500" data-scale="3">
+                    <div class="slide-title">
+                        <em>transparent</em> for other researchers
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/citation.png" alt="transparent"  />
+                        </figure>
+                    </div>
+                </div>
+
+
+                <div id="tools" class="step slide" data-x="4400" data-y="6000" data-scale="3">
+                    <div class="slide-title">
+                        <em>tools</em>
+                    </div>
+                    <div class="slide-content-small" align="center">
+                        <table width=100%><tr><td width=50%>
+                        <ul class="lv0_indent"><li>Text Manipulation</li>
+                            <li>Format Converters</li>
+                            <li>Filtering and Sorting</li>
+                            <li>Join, Subtract, Group</li>
+                            <li>Sequence Tools</li>
+                            <li>Multi-species Alignment Tools</li>
+                            <li>Genomic Interval Operations</li>
+                            <li>Summary Statistics</li>
+                            <li>Graphing / Plotting</li></ul>
+                        </td><td>
+                            <ul class="lv0_indent">
+                            <li>Regional Variation</li>
+                            <li>EMBOSS</li>
+                            <li>Evolution / Phylogeny</li>
+                            <li>RNA-seq</li>
+                            <li>ChIP-seq</li>
+                            <li>GATK</li>
+                            <li>Picard</li>
+                            <li>RGenetics</li></ul>
+                            ...and more
+                        </td></tr></table>
+                    </div>
+                </div>
+
+
+            <div id="tool-integration-topic" class="step slide" data-x="-900" data-y="2200" data-scale="7">
+                <div class="section-title">
+                    <h3>Integrating your own tools in Galaxy</h3>
+                </div>
+
+            </div>
+
+            <div id="tool-integration-features" class="step slide" data-x="-900" data-y="4200" data-scale="3">
+                <div class="slide-title">
+                    utilizing open source standards
+                </div>
+                <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    <em>xml</em> based
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>cheetah</em> template language
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>restructuredtext</em> (docutils) syntax
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    build in <em>unit-tests</em>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    automatic <em>requirements</em> check
+                                </p>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+
+
+            <div id="tool-integration-basic-example" class="step slide" data-x="-4300" data-y="4200" data-scale="3">
+                <div class="slide-title">
+                    <em>basic</em> example
+                </div>
+                <div class="slide-content">
+                    <table style="width: 90%">
+                    <tr><td style="width: 40%" valign=top>
+                        <figure>
+                            <img src="./resources/img/code.png" alt="transparent"  />
+                        </figure>                      
+                    </td><td valign=center>
+                        <div id="wrap" style="text-align:left; ">
+                            <iframe name='iframe-blast' id="iframe" src="http://galaxy.pharmaceutical-bioinformatics.de/tool_runner?tool_id=wc_gnu" 
+                                frameborder="0" cellspacing="0" style=" width: 700px; height: 1000px;">
+                            </iframe>
+                        </div>
+                    </td></tr></table>  
+                </div>
+            </div>
+
+
+            <div id="tool-integration-advanced-example" class="step slide" data-x="-6500" data-y="4200" data-scale="3">
+                <div class="slide-title">
+                    <em>advanced</em> features
+                </div>
+                <div class="slide-content-small">
+                    <table style="width: 100%">
+                    <tr><td style="width: 40%" valign=top>
+                        <ul>
+                            <li>
+                                <p>
+                                    conditionals
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    multiple outputs with different formats
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    build in parallelism method
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    input dependend selection lists
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    repeat
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    validator
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    config file creation
+                                </p>
+                            </li>
+                        </ul>
+                    </td><td align=center>
+                        <div id="wrap" style="text-align:left; ">
+                            <iframe name='iframe-blast' id="iframe" src="http://galaxy.pharmaceutical-bioinformatics.de/tool_runner?tool_id=ncbi_blastn_wrapper" 
+                                frameborder="0" cellspacing="0" style=" width: 100%; height: 800px;">
+                            </iframe>
+                        </div>
+                    </td></tr></table>
+                </div>
+            </div>
+
+
+                <div id="community" class="step slide" data-x="-8500" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>community</em> is key
+                    </div>
+                    <div class="slide-content-small">
+                        <ul>
+                            <li>
+                                <p>
+                                    ~1000 additional tools
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~315 publications, 150 in 2012
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    21 known public instances
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    3000 registered users (galaxy-users)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    600 registered developers (galaxy-dev)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    400 mails per month
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <!-- Deployment -->
+                <div id="deployment-image" class="step slide" data-x="9000" data-y="-2000" data-scale="7">
+                    <div class="section-title with_logo">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/Universe_In_Hand.jpg" alt="Galaxy"/>
+                        </figure>
+                    </div>
+                </div>
+
+
+                <div id="deployment-central" class="step slide" data-x="9000" data-y="-2000" data-scale="3">
+                    <div class="slide-title">
+                        <em>centralized</em> - Galaxy main
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    ~500 new users per month
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~100 TB of user data
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~140,000 analysis jobs per month
+                                </p>
+                            </li>
+                        </ul>
+                        <br>
+                        Centralized solution <em>cannot scale</em> to meet data
+                        analysis demands
+                    </div>
+                    <div id="slide_details">
+                        <p>http://usegalaxy.org</p>
+                    </div>
+                </div>
+
+              <div id="worldmap" class="step slide" data-x="11600" data-y="-2000" data-scale="3">
+                    <div class="section-title with_logo">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/worldmap.png" alt="Galaxy" />
+                        </figure>
+                    </div>
+                        <div id="slide_details">
+                            <p>http://omicsmaps.com/</p>
+                        </div>
+                </div>
+
+
+                <div id="deployment-decentralized" class="step slide" data-x="14500" data-y="-2000" data-scale="3">
+                    <div class="slide-title">
+                        <em>local</em> Galaxy instances
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    completely self-contained
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    easy to deploy
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    run jobs on existing compute clusters
+                                </p>
+                            </li>
+                        </ul>
+                        <br>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://galaxy.pharmaceutical-bioinformatics.org</p>
+                    </div>
+                </div>
+
+                <div id="deployment-phabi" class="step slide" data-x="16500" data-y="-2000" data-scale="3">
+                    <div class="slide-title">
+                        <em>pharmaceutical bioinformatics</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    37 users
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    20 jobs per day
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    1 TB of user data
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~50 additional Tools
+                                </p>
+                            </li>
+                            <ul class="lv1_indent">
+                                <li>
+                                    <p>
+                                        genomic annotation pipeline
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        exploring the chemical universe
+                                    </p>
+                                </li>
+                            </ul>
+                            <li>
+                                <p>
+                                    GBrowse integration
+                                </p>
+                            </li>
+                        </ul>
+                        <br>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://galaxy.pharmaceutical-bioinformatics.org</p>
+                    </div>
+                </div>
+
+
+                <div id="downsides" class="step slide" data-x="18500" data-y="-2000" data-scale="3">
+                    <div class="slide-title">
+                        downsides
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    investment in training users
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    missing tools
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>reproducibility</em> and <em>transparentness</em> is storage intensive
+                                </p>
+                            </li>
+                        </ul>
+                        <br>
+                    </div>
+                </div>
+
+
+              <div id="what_else" class="step slide" data-x="18500" data-y="-3000" data-scale="3">
+                <div class="slide-title">
+                    What else?
+                </div>
+                <div class="slide-content" align="center">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/what_else.png" alt="Galaxy" width="800" height="334" />
+                        </figure>
+                    </div>
+                </div>
+
+
+
+              <div id="so-what" class="step slide" data-x="18500" data-y="0" data-scale="3">
+                <div class="section-title with_logo">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/so-what-pic.png" alt="Galaxy"/>
+                        </figure>
+                    </div>
+                </div>
+
+              <div id="enter-the-cluster" class="step slide" data-x="18500" data-y="0" data-scale="3">
+                    <div class="slide-title">
+                        The vision!
+                    </div>
+                    <div class="slide-content">
+                        <ul>
+                            <li>enter the <em>cluster</em>!</li>
+                            <li>join forces</li>
+                            <li>get <em>more users</em> on the cluster</li>
+                            <li>extention beyond a local cluster?</li>
+                        </ul>
+                        <br>
+                        <p><em>Marek</em> Dynowski</p>
+                        <p><em>Michael</em> Janczyk</p>
+                        <p>/me</p>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://galaxy.bfg.uni-freiburg.de</p>
+                    </div>
+                </div>
+
+
+                <div id="cluster" class="step slide" data-x="18500" data-y="2000" data-scale="3">
+                    <div class="section-title with_logo">
+                        <figure>
+                            <img src="./resources/img/bfg.png" alt="cluster" width="800" height="411" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://wiki.g2.bx.psu.edu/Community/GalaxyCzars</p>
+                    </div>
+                </div>
+<!--
+
+Galaxy is an open, Web-based platform for
+accessible, reproducible, and transparent
+computational biomedical research
+
+-->
+
+
+                <!-- EOF Deployment -->
+
+                        
+            <!-- Questions? -->
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                </div>
+            </div>
+            <!-- EOF Questions? -->
+            
+            <!-- Thank You -->
+            <div id="thank-you" class="step slide" data-x="18500" data-y="3900" data-scale="3" data-z="1000">
+                <div id="ty" class="slide-title">
+                    Thank You!
+                </div>
+                <div class="slide-content">
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@pharmazie.uni-freiburg.de</a>
+                    </p>
+                    <p id="email">
+                        http://www.pharmaceutical-bioinformatics.org
+                    </p>
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+            
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+        <script type="text/javascript">
+             SyntaxHighlighter.all()
+        </script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
