@@ -34,10 +34,10 @@
 
             <!-- Motivation? Current problems -->
             <div id="problems" class="step slide" data-x="9000" data-y="-2000" data-scale="7">
-                <div class="section-title with_logo">
-                    The problems ...
+                <div class="section-title" style='top: 7%'>
+                    <h1 style='font-size: 35pt;'>The problems ...</h1>
                     <figure id="galaxy_logo">
-                        <img src="./resources/img/data_reduction.jpg" alt="Bioinformatics"/>
+                        <img src="./resources/img/data_reduction.png" alt="Bioinformatics"/>
                     </figure>
                 </div>
                 <div id="slide_details">
@@ -287,6 +287,39 @@
                     </div>
                 </div>
 
+            <div id="tools2" class="step slide" data-x="-900" data-y="4200" data-scale="3">
+                <div id="ty" class="slide-title">
+                    Proteomics/Metabolomics
+                </div>
+                <div class="slide-content-small" align="center">
+                    <table width=80%><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td width=50%>
+                    <ul class="lv0_indent">
+                        <li>OMSSA</li>
+                        <li>MassSpecAccess</li>
+                        <li>X!TANDEM</li>
+                        <li>Protk</li>
+                        <li>Trans Proteomic Pipeline</li>
+                        <li>PeptideShaker</li>
+                        <li>Scaffold (commercial)</li></ul>
+                        <li>OpenMS</li>
+                        <li>MSConvert</li>
+                        <li>ProteinPilot</li>
+                    </td><td>
+                        <ul class="lv0_indent">
+                        <li>Mascot</li>
+                        <li>MSGF+</li>
+                        <li>ms2preproc</li></ul>
+                        <li>digestdb</li>
+                        <li>MTSiP</li>
+                        <li>NCBO's BioPortal</li>
+                        <li>Blast2GO</li>
+                        <li>Onto-toolkit</li>
+                        <li>Mothur</li>
+                        <li>ChemicalToolBoX</li>
+                    </td></tr></table>
+                </div>
+            </div>
+
             <!--
             <div id="tool-integration-topic" class="step slide" data-x="-900" data-y="2200" data-scale="7">
                 <div class="section-title">
@@ -490,7 +523,7 @@
                             </li>
                             <li>
                                 <p>
-                                    ~898 publications, 91 in 2013
+                                    ~800 publications since 2010, 91 in 2013
                                 </p>
                             </li>
                             <li>
@@ -500,12 +533,12 @@
                             </li>
                             <li>
                                 <p>
-                                    ~4000 registered users (galaxy-users)
+                                    ~4000 registered users (galaxy-users Mailinglist)
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    ~600 registered developers (galaxy-dev)
+                                    ~600 registered developers (galaxy-dev Mailinglist)
                                 </p>
                             </li>
                             <li>
@@ -578,7 +611,7 @@
 
                 <div id="deployment-decentralized" class="step slide" data-x="15500" data-y="-2000" data-scale="3">
                     <div class="slide-title">
-                        <em>local</em> Galaxy instances
+                        <em>personal</em> Galaxy instances
                     </div>
                     <div class="slide-content">
                         <ul class="lv0_indent">
@@ -713,7 +746,12 @@
                         <ul class="lv0_indent">
                             <li>
                                 <p>
-                                    investment in training
+                                    investment in training/teching
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    cluster and galaxy administration
                                 </p>
                             </li>
                             <li>
@@ -749,7 +787,7 @@
                             <li>share tools, workflows, knowledge</li>
                             <li>enable reproducible research</li>
                             <li>regular training session (Bern/Freiburg)</li>
-                            <li>Galaxy instances in FB, TÜ, HD, Bern, Basel ...</li>
+                            <li>Galaxy instances in FR, TÜ, HD, Bern, Basel ...</li>
                         </ul>
                     </div>
                     <div id="slide_details">
@@ -778,12 +816,59 @@ computational biomedical research
             <!-- EOF Deployment -->
 
             <!-- Questions? -->
+            <!--
             <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
                 <div class="section-title">
                     <h3>Questions?</h3>
                 </div>
             </div>
+            -->
             <!-- EOF Questions? -->
+
+            <div id="cooperations" class="step slide" data-x="18500" data-y="3000" data-scale="3">
+                <div class="slide-content" align="center">
+
+                    <table border=0><tr><td width=50% align=center>
+                        <p style='font-size:20pt'>Genome Annotation</p>
+                        <table border=0><tr><td>
+                            <figure id="example">
+                                <img src="./resources/img/tue_annotation.png" alt="Genome Annotation"/>
+                            </figure>
+                            </td><td align=center>
+                            <p style='font-size:15pt'>Prof. Bechthold<br>Prof. Müller<br>(Pharmacy)</p>
+                        </td></tr></table>
+                        </td><td align=center>
+                            <p style='font-size:20pt'>Whole‐Genome Bisulfite-Seq</p>
+                            <table border=0><tr><td align=center>
+                                <figure id="bi">
+                                    <img src="./resources/img/5-Methylcytosine.png" alt="Methylation"/>
+                                </figure> 
+                                </td><td align=center>
+                                <p style='font-size:15pt'>Prof. Hein<br>(Pharmacology, SFB 992)</p>
+                            </td></tr></table>
+                    </td></tr><tr><td align=center>
+                        <p style='font-size:20pt'>Galaxy training and administration</p>
+                        <table border=0><tr><td align=center>
+                                <figure id="bi">
+                                    <img src="./resources/img/training.png" alt="Methylation"/>
+                                </figure> 
+                                </td></tr><tr><td align=center>
+                                <p style='font-size:15pt'>
+                                Prof Backofen (Bioinformatics, SFB 992)<br>Dr. Manke (MPI, SFB 992)</p>
+                            </td></tr></table>
+                        </td><td align=center>
+                        <p style='font-size:20pt'>Cheminformatics</p>
+                        <table border=0><tr><td align=center>
+                                <figure id="bi">
+                                    <img src="./resources/img/cheminformatics.png" alt="Methylation"/>
+                                </figure> 
+                                </td></tr><tr><td align=center>
+                                <p style='font-size:15pt'>
+                                Jun. Prof. Günther<br>(Pharmaceutical Bioinformatics)</p>
+                            </td></tr></table>
+                    </td></tr></table>
+                </div>
+            </div>
 
             <!-- Thank You -->
             <div id="thank-you" class="step slide" data-x="18500" data-y="3900" data-scale="3" data-z="1000">
@@ -798,7 +883,10 @@ computational biomedical research
                         <a href="mailto:bjoern@gruenings.eu">bjoern@gruenings.eu</a>
                     </p>
                     <p id="websites">
-                        http://www.pharmaceutical-bioinformatics.org
+                        http://www.<em>pharmaceutical-bioinformatics</em>.org
+                    </p>
+                    <p id="websites">
+                        http://galaxy.bi.uni-freiburg.de
                     </p>
                     <p id="websites">
                         http://wiki.<em>galaxyproject.org</em>/Learn
@@ -807,36 +895,6 @@ computational biomedical research
             </div>
             <!-- EOF Thank You -->
 
-
-            <div id="extension" class="step slide" data-x="20500" data-y="5000" data-scale="1">
-                <div id="ty" class="slide-title">
-                    Proteomics
-                </div>
-                <div class="slide-content-small" align="center">
-                    <table width=80%><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td width=50%>
-                    <ul class="lv0_indent">
-                        <li>OMSSA</li>
-                        <li>MassSpecAccess</li>
-                        <li>X!TANDEM</li>
-                        <li>DBBuilder</li>
-                        <li>Protk</li>
-                        <li>Trans Proteomic Pipeline</li>
-                        <li>Bumbershoot</li>
-                        <li>PeptideShaker</li>
-                        <li>Scaffold (commercial)</li></ul>
-                    </td><td>
-                        <ul class="lv0_indent">
-                        <li>OpenMS</li>
-                        <li>MSConvert</li>
-                        <li>ProteinPilot</li>
-                        <li>Mascot</li>
-                        <li>MSGF+</li>
-                        <li>BIOMART</li>
-                        <li>ms2preproc</li></ul>
-                        <li>digestdb</li>
-                    </td></tr></table>
-                </div>
-            </div>
 
             <div id="toolshed" class="step slide" data-x="20500" data-y="5500" data-scale="1">
                 <div class="slide-title">
