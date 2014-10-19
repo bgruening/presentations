@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="My presentation at Bled 2014" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="Retreat, Workshop" />  
+        <title>de.NBI</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="5">
+                <div class="title">
+                    <em>de.NBI</em> <br> dt. Netzwerks für Bioinformatik-Infrastruktur
+                </div>
+                <!--<div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>-->
+                <div id="slide_details">
+                    <p>March 2014&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+            <!-- What is needed? -->
+            <div id="what_is_needed" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                    <div class="slide-title">Who?</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/de.NBI_structure.png" alt="de.NBI" />
+                        </figure>
+                    </div>
+            </div>
+
+            <div id="what" class="step slide" data-x="1000" data-y="500" data-scale="1">
+                    <div class="slide-title">What?</div>
+                    <div class="slide-content">
+                        Users, Users, Users
+                    </div>
+            </div>
+
+            <div id="what2" class="step slide" data-x="1000" data-y="1000" data-scale="1">
+                    <div class="slide-title">What?</div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Offering Support</li>
+                            <li>Maintaining Software/Databases</li>
+                            <li>Workshops</li>
+                            <li>Central Contact Point for Bioinformatics</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="what2" class="step slide" data-x="1000" data-y="1500" data-scale="1">
+                    <div class="slide-title">RBC - RNA Bioinformatic Center</div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Peter F. Stadler (Leipzig)</li>
+                            <li>Uwe Ohler (Berlin)</li>
+                            <li>Nikolaus Rajewsky (Berlin)</li>
+                            <li>Rolf Backofen (Freiburg)</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="what2" class="step slide" data-x="1000" data-y="2000" data-scale="1">
+                    <div class="slide-title">Aims :: Visions</div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Raise the awreness of RNA-based regulation</li>
+                            <li>accessible RNA tools</li>
+                            <li>integrate 'RNA tools' into NGS pipelines</li>
+                            <li>training, workshops, support</li>
+                        </ul>
+                    </div>
+            </div>
+
+
+            <div id="outreach" class="step slide" data-x="1000" data-y="2500" data-scale="1">
+                    <div class="slide-title">Who?</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/rbc-outreach-diagramm-centers.png" alt="de.NBI" />
+                        </figure>
+                    </div>
+            </div>
+
+
+                <div id="measuring_success" class="step slide" data-x="1000" data-y="3000" data-scale="1">
+                    <div class="title"><em>Measuring</em> and <em>Tracking</em> Success</div>
+                </div>
+
+                <div id="matriken01" class="step slide" data-x="1000" data-y="3500" data-scale="1">
+                    <div class="slide-title"><em>Tools/Workflows for download</em></div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Number of downloads</li>
+                            <li>Citations/website link/acknowledgement</li>
+                            <li>Number of users on mailing lists</li>
+                            <li>Grant applications</li>
+                            <li>Satisfaction</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="matriken02" class="step slide" data-x="1000" data-y="4000" data-scale="1">
+                    <div class="slide-title"><em>running Applications/Workflows</em></div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Number of projects</li>
+                            <li>Datavolume (Storage)</li>
+                            <li>CPU hours</li>
+                            <li>Number of users on mailing lists</li>
+                            <li>Recurring users</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="matriken03" class="step slide" data-x="1000" data-y="4500" data-scale="1">
+                    <div class="slide-title"><em>Webapplications</em></div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Number of projects</li>
+                            <li>Number of jobs processed</li>
+                            <li>Registrations/active users</li>
+                            <li>Number of users on mailing lists</li>
+                            <li>Hits/visits/unique users</li>
+                            <li>Citations/website link/acknowledgement</li>
+                            <li>Number of users on mailing lists</li>
+                            <li>Recurring users</li>
+                            <li>Satisfaction</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="matriken04" class="step slide" data-x="1000" data-y="5000" data-scale="1">
+                    <div class="slide-title"><em>Databases</em></div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Number of downloads</li>
+                            <li>Hits/visits/unique users</li>
+                            <li>Citations/website/acknowledgement</li>
+                            <li>Grant applications</li>
+                            <li>Number of users on mailing lists</li>
+                            <li>Recurring users</li>
+                            <li>Satisfaction</li>
+                            <li>Number of primary resources parsed -> curated entries (mobilisation) (monitors the internal progress)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="metriken05" class="step slide" data-x="1000" data-y="5000" data-scale="1">
+                    <div class="slide-title"><em>Services/Support/Training</em></div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Person hours</li>
+                            <li>Support requests</li>
+                            <li>Documentation</li>
+                            <li>Satisfaction (e.g. evaluation of training courses or workshops)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="accessible_research" class="step slide" data-x="1000" data-y="5500" data-scale="1">
+                    <div class="title"><em>accessible</em> research</div>
+                </div>
+
+                <!-- What is the Galaxy framework? -->
+                <div id="galaxy-framework" class="step slide" data-x="1000" data-y="6000" data-scale="1">
+                    <div class="section-title with_logo">
+                        <h3>The</h3>
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/galaxyLogo360.png" alt="de.NBI" />
+                            </figure>
+                        <h3>Tool Shed</h3>
+                    </div>
+                        <div id="slide_details">
+                            <p>Blankenberg et al., Dissemination of scientific software with Galaxy ToolShed; Genome Biology</p>
+                        </div>
+                </div>
+
+
+                <!--  -->
+                <div id="docker" class="step slide" data-x="1000" data-y="7000" data-scale="1">
+                    <div class="section-title with_logo">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/docker-logo.png" alt="de.NBI" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>https://www.docker.io/</p>
+                    </div>
+                </div>
+                <!-- EOF  -->
+
+                <div id="accessible-webinterace" class="step slide" data-x="1000" data-y="8000" data-scale="1">
+                    <div class="slide-title">
+                        build on <em>Linux</em> kernel features
+                    </div>
+                    <div class="slide-content" align="center">
+                        <table width=80%><tr><td width=50%>
+                        <ul class="lv0_indent">
+                            <li>Linux Containers (LXC)</li>
+                            <li>cgroups</li>
+                            <li>namespaces</li>
+                            <li>union filesystem</li>
+                        </td></tr></table>
+                    </div>
+                </div>
+
+                <div id="accessible-uscs" class="step slide" data-x="1000" data-y="8500" data-scale="1">
+                    <div class="slide-title">
+                        <em>docker</em> example
+                    </div>
+                    <div class="slide-content-small" align="left">
+                                > docker search debian<br>
+                                > docker pull bgruening/debian<br>
+                                > docker run bgruening/debian echo "hello world"<br>
+                                > docker run bgruening/debian apt-get install ping<br>
+                                > docker commit 6982a9948422 bgruening/ping<br>
+                                > docker run bgruening/ping ping google.com<br>
+                                > docker push bgruening/ping
+                    </div>
+                </div>
+
+
+            <!-- Questions? -->
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                </div>
+            </div>
+            <!-- EOF Questions? -->
+            
+            <!-- Thank You -->
+            <div id="thank-you" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div class="section-title">
+                    <h3>Thank you!</h3>
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Thank You -->
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    contact
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+                    <p id="email">
+                        <a href="www.pharmaceutical-bioinformatics.org">http://www.bioinf.uni-freiburg.de</a>
+                    </p>
+                    <p id="email">
+                        <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                        <a href="https://bitbucket.org/BjoernGruening">https://bitbucket.org/BjoernGruening</a>
+                    </p>
+                    
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->

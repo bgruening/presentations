@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Swiss/German Galaxy workhsop" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="Retreat, Workshop, Galaxy, NGS, SGBM" />
+        <title>Galaxy :: putting pieces together</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="9">
+                <div class="title">
+                    <em>Galaxy</em> putting pieces together
+                </div>
+                <!--<div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>-->
+                <div id="slide_details">
+                    <p>October 2014&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+
+                <div id="datasets" class="step slide" data-x="0" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        <em>Datasets</em>
+                    </div>
+                    <div class="slide-content">
+                        <table><tr><td>
+                        <figure id="galaxy_main_view">
+                            <img src="./resources/img/datasets.png" alt="reloaded tool" />
+                        </figure>
+                        </td><td>&nbsp;&nbsp;&nbsp;</td><td>
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        Metadata
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Building process
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Composite Datasets
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Datatype
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Data collections
+                                    </p>
+                                </li>
+                            </ul>
+                        </td></tr></table>
+                    </div>
+                    <div id="slide_details">
+                        <p>config/datatypes_conf.xml</p>
+                        <p>lib/galaxy/datatypes/</p>
+                    </div>
+                </div>
+
+                <div id="data_libraries" class="step slide" data-x="2000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        <em>Data libraries</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    access control (group, roles)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    data is linked not copied
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    central place for sharing data
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div id="object-store" class="step slide" data-x="4000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy <em>Object Store</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    S3
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Irods
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Swift
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    distributed, hierarchical
+                                </p>
+                            </li>
+                        </ul>
+                        <div id="slide_details">
+                            <p>config/object_store_conf.xml</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="section-title-tools" class="step slide" data-x="-900" data-y="2200" data-scale="7">
+                    <div class="section-title with_logo">
+                        <h3>Tools, Tools, Tools</h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/lego_box.jpg" alt="Bioinformatics"/>
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>config/tool_conf.xml</p>
+                        <p>config/shed_tool_conf.xml</p>
+                    </div>
+                </div>
+
+                <div id="tools" class="step slide" data-x="-900" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>tools</em>
+                    </div>
+                    <div class="slide-content-small" align="center">
+                        <table width=90%><tr><td width=50%>
+                        <ul class="lv0_indent">
+                            <li>Text Manipulation</li>
+                            <li>Format Converters</li>
+                            <li>Filtering and Sorting</li>
+                            <li>Join, Subtract, Group</li>
+                            <li>Unix Tools</li>
+                            <li>Alignment Tools</li>
+                            <li>Genomic Interval Operations</li>
+                            <li>Summary Statistics</li>
+                            <li>Plotting</li>
+                        </ul>
+                        </td><td>
+                        <ul class="lv0_indent">
+                            <li>Mapping</li>
+                            <li>EMBOSS</li>
+                            <li>RNA-seq</li>
+                            <li>ChIP-seq</li>
+                            <li>GATK</li>
+                            <li>Proteomics/Metabolomics</li>
+                            <li>NCBI Blast+</li>
+                            <li>Blast2GO</li>
+                            <li>ChemicalToolBoX</li>
+                            <li>...and many more (1000+)</li>
+                        </ul>
+                        </td></tr></table>
+                    </div>
+                </div>
+
+                <div id="history" class="step slide" data-x="-3000" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>History</em>
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <table><tr><td>
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/history.png" alt="reloaded tool" />
+                            </figure>
+                            </td><td>&nbsp;&nbsp;&nbsp;</td><td>
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/history_options.png" alt="reloaded tool" />
+                            </figure>
+                            </td></tr></table>
+                        </div>
+                </div>
+
+
+                <div id="jobs" class="step slide" data-x="-6000" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Jobs</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    combining different schedulers (drmaa, lwr, slurm, condor ...)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    combining different OS  
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    tool specific hosts and resources
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    limits (tools, users, jobs)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    dynamic resources
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Job matics
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>config/job_conf.xml</p>
+                        <p>lib/galaxy/jobs/rules</p>
+                        <p>config/job_metrics_conf.xml</p>
+                    </div>
+                </div>
+
+                <div id="data_managers" class="step slide" data-x="-8000" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Data managers</em>
+                    </div>
+
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/data_managers.png" width="70%" height="70%" alt="reloaded tool" />
+                            </figure>
+                        </div>
+                    <div id="slide_details">
+                        <p>config/tool_data_table_conf.xml</p>
+                    </div>
+                </div>
+
+                <div id="workflow" class="step slide" data-x="-10000" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Workflows</em>
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/large_workflow.png" alt="reloaded tool" />
+                            </figure>
+                        </div>
+                </div>
+
+
+                <div id="workflow2" class="step slide" data-x="-12000" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Workflows</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    post-action steps
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    scheduling
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    sharing, exporting (myexperiment.org)
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="citations" class="step slide" data-x="-14000" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Citations</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    add citation annotation to every tool
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    export all citations from workflows / histories
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div id="visualisation_scatterplot" class="step slide" data-x="-4300" data-y="5200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - Scatterplot
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_scatterplot">
+                                <img src="./resources/img/scatterplot-partialscreen.png" alt="Scatterplot" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="visualisation_charts" class="step slide" data-x="-4300" data-y="7200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - Charts
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_scatterplot">
+                                <img src="./resources/img/charts.png" alt="Scatterplot" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="visualisation_trackster" class="step slide" data-x="-4300" data-y="9200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - Trackster
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_trackster">
+                                <img src="./resources/img/GalaxyMainTrackster.png" alt="Trackster" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="visualisation_sweepster" class="step slide" data-x="-4300" data-y="11200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - Sweepster
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/sweepster.png" alt="Sweepster" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="ipython" class="step slide" data-x="-4300" data-y="13200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Interactive Environments</em> - IPython
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/ipython_in_galaxy.png" alt="IPython" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="toolshed" class="step slide" data-x="0" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy <em>ToolShed</em> :: The Appstore
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    version controlled tools
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    datatypes, data managers ...
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    tools (+ dependencies), workflows ...
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    daily tests
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    community rated
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>./config/tool_sheds_conf.xml</p>
+                    </div>
+                </div>
+
+                <div id="api" class="step slide" data-x="-2000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy <em>API</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    script the Galaxy
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    workflows, datasets, histories ...
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    running, deleting, retrieving ...
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    REST interface, python library (bioblend)
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://bioblend.readthedocs.org</p>
+                        <p>https://wiki.galaxyproject.org/Learn/API</p>
+                    </div>
+                </div>
+
+
+                <!-- Administration -->
+                <div id="cluster" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy <em>Admins</em>
+                    </div>
+                    <div class="slide-content">
+                        <figure>
+                            <img src="./resources/img/bfg.png" alt="cluster" width="800" height="411" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>https://wiki.galaxyproject.org/Community/GalaxyAdmins</p>
+                    </div>
+                </div>
+
+
+                <div id="CloudMan" class="step slide" data-x="-6000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy <em>CloudMan</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    Elastic Computing Cloud (EC2)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Opennebula
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    OpenStack
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>https://usegalaxy.org/cloudlaunch</p>
+                    </div>
+                </div>
+
+                <div id="docker" class="step slide" data-x="-8000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy <em>Docker</em> images
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    PostgreSQL
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Nginx
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Slurm
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    preconfigured, ready to go
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    different flavours for your analysis
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>docker run -d -p 8080:80 -v /local/storage/:/export/ bgruening/galaxy-stable</p>
+                    </div>
+                </div>
+
+
+                <div id="gtn" class="step slide" data-x="-8000" data-y="9000" data-scale="3">
+                    <div class="slide-title">
+                        <em>Galaxy</em> Teaching Hub
+                    </div>
+                    <div class="slide-content">
+                        <div class="slide-content">
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        Recommended comp. platforms
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Resources, Pages
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Best practices
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Galaxy events calender
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div id="slide_details">
+                        <p>https://wiki.galaxyproject.org/Teach</p>
+                        <p>https://wiki.galaxyproject.org/Teach/GTN</p>
+                    </div>
+                </div>
+
+            <!-- Questions? -->
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                    <h3>Thank <em>you</em>  !</h3>
+                </div>
+            </div>
+            <!-- EOF Questions? -->
+
+            <!-- Thank You -->
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    contact
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+                    <p id="email">
+                        <a href="www.pharmaceutical-bioinformatics.org">http://www.bioinf.uni-freiburg.de</a>
+                    </p>
+                    <p id="email">
+                        <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                        <a href="https://bitbucket.org/BjoernGruening">https://bitbucket.org/BjoernGruening</a>
+                    </p>
+                    
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->

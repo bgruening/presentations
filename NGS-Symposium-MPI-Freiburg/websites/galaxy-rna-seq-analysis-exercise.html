@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html><head>
+        <title>
+    Galaxy | 
+Published Page | 
+    Galaxy RNA-seq Analysis Exercise
+</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        
+    
+    
+    <link href="galaxy-rna-seq-analysis-exercise-Dateien/base.css" media="screen" rel="Stylesheet" type="text/css">
+<link href="galaxy-rna-seq-analysis-exercise-Dateien/panel_layout.css" media="screen" rel="Stylesheet" type="text/css">
+<link href="galaxy-rna-seq-analysis-exercise-Dateien/jquery.css" media="screen" rel="Stylesheet" type="text/css">
+    <style type="text/css">
+    body, html {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #center {
+            left: 0 !important;
+    }
+    </style>
+
+    <link href="galaxy-rna-seq-analysis-exercise-Dateien/autocomplete_tagging.css" media="screen" rel="Stylesheet" type="text/css">
+<link href="galaxy-rna-seq-analysis-exercise-Dateien/embed_item.css" media="screen" rel="Stylesheet" type="text/css">
+<link href="galaxy-rna-seq-analysis-exercise-Dateien/trackster.css" media="screen" rel="Stylesheet" type="text/css">
+<link href="galaxy-rna-seq-analysis-exercise-Dateien/jquery.css" media="screen" rel="Stylesheet" type="text/css">
+<link href="galaxy-rna-seq-analysis-exercise-Dateien/jquery-ui-1.html" media="screen" rel="Stylesheet" type="text/css">
+    
+    <style type="text/css">
+        .page-body {
+            padding: 10px;
+        }
+        .page-meta {
+            float: right;
+            width: 27%;
+            padding: 0.5em;
+            margin: 0.25em;
+            vertical-align: text-top;
+            border: 2px solid #DDDDDD;
+            border-top: 4px solid #DDDDDD;
+        }
+        
+        .historyItemContainer, .toolForm {
+            max-width: 500px;
+        }
+        
+        div.toolForm{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .historyItemContainer {
+            padding-right: 3px;
+            border-right-style: solid;
+            border-right-color: #66AA66;
+        }
+    </style>
+
+    <link href="galaxy-rna-seq-analysis-exercise-Dateien/base.css" media="screen" rel="Stylesheet" type="text/css">
+<link href="galaxy-rna-seq-analysis-exercise-Dateien/history.css" media="screen" rel="Stylesheet" type="text/css">
+<link href="galaxy-rna-seq-analysis-exercise-Dateien/autocomplete_tagging.css" media="screen" rel="Stylesheet" type="text/css">
+    <style type="text/css">
+        .toggle { display: none; }
+        .embedded-item h4 {
+            margin: 0px;
+        }
+        .page-body > table {
+            padding: 8px 5px 5px;
+            min-width: 500px; 
+            border: none;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        .page-body caption { 
+            text-align: left;
+            background: #E4E4B0; 
+            padding: 5px; 
+            font-weight: bold; 
+        }
+        .page-body > table td {
+            width: 25%;
+            padding: 0.2em 0.8em;
+        }
+        .embedded-item .trackster-nav-container {
+            height: inherit;
+        }
+        .embedded-item .trackster-nav {
+            position: inherit;
+        }
+    </style>
+
+        
+    
+    
+    
+    <!--[if lt IE 7]>
+    <script src="/static/scripts/libs/IE/IE7.js?v=1347381460" type="text/javascript"></script>
+<script src="/static/scripts/libs/IE/ie7-recalc.js?v=1347381460" type="text/javascript"></script>
+    <![endif]-->
+    <script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery_004.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/bootstrap.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/underscore.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/backbone.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/backbone-relational.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/handlebars.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/ui.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // Set up needed paths.
+        var galaxy_paths = new GalaxyPaths({
+            root_path: '/',
+            image_path: '/static/images',
+            
+            tool_url: '/api/tools',
+            history_url: '/api/histories',
+            
+            data_url: '/tracks/data',
+            raw_data_url: '/tracks/raw_data',
+            converted_datasets_state_url: '/tracks/converted_datasets_state',
+            dataset_state_url: '/tracks/dataset_state',
+            sweepster_url: '/tracks/sweepster',
+            
+            visualization_url: '/visualization/save',
+        });
+    </script>
+
+
+    <script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery_004.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/bootstrap.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/galaxy.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/json2.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/jstorage.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery_003.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery_002.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/galaxy_003.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/trackster.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/trackster_ui.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery_006.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery_005.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery_003.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery.html" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/farbtastic.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/data.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/visualization.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        
+        // Handle click on community tag.
+        function community_tag_click(tag_name, tag_value) {
+            
+    
+            var href = '/page/list_published';
+            href = href + "?f-tags=" + tag_name;
+            if (tag_value != undefined && tag_value != "") {
+                href = href + ":" + tag_value;
+            }
+            self.location = href;
+        }
+        
+        // Map item rating to number of stars to show.
+        function map_rating_to_num_stars(rating) {
+            if (rating <= 0)
+                return 0;
+            else if (rating > 0 && rating <= 1.5)
+                return 1;
+            else if (rating > 1.5 && rating <= 2.5)
+                return 2;
+            else if (rating > 2.5 && rating <= 3.5)
+                return 3;
+            else if (rating > 3.5 && rating <= 4.5)
+                return 4;
+            else if (rating > 4.5)
+                return 5;
+        }
+        
+        // Init. on document load.
+        $(function() {
+            // Set links to Galaxy screencasts to open in overlay.
+            $(this).find("a[href^='http://screencast.g2.bx.psu.edu/']").each( function() {
+                $(this).click( function() {
+                    var href = $(this).attr('href');
+                    show_in_overlay(
+                        {
+                            url: href,        
+                            width: 640,
+                            height: 480,
+                            scroll: 'no'  
+                        }
+                    );
+                    return false;
+                });
+            });
+            
+            // Init history boxes.
+            init_history_items( $("div.historyItemWrapper"), false, "nochanges" );
+            
+            // Init user item rating.
+            $('.user_rating_star').rating({
+                callback: function(rating, link) {
+                    $.ajax({
+                        type: "GET",
+                        url: "/page/rate_async",
+                        data: { id : "33b2b5739e9175b1", rating : rating },
+                        dataType: 'json',
+                        error: function() { alert( "Rating submission failed" ); },
+                        success: function( community_data ) {
+                            $('#rating_feedback').show();
+                            $('#num_ratings').text(Math.round(community_data[1]*10)/10);
+                            $('#ave_rating').text(community_data[0]);
+                            $('.community_rating_star').rating('readOnly', false);
+                            $('.community_rating_star').rating('select', map_rating_to_num_stars(community_data[0])-1);
+                            $('.community_rating_star').rating('readOnly', true);
+                        }
+                    });
+                },
+                required: true // Hide cancel button.
+            });
+        });    
+    </script>
+
+    <script type="text/javascript">
+    
+        $(function() {
+
+            // Setup embedded content:
+            //  (a) toggles for showing/hiding embedded content;
+            //  (b) ...
+            $('.embedded-item').each( function() {
+                var container = $(this);
+            
+                // Show embedded item.
+                var show_embedded_item = function() {
+                    var ajax_url = container.find("input[type=hidden]").val();
+                    // Only get item content if it's not already there.
+                    var item_content = $.trim(container.find(".item-content").text());
+                    if (!item_content) {
+                        $.ajax({
+                            type: "GET",
+                            url: ajax_url,
+                            error: function() { alert("Getting item content failed."); },
+                            success: function( item_content ) {
+                                container.find(".summary-content").hide("fast");
+                                container.find(".item-content").html(item_content);
+                                container.find(".expanded-content").show("fast");
+                                container.find(".toggle-expand").hide();
+                                container.find(".toggle").show();
+
+                                // Init needed for history items.
+                                init_history_items( container.find("div.historyItemWrapper"), "noinit", "nochanges" ); 
+                                container.find( "div.historyItemBody:visible" ).each( function() {
+                                    if ( $.browser.mozilla ) {
+                                        $(this).find( "pre.peek" ).css( "overflow", "hidden" );
+                                    }
+                                    $(this).hide();
+                                });
+                                make_popup_menus();
+                            }
+                        });
+                    } else {
+                        container.find(".summary-content").hide("fast");
+                        container.find(".expanded-content").show("fast");
+                        container.find(".toggle-expand").hide();
+                        container.find(".toggle").show();
+                    }
+                };
+            
+                // Hide embedded item.
+                var hide_embedded_item = function() {
+                    container.find(".expanded-content").hide("fast");
+                    container.find(".summary-content").show("fast");
+                    container.find(".toggle").hide();
+                    container.find(".toggle-expand").show();
+                };
+            
+                // Setup toggle expand.
+                var toggle_expand = $(this).find('.toggle-expand');
+                toggle_expand.click( function() {
+                    show_embedded_item();
+                    return false;
+                });
+            
+                // Setup toggle contract.
+                var toggle_contract = $(this).find('.toggle');
+                toggle_contract.click( function() {
+                    hide_embedded_item();
+                    return false;
+                });
+            
+                // Setup toggle embed.
+                var toggle_embed = $(this).find('.toggle-embed');
+                toggle_embed.click( function() {
+                    if (container.find(".expanded-content").is(":visible")) {
+                        hide_embedded_item();
+                    } else {
+                        show_embedded_item();
+                    }
+                    return false;
+                });
+            });
+        });
+    
+    </script>
+
+    </head>
+    
+    <body scroll="no" class="">
+        <div id="everything" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; min-width: 600px;">
+            <div id="background"></div>
+            <div id="masthead" class="navbar navbar-fixed-top">
+                <div class="masthead-inner navbar-inner">
+                    
+
+    <div style="position: relative; right: -50%; float: left;">
+    <div style="display: block; position: relative; right: 50%;">
+
+    <ul class="nav" border="0" cellspacing="0">
+    
+    
+
+    
+    
+        
+        <li class="" style="">
+                <a class="" data-toggle="dropdown" target="_parent" href="https://main.g2.bx.psu.edu/root">Analyze Data</a>
+        </li>
+    
+    
+    
+    
+        
+        <li class="" style="">
+                <a class="" data-toggle="dropdown" target="_parent" href="https://main.g2.bx.psu.edu/workflow">Workflow</a>
+        </li>
+    
+    
+    
+    
+        
+        <li class=" active dropdown" style="">
+                <a class=" dropdown-toggle" data-toggle="dropdown" target="_parent" href="https://main.g2.bx.psu.edu/library">Shared Data<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                            <li>
+                                
+                                <a href="https://main.g2.bx.psu.edu/library">Data Libraries</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                
+                                <a href="https://main.g2.bx.psu.edu/history/list_published">Published Histories</a>
+                            </li>
+                            <li>
+                                
+                                <a href="https://main.g2.bx.psu.edu/workflow/list_published">Published Workflows</a>
+                            </li>
+                            <li>
+                                
+                                <a href="https://main.g2.bx.psu.edu/visualization/list_published">Published Visualizations</a>
+                            </li>
+                            <li>
+                                
+                                <a href="https://main.g2.bx.psu.edu/page/list_published">Published Pages</a>
+                            </li>
+                </ul>
+        </li>
+    
+    
+    
+    
+        
+        <li class=" dropdown" style="display: none;">
+                <a class=" dropdown-toggle" data-toggle="dropdown">Lab<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                            <li>
+                                
+                                <a href="https://main.g2.bx.psu.edu/requests">Sequencing Requests</a>
+                            </li>
+                            <li>
+                                
+                                <a href="https://main.g2.bx.psu.edu/requests/find_samples_index">Find Samples</a>
+                            </li>
+                            <li>
+                                
+                                <a target="galaxy_main" href="http://main.g2.bx.psu.edu/u/rkchak/p/sts">Help</a>
+                            </li>
+                </ul>
+        </li>
+    
+
+    
+    
+        
+        <li class=" dropdown" style="">
+                <a class=" dropdown-toggle" data-toggle="dropdown" target="_parent" href="https://main.g2.bx.psu.edu/visualization/list">Visualization<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                            <li>
+                                
+                                <a href="https://main.g2.bx.psu.edu/tracks">New Visualization</a>
+                            </li>
+                            <li>
+                                
+                                <a href="https://main.g2.bx.psu.edu/visualization/list">Saved Visualizations</a>
+                            </li>
+                </ul>
+        </li>
+    
+
+        
+    
+        
+        <li class=" dropdown" style="">
+                <a class=" dropdown-toggle" data-toggle="dropdown" target="_parent" href="https://main.g2.bx.psu.edu/cloudlaunch">Cloud<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                            <li>
+                                
+                                <a href="https://main.g2.bx.psu.edu/cloudlaunch">New Cloud Cluster</a>
+                            </li>
+                </ul>
+        </li>
+    
+
+    
+    
+        
+        <li class=" admin-only" style="display: none;">
+                <a class="" data-toggle="dropdown" target="_parent" href="https://main.g2.bx.psu.edu/admin">Admin</a>
+        </li>
+    
+    
+    
+    
+        
+        <li class=" dropdown" style="">
+                <a class=" dropdown-toggle" data-toggle="dropdown">Help<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                            <li>
+                                
+                                <a target="galaxy_main" href="http://slyfox.bx.psu.edu:8080/">Galaxy Q&amp;A</a>
+                            </li>
+                            <li>
+                                
+                                <a target="_blank" href="http://wiki.g2.bx.psu.edu/Support">Support</a>
+                            </li>
+                            <li>
+                                
+                                <a target="_blank" href="http://wiki.g2.bx.psu.edu/">Galaxy Wiki</a>
+                            </li>
+                            <li>
+                                
+                                <a target="_blank" href="http://galaxycast.org/">Video tutorials (screencasts)</a>
+                            </li>
+                            <li>
+                                
+                                <a target="_blank" href="http://wiki.g2.bx.psu.edu/Citing%20Galaxy">How to Cite Galaxy</a>
+                            </li>
+                            <li>
+                                
+                                <a target="_blank" href="https://main.g2.bx.psu.edu/static/terms.html">Terms and Conditions</a>
+                            </li>
+                </ul>
+        </li>
+    
+    
+    
+    
+        
+        <li class=" dropdown" style="">
+                <a class=" dropdown-toggle" data-toggle="dropdown">User<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                            <li>
+                                
+                                <a target="galaxy_main" href="https://main.g2.bx.psu.edu/user/login">Login</a>
+                            </li>
+                            <li>
+                                
+                                <a target="galaxy_main" href="https://main.g2.bx.psu.edu/user/create?cntrller=user&amp;webapp=galaxy">Register</a>
+                            </li>
+                </ul>
+        </li>
+    
+    
+        
+        <li class=" dropdown" style="display: none;">
+                <a class=" dropdown-toggle" data-toggle="dropdown">User<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                            <li>
+                                <a>Logged in as <span id="user-email"></span></a>
+                            </li>
+                            <li>
+                                
+                                <a target="galaxy_main" href="https://main.g2.bx.psu.edu/user?cntrller=user&amp;webapp=galaxy">Preferences</a>
+                            </li>
+                            <li>
+                                
+                                <a target="galaxy_main" href="https://main.g2.bx.psu.edu/user/dbkeys">Custom Builds</a>
+                            </li>
+                            <li>
+                                
+                                <a target="_top" href="https://main.g2.bx.psu.edu/user/logout?webapp=galaxy">Logout</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                
+                                <a target="galaxy_main" href="https://main.g2.bx.psu.edu/history/list">Saved Histories</a>
+                            </li>
+                            <li>
+                                
+                                <a target="galaxy_main" href="https://main.g2.bx.psu.edu/dataset/list">Saved Datasets</a>
+                            </li>
+                            <li>
+                                
+                                <a target="_top" href="https://main.g2.bx.psu.edu/page/list">Saved Pages</a>
+                            </li>
+                            <li>
+                                
+                                <a target="galaxy_main" href="https://main.g2.bx.psu.edu/user/api_keys?cntrller=user&amp;webapp=galaxy">API Keys</a>
+                            </li>
+                </ul>
+        </li>
+    
+    
+    </ul>
+
+    </div>
+    </div>
+    
+    <div class="title">
+        <a href="https://main.g2.bx.psu.edu/">
+        <img src="galaxy-rna-seq-analysis-exercise-Dateien/galaxyIcon_noText.png" border="0">
+        Galaxy
+        </a>
+    </div>
+
+    
+
+    <div class="quota-meter-container">
+        <div id="quota-meter" class="quota-meter">
+            <div id="quota-meter-bar" class="quota-meter-bar" style="width: 0px;"></div>
+                <div id="quota-meter-text" class="quota-meter-text">Using 0 bytes</div>
+        </div>
+    </div>
+    
+
+                </div>
+            </div>
+            <div id="messagebox" class="panel--message">
+            </div>
+            
+    
+    
+
+    
+
+    <div id="overlay" style="display: none;">
+
+        <div id="overlay-background" class="modal-backdrop fade "></div>
+
+        <div id="dialog-box" class="modal dialog-box" border="0" style="display: none;">
+                <div class="modal-header">
+                    <span><h3 class="title"></h3></span>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <div class="buttons" style="float: right;"></div>
+                    <div class="extra_buttons" style=""></div>
+                    <div style="clear: both;"></div>
+                </div>
+        </div>
+    
+    </div>
+
+            <div id="center">
+                
+	
+    
+    
+    
+	
+
+    
+    <div class="unified-panel-header" unselectable="on">
+		<div class="unified-panel-header-inner">
+	                <a href="https://main.g2.bx.psu.edu/page/list_published">Published Pages</a> | 
+	                <a href="https://main.g2.bx.psu.edu/page/list_published?f-username=jeremy">jeremy</a>
+			| 
+    Galaxy RNA-seq Analysis Exercise
+			
+            <div style="float: right">
+                
+
+            </div>
+	    </div>
+    </div>
+    
+    <div class="unified-panel-body">
+        <div style="overflow: auto; height: 100%;">        
+            <div class="page-body">
+                <div>
+                    
+
+                </div>
+                
+                
+    <h1>RNA-seq Analysis Exercise</h1><p>Galaxy provides the tools 
+necessary to creating and executing a complete RNA-seq analysis 
+pipeline. This exercise introduces these tools and guides you through a 
+simple pipeline using some example datasets. Familiarity with Galaxy and
+ the general concepts of RNA-seq analysis are useful for understanding 
+this exercise.&nbsp;This exercise should take 1-2 hours. You can check 
+your work by looking at the history and visualization at the bottom of 
+this page, which contain the datasets for the completed exercise.</p><h2>Input Datasets</h2><p>Below are small samples of datasets from <a href="http://www.ensembl.info/blog/2011/05/24/human-bodymap-2-0-data-from-illumina/" title="BodyMap 2.0">the Illumina BodyMap 2.0 project</a>;
+ specifically, the datasets are paired-end 50bp reads from adrenal and 
+brain tissues. The sampled reads map mostly to a 500Kb region of 
+chromosome 19, positions 3-3.5 million (chr19:3000000:3500000).</p><p>RNA-seq data from adrenal tissue:</p>
+
+<div class="embedded-item display 
+dataset">
+    <div class="title">
+        
+    
+
+    
+    
+    
+    <div style="float: left">
+        <a data-original-title="Show dataset content" class="display_in_embed icon-button toggle-expand tooltip" item_id="d44d2a324474d1aa" item_class="$item.__class__.__name__" href="https://main.g2.bx.psu.edu/u/jeremy/d/d44d2a324474d1aa"></a>
+        <a data-original-title="Hide dataset content" class="toggle icon-button tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/d44d2a324474d1aa"></a>
+    </div>
+    <div style="float: right;">
+        
+    <a data-original-title="Save dataset" href="https://main.g2.bx.psu.edu/datasets/d44d2a324474d1aa/display?to_ext=fastqsanger" class="icon-button disk tooltip"></a>
+    <a data-original-title="Import dataset" href="https://main.g2.bx.psu.edu/datasets/d44d2a324474d1aa/imp" class="icon-button import tooltip"></a>
+    <a data-original-title="Go to dataset" class="icon-button go-to-full-screen tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/d44d2a324474d1aa"></a>
+    
+
+    </div>
+    <h4><a data-original-title="Show or hide dataset content" class="toggle-embed tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/d44d2a324474d1aa">Galaxy 
+Dataset | 
+    adrenal_1.fastq</a></h4>
+        <div class="annotation">Forward RNA-seq reads from BodyMap 2.0 project, adrenal tissue, mapping to chr19:3000000:3500000</div>
+    
+    <input name="ajax-item-content-url" value="/dataset/get_item_content_async?id=d44d2a324474d1aa" type="hidden">
+
+    </div>
+    <div class="summary-content">
+        
+
+    </div>
+    <div class="expanded-content">
+        <hr>
+        <div class="item-content"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<p>and</p>
+
+<div class="embedded-item display 
+dataset">
+    <div class="title">
+        
+    
+
+    
+    
+    
+    <div style="float: left">
+        <a data-original-title="Show dataset content" class="display_in_embed icon-button toggle-expand tooltip" item_id="d08360a1c0ffdc62" item_class="$item.__class__.__name__" href="https://main.g2.bx.psu.edu/u/jeremy/d/d08360a1c0ffdc62"></a>
+        <a data-original-title="Hide dataset content" class="toggle icon-button tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/d08360a1c0ffdc62"></a>
+    </div>
+    <div style="float: right;">
+        
+    <a data-original-title="Save dataset" href="https://main.g2.bx.psu.edu/datasets/d08360a1c0ffdc62/display?to_ext=fastqsanger" class="icon-button disk tooltip"></a>
+    <a data-original-title="Import dataset" href="https://main.g2.bx.psu.edu/datasets/d08360a1c0ffdc62/imp" class="icon-button import tooltip"></a>
+    <a data-original-title="Go to dataset" class="icon-button go-to-full-screen tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/d08360a1c0ffdc62"></a>
+    
+
+    </div>
+    <h4><a data-original-title="Show or hide dataset content" class="toggle-embed tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/d08360a1c0ffdc62">Galaxy 
+Dataset | 
+    adrenal_2.fastq</a></h4>
+        <div class="annotation">Reverse
+ RNA-seq reads from BodyMap 2.0 project, adrenal tissue, mapping to chr19:3000000:3500000</div>
+    
+    <input name="ajax-item-content-url" value="/dataset/get_item_content_async?id=d08360a1c0ffdc62" type="hidden">
+
+    </div>
+    <div class="summary-content">
+        
+
+    </div>
+    <div class="expanded-content">
+        <hr>
+        <div class="item-content"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<p>RNA-seq data from brain tissue:</p>
+
+<div class="embedded-item display 
+dataset">
+    <div class="title">
+        
+    
+
+    
+    
+    
+    <div style="float: left">
+        <a data-original-title="Show dataset content" class="display_in_embed icon-button toggle-expand tooltip" item_id="f187acb8015d6c7f" item_class="$item.__class__.__name__" href="https://main.g2.bx.psu.edu/u/jeremy/d/f187acb8015d6c7f"></a>
+        <a data-original-title="Hide dataset content" class="toggle icon-button tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/f187acb8015d6c7f"></a>
+    </div>
+    <div style="float: right;">
+        
+    <a data-original-title="Save dataset" href="https://main.g2.bx.psu.edu/datasets/f187acb8015d6c7f/display?to_ext=fastqsanger" class="icon-button disk tooltip"></a>
+    <a data-original-title="Import dataset" href="https://main.g2.bx.psu.edu/datasets/f187acb8015d6c7f/imp" class="icon-button import tooltip"></a>
+    <a data-original-title="Go to dataset" class="icon-button go-to-full-screen tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/f187acb8015d6c7f"></a>
+    
+
+    </div>
+    <h4><a data-original-title="Show or hide dataset content" class="toggle-embed tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/f187acb8015d6c7f">Galaxy 
+Dataset | 
+    brain_1.fastq</a></h4>
+        <div class="annotation">Forward RNA-seq reads from BodyMap 2.0 project, brain
+ tissue, mapping to chr19:3000000:3500000</div>
+    
+    <input name="ajax-item-content-url" value="/dataset/get_item_content_async?id=f187acb8015d6c7f" type="hidden">
+
+    </div>
+    <div class="summary-content">
+        
+
+    </div>
+    <div class="expanded-content">
+        <hr>
+        <div class="item-content"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<p>and</p>
+
+<div class="embedded-item display 
+dataset">
+    <div class="title">
+        
+    
+
+    
+    
+    
+    <div style="float: left">
+        <a data-original-title="Show dataset content" class="display_in_embed icon-button toggle-expand tooltip" item_id="08c45996966d7ded" item_class="$item.__class__.__name__" href="https://main.g2.bx.psu.edu/u/jeremy/d/08c45996966d7ded"></a>
+        <a data-original-title="Hide dataset content" class="toggle icon-button tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/08c45996966d7ded"></a>
+    </div>
+    <div style="float: right;">
+        
+    <a data-original-title="Save dataset" href="https://main.g2.bx.psu.edu/datasets/08c45996966d7ded/display?to_ext=fastqsanger" class="icon-button disk tooltip"></a>
+    <a data-original-title="Import dataset" href="https://main.g2.bx.psu.edu/datasets/08c45996966d7ded/imp" class="icon-button import tooltip"></a>
+    <a data-original-title="Go to dataset" class="icon-button go-to-full-screen tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/08c45996966d7ded"></a>
+    
+
+    </div>
+    <h4><a data-original-title="Show or hide dataset content" class="toggle-embed tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/08c45996966d7ded">Galaxy 
+Dataset | 
+    brain_2.fastq</a></h4>
+        <div class="annotation">Reverse RNA-seq reads from BodyMap 2.0 project, brain
+ tissue, mapping to chr19:3000000:3500000</div>
+    
+    <input name="ajax-item-content-url" value="/dataset/get_item_content_async?id=08c45996966d7ded" type="hidden">
+
+    </div>
+    <div class="summary-content">
+        
+
+    </div>
+    <div class="expanded-content">
+        <hr>
+        <div class="item-content"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<p>You'll also need one additional dataset: a gene annotation in GTF format. Here is <a href="http://tophat.cbcb.umd.edu/igenomes.html" title="iGenomes">iGenomes</a> gene annotation for the UCSC hg19 build:</p>
+
+<div class="embedded-item display 
+dataset">
+    <div class="title">
+        
+    
+
+    
+    
+    
+    <div style="float: left">
+        <a data-original-title="Show dataset content" class="display_in_embed icon-button toggle-expand tooltip" item_id="f09f4a0bd8a19fd6" item_class="$item.__class__.__name__" href="https://main.g2.bx.psu.edu/u/jeremy/d/f09f4a0bd8a19fd6"></a>
+        <a data-original-title="Hide dataset content" class="toggle icon-button tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/f09f4a0bd8a19fd6"></a>
+    </div>
+    <div style="float: right;">
+        
+    <a data-original-title="Save dataset" href="https://main.g2.bx.psu.edu/datasets/f09f4a0bd8a19fd6/display?to_ext=gtf" class="icon-button disk tooltip"></a>
+    <a data-original-title="Import dataset" href="https://main.g2.bx.psu.edu/datasets/f09f4a0bd8a19fd6/imp" class="icon-button import tooltip"></a>
+    <a data-original-title="Go to dataset" class="icon-button go-to-full-screen tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/f09f4a0bd8a19fd6"></a>
+    
+
+    </div>
+    <h4><a data-original-title="Show or hide dataset content" class="toggle-embed tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/d/f09f4a0bd8a19fd6">Galaxy 
+Dataset | 
+     iGenomes UCSC hg19, chr19 gene annotation</a></h4>
+        <div class="annotation">iGenomes gene annotation for chr19 of hg19 build</div>
+    
+    <input name="ajax-item-content-url" value="/dataset/get_item_content_async?id=f09f4a0bd8a19fd6" type="hidden">
+
+    </div>
+    <div class="summary-content">
+        
+
+    </div>
+    <div class="expanded-content">
+        <hr>
+        <div class="item-content"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<p>Here's a history containing all five datasets; click on the green 
+plus to import (copy) it into your workspace. Use this history to 
+complete the exercise.</p>
+
+<div class="embedded-item display 
+history">
+    <div class="title">
+        
+    
+
+    
+    
+    
+    <div style="float: left">
+        <a data-original-title="Show history content" class="display_in_embed icon-button toggle-expand tooltip" item_id="d3b13a99ddca82ea" item_class="$item.__class__.__name__" href="https://main.g2.bx.psu.edu/u/jeremy/h/rna-seq-exercise-inputs"></a>
+        <a data-original-title="Hide history content" class="toggle icon-button tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/h/rna-seq-exercise-inputs"></a>
+    </div>
+    <div style="float: right;">
+        
+    
+
+    
+    
+    
+    
+    <a data-original-title="Import history" href="https://main.g2.bx.psu.edu/history/imp?id=d3b13a99ddca82ea" class="icon-button import tooltip"></a>
+    <a data-original-title="Go to history" class="icon-button go-to-full-screen tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/h/rna-seq-exercise-inputs"></a>
+
+    </div>
+    <h4><a data-original-title="Show or hide history content" class="toggle-embed tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/h/rna-seq-exercise-inputs">Galaxy 
+History | 
+    RNA-seq exercise datasets</a></h4>
+        <div class="annotation">Datasets needed for Galaxy RNA-seq exercise</div>
+    
+    <input name="ajax-item-content-url" value="/history/get_item_content_async?id=d3b13a99ddca82ea" type="hidden">
+
+    </div>
+    <div class="summary-content">
+        
+
+
+    </div>
+    <div class="expanded-content">
+        <hr>
+        <div class="item-content"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<h2>Understanding and QCing the reads</h2><p>You should understand the reads a bit before analyzing them. Quality control (QC) may be needed as well.</p><p><strong>Step 1</strong>: Run a quality control check on your data using the&nbsp;[<em>NGS: QC and manipulation &gt;</em>]&nbsp;<strong>FASTQC</strong>&nbsp;tool.&nbsp;Often,
+ it is useful to trim reads to remove&nbsp;base positions that have a 
+low median (or bottom quartile) score. For this exercise, assume a 
+median quality score of below 20 to be unusable. Given this criterion, 
+is trimming needed for the datasets? If so, which base pairs should be 
+trimmed?</p><p><strong>Step 2</strong>: If necessary, trim the reads based on your answers to step A using&nbsp;[<em>NGS: QC and manipulation &gt;</em>]&nbsp;<strong>FASTQ Trimmer</strong></p><h2>Map processed reads</h2><p>The
+ next step is mapping the processed reads to the genome. The major 
+challenge when mapping RNA-seq reads is that the reads, because they 
+come from RNA, often cross splice junction boundaries; splice junctions 
+are not present in a genome's sequence, and hence typical NGS mappers 
+such as Bowtie and BWA are not ideal without modifying the genome 
+sequence. Instead, it is better to use a mapper such as <a href="http://tophat.cbcb.umd.edu/" title="Tophat">Tophat</a> that is designed to map RNA-seq reads.</p><p><strong>Step 1</strong>: Use the&nbsp;[<em>NGS: RNA Analysis &gt;</em>]&nbsp;<strong>Tophat</strong>&nbsp;tool
+ to map RNA-seq reads to the hg19 Canonical Female build. Because the 
+reads are paired, you'll need to set mean inner distance between pairs; 
+this is the average distance in basepairs between reads, not the total 
+insert/fragment size. Use a mean inner distance of 110 for BodyMap data.</p><p><a href="http://tophat.cbcb.umd.edu/manual.html" title="Tophat documentation">Look at the documentation to understand the datasets that Tophat produces</a>.&nbsp;How
+ many splice junctions did Tophat find? Are most splice junctions 
+supported by (i.e. spanned by) more or less than 10 reads? (Hint: the 
+score column in the splice junctions dataset is useful for answering 
+this question.)</p><p><strong>Step 2</strong>:&nbsp;To view Tophat's output, create a simple Galaxy visualization by selecting&nbsp;<em>Visualization &gt; </em><strong>New Track Browser&nbsp;</strong>from
+ the main Galaxy menu at the top. Create the visualization using the 
+hg19 build and add datasets to your visualization by clicking on the <em>Add Datasets to Visualization </em>button. Add (a) Tophat's <em>accepted hits</em> BAM datasets, which are the mapped reads; (b) Tophat's <em>splice junctions</em> datasets, which denote the junctions found by mapping the reads; and (c) the iGenomes gene annotation.</p><p>Navigate
+ to chr19 using the select box at the top of visualization and look at 
+the data. Zoom in&nbsp;to view the data at greater detail. You can zoom 
+in by (a)&nbsp;double-clicking anywhere on the visualization to zoom in 
+on that area or (b) dragging on the base number area at the top of the 
+visualization to create a zoom area; or (c) clicking on the location bar
+ and entering the region with data, chr19:3000000:3500000</p><p>You 
+should be able to see:&nbsp;(a) the reads mapped by Tophat, including 
+reads mapped across introns (there are a lot of reads!); (b) the splice 
+junctions produced by Tophat; and (c) how Tophat's reads and junction 
+correspond to the annotated genes. Find a gene locus where there are 
+mapped reads, and then find an example of a splice junction between 2 
+known exons, and find an example where a splice junction might be found 
+but is not.</p><h2>Assemble and analyze transcripts</h2><p>After mapping
+ the reads, the next step is to assemble the reads into complete 
+transcripts that can be analyzed for differential expression and 
+phenomena such as splicing events and transcriptional start sites.</p><p><strong>Step 1</strong>: Run&nbsp;[<em>NGS: RNA Analysis &gt;</em>]&nbsp;<strong>Cufflinks</strong>&nbsp;on each BAM dataset produced by Tophat using de novo assembly; this will assemble the reads into transcripts.&nbsp;<a href="http://cufflinks.cbcb.umd.edu/manual.html#cufflinks" title="Cufflinks documentation">Here is the documentation for the datasets that Cufflinks produces.</a>&nbsp;Look at the assembled transcripts dataset and find some transcripts that have multiple exons.</p><p><strong>Step 2</strong>:
+ Add the Cufflinks' assembled transcripts datasets&nbsp;to&nbsp;the 
+visualization you created earlier in order to view the transcripts 
+alongside the mapped reads, junctions, and reference genes.&nbsp;Can you
+ find examples where Cufflinks assembled a complete or almost complete 
+transcript?</p><p><strong>Step 3a</strong>: Run&nbsp;[<em>NGS: RNA Analysis &gt;</em>]&nbsp;<strong>Cuffmerge&nbsp;</strong>on
+ two datasets of assembled transcripts from Step 1 and use the UCSC 
+genes annotation as the reference annotation.&nbsp;Cuffmerge produces a 
+merged transcripts dataset that includes all transcript in both 
+datasets. The merged set of transcripts are&nbsp;needed in subsequent 
+steps.&nbsp;You can find information about this dataset by <a href="http://cufflinks.cbcb.umd.edu/manual.html#cuffmerge" title="Cuffmerge documentation">reading the Cuffmerge documentation</a>.</p><p><strong>Step 3b</strong>: Run&nbsp;[<em>NGS: RNA Analysis &gt;</em>]&nbsp;<strong>Cuffdiff </strong>on
+ (a) the merged transcripts produced by Cuffmerge and (b) 
+Tophat's&nbsp;accepted hits datasets for each dataset to perform 
+differential expression analyses on the two samples. Cuffdiff produces 
+quite a few output datasets; <a href="http://cufflinks.cbcb.umd.edu/manual.html#cuffdiff" title="Cuffdiff documentation">you'll want to browse the Cuffdiff documentation to get a sense of what they do</a>.&nbsp;</p><p>Look
+ at the transcript FPKM tracking dataset at the top of your history. 
+Find an entry for a novel isoform--class code 'j'--and an entry for an 
+isoform that matches a reference isoform--class code '='. What is the 
+nearest gene and transcription start site for each entry and what is 
+each transcript's FPKM value?&nbsp;</p><p>Look at transcript 
+differential expression testing dataset (second from the top of your 
+history) and find two transcripts that are differentially expressed. 
+What are the p and q values for each differentially expressed 
+transcript?&nbsp;</p><h2>On your own</h2><p>Identify all novel splice junctions and transcript isoforms in each set of transcripts.</p><p>Find some loci that exhibit differences in TSS and splicing.</p><p>Create
+ a workflow from your history (in history's options menu, select 
+'Extract Workflow'), import the full Adrenal and Brain datasets from the
+ BodyMap data library, and run the workflow on the full datasets. Here 
+is what the workflow should look like:</p><h2>More Resources</h2><p>A history with the exercise completed:</p>
+
+<div class="embedded-item display 
+history">
+    <div class="title">
+        
+    
+
+    
+    
+    
+    <div style="float: left">
+        <a data-original-title="Show history content" class="display_in_embed icon-button toggle-expand tooltip" item_id="0cdc80149b325a03" item_class="$item.__class__.__name__" href="https://main.g2.bx.psu.edu/u/jeremy/h/rna-seq-exercise-completed"></a>
+        <a data-original-title="Hide history content" class="toggle icon-button tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/h/rna-seq-exercise-completed"></a>
+    </div>
+    <div style="float: right;">
+        
+    
+
+    
+    
+    
+    
+    <a data-original-title="Import history" href="https://main.g2.bx.psu.edu/history/imp?id=0cdc80149b325a03" class="icon-button import tooltip"></a>
+    <a data-original-title="Go to history" class="icon-button go-to-full-screen tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/h/rna-seq-exercise-completed"></a>
+
+    </div>
+    <h4><a data-original-title="Show or hide history content" class="toggle-embed tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/h/rna-seq-exercise-completed">Galaxy 
+History | 
+    RNA-seq exercise completed</a></h4>
+        <div class="annotation">Datasets needed for Galaxy RNA-seq exercise</div>
+    
+    <input name="ajax-item-content-url" value="/history/get_item_content_async?id=0cdc80149b325a03" type="hidden">
+
+    </div>
+    <div class="summary-content">
+        
+
+
+    </div>
+    <div class="expanded-content">
+        <hr>
+        <div class="item-content"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<p>and a visualization of the datasets:</p>
+
+<div class="embedded-item display 
+visualization">
+    <div class="title">
+        
+    
+
+    
+    
+    
+    <div style="float: left">
+        <a data-original-title="Show visualization content" class="display_in_embed icon-button toggle-expand tooltip" item_id="1b1df0e18b60fd93" item_class="$item.__class__.__name__" href="https://main.g2.bx.psu.edu/u/jeremy/v/rna-seq-exercise-visualization"></a>
+        <a data-original-title="Hide visualization content" class="toggle icon-button tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/v/rna-seq-exercise-visualization"></a>
+    </div>
+    <div style="float: right;">
+        
+    
+
+    
+    
+    
+    
+    <a data-original-title="Import visualization" href="https://main.g2.bx.psu.edu/visualization/imp?id=1b1df0e18b60fd93" class="icon-button import tooltip"></a>
+    <a data-original-title="Go to visualization" class="icon-button go-to-full-screen tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/v/rna-seq-exercise-visualization"></a>
+
+    </div>
+    <h4><a data-original-title="Show or hide visualization content" class="toggle-embed tooltip" href="https://main.g2.bx.psu.edu/u/jeremy/v/rna-seq-exercise-visualization">Galaxy 
+Visualization | 
+    RNA-seq exercise visualization</a></h4>
+    
+    <input name="ajax-item-content-url" value="/visualization/get_item_content_async?id=1b1df0e18b60fd93" type="hidden">
+
+    </div>
+    <div class="summary-content">
+        
+
+    </div>
+    <div class="expanded-content">
+        <hr>
+        <div class="item-content"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<p>Full RNA-seq BodyMap datasets are available in the data library 'Illumina BodyMap 2.0' and available for use. Use the&nbsp;<strong>Shared Data</strong>&nbsp;--&gt;&nbsp;<strong>Data Libraries</strong>&nbsp;link in the header above to find this library.</p><p><a href="http://tophat.cbcb.umd.edu/manual.html" title="Tophat manual">Tophat documentation</a></p><p><a href="http://cufflinks.cbcb.umd.edu/manual.html" title="Cuff* tools manual">Cufflinks/compare/merge/diff documentation</a></p><p><a href="http://www.nature.com/nprot/journal/v7/n3/full/nprot.2012.016.html" title="RNA-seq protocol paper">Nature Protocols paper describing RNA-seq analysis using Tophat-Cuff* pipeline</a></p><p><a href="http://tophat.cbcb.umd.edu/igenomes.html" title="iGenomes data resource">iGenomes data</a>&nbsp;</p>
+
+            </div>
+        
+
+        </div>
+    </div>
+
+
+            </div>
+                <div id="right">
+                    
+
+    
+    
+	
+
+
+    <div class="unified-panel-header" unselectable="on">
+        <div class="unified-panel-header-inner">
+            About this 
+Page
+        </div>
+    </div>
+    
+    <div class="unified-panel-body">
+        <div style="overflow: auto; height: 100%;">
+            <div style="padding: 10px;">
+            
+                <div style="float: right;"><img src="galaxy-rna-seq-analysis-exercise-Dateien/98876b4025ea8e47dc91b018b3ccb36b.jpeg"></div>
+            
+                <h4>Author</h4>
+                
+                <p>jeremy</p>
+                
+                <h4>Related Pages</h4>
+                <p>
+                    <a href="https://main.g2.bx.psu.edu/page/list_published">All published pages</a><br>
+                    <a href="https://main.g2.bx.psu.edu/page/list_published?f-username=jeremy">Published pages by jeremy</a>
+                
+                </p><h4>Rating</h4>
+
+                
+                <div style="padding-bottom: 0.75em; float: left">
+                    Community<br>
+                    <span style="font-size:80%">
+                        (<span id="num_ratings">55</span> ratings, 
+                         <span id="ave_rating">4.9</span> average)
+                    <span>
+                </span></span></div>
+                <div style="float: right">
+                    <span class="star-rating-control"><div style="display: none;" class="rating-cancel"><a title="Cancel Rating"></a></div><div class="star-rating rater-0 community_rating_star star star-rating-applied star-rating-readonly star-rating-on"><a title="1">1</a></div><div class="star-rating rater-0 community_rating_star star star-rating-applied star-rating-readonly star-rating-on"><a title="2">2</a></div><div class="star-rating rater-0 community_rating_star star star-rating-applied star-rating-readonly star-rating-on"><a title="3">3</a></div><div class="star-rating rater-0 community_rating_star star star-rating-applied star-rating-readonly star-rating-on"><a title="4">4</a></div><div class="star-rating rater-0 community_rating_star star star-rating-applied star-rating-readonly star-rating-on"><a title="5">5</a></div></span><input style="display: none;" name="star1" class="community_rating_star star star-rating-applied star-rating-readonly" disabled="disabled" value="1" type="radio">
+                    <input style="display: none;" name="star1" class="community_rating_star star star-rating-applied star-rating-readonly" disabled="disabled" value="2" type="radio">
+                    <input style="display: none;" name="star1" class="community_rating_star star star-rating-applied star-rating-readonly" disabled="disabled" value="3" type="radio">
+                    <input style="display: none;" name="star1" class="community_rating_star star star-rating-applied star-rating-readonly" disabled="disabled" value="4" type="radio">
+                    <input style="display: none;" name="star1" class="community_rating_star star star-rating-applied star-rating-readonly" disabled="disabled" value="5" checked="checked" type="radio">
+                </div>
+                <div style="clear: both;"></div>
+                <div style="clear: both;"></div>
+                        
+                <h4>Tags</h4>
+                <p>
+                </p><div>
+                    Community:
+                    
+    
+    
+    
+    <div class="tag-element" id="8558410233689204736">
+        <div class="tag-area 
+        ">
+
+                
+                <span class="tag-button">
+                    <span class="tag-name">rna-seq</span>
+                </span>
+                
+                <span class="tag-button">
+                    <span class="tag-name">tutorial</span>
+                </span>
+                
+                <span class="tag-button">
+                    <span class="tag-name">rna</span>
+                </span>
+            
+        </div>
+    </div>
+
+    
+    <script type="text/javascript">
+        init_tag_click_function($('#8558410233689204736'), community_tag_click);
+    </script>
+
+                </div>
+            </div>    
+        </div>
+    </div>
+
+
+                    <div class="unified-panel-footer">
+                        
+                        <div class="drag"></div>
+                    </div>
+                </div>
+        </div>
+    
+    
+    <script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery_006.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery_007.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/jquery_002.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/galaxy.js" type="text/javascript"></script>
+<script src="galaxy-rna-seq-analysis-exercise-Dateien/galaxy_002.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        
+    ensure_dd_helper();
+        
+        
+            var rp = new Panel( { panel: $("#right"), center: $("#center"), drag: $("#right > .unified-panel-footer > .drag" ), toggle: $("#right > .unified-panel-footer > .panel-collapse" ), right: true } );
+            window.handle_minwidth_hint = function( x ) { rp.handle_minwidth_hint( x ) };
+            force_right_panel = function( x ) { rp.force_panel( x ) };
+    
+    </script><div style="background: none repeat scroll 0% 0% white; opacity: 0; z-index: 9000; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; display: none;" id="DD-helper"></div><div class="panel-collapse right"></div>
+    <!--[if !IE]-->
+    <script type="text/javascript">
+        var upload_form_error = function( msg ) {
+            if ( ! $("iframe#galaxy_main").contents().find("body").find("div[class='errormessage']").size() ) {
+                $("iframe#galaxy_main").contents().find("body").prepend( '<div class="errormessage" name="upload_error">' + msg + '</div><p/>' );
+            } else {
+                $("iframe#galaxy_main").contents().find("body").find("div[class='errormessage']").text( msg );
+            }
+        }
+        var uploads_in_progress = 0;
+        jQuery( function() {
+            $("iframe#galaxy_main").load( function() {
+                $(this).contents().find("form").each( function() { 
+                    if ( $(this).find("input[galaxy-ajax-upload]").length > 0 ){
+                        $(this).submit( function() {
+                            // Only bother using a hidden iframe if there's a file (e.g. big data) upload
+                            var file_upload = false;
+                            $(this).find("input[galaxy-ajax-upload]").each( function() {
+                                if ( $(this).val() != '' ) {
+                                    file_upload = true;
+                                }
+                            });
+                            if ( ! file_upload ) {
+                                return true;
+                            }
+                            // Make a synchronous request to create the datasets first
+                            var async_datasets;
+                            var upload_error = false;
+                            $.ajax( {
+                                async:      false,
+                                type:       "POST",
+                                url:        "/tool_runner/upload_async_create",
+                                data:       $(this).formSerialize(),
+                                dataType:   "json",
+                                success:    function(array_obj, status) {
+                                                if (array_obj.length > 0) {
+                                                    if (array_obj[0] == 'error') {
+                                                        upload_error = true;
+                                                        upload_form_error(array_obj[1]);
+                                                    } else {
+                                                        async_datasets = array_obj.join();
+                                                    }
+                                                } else {
+                                                    // ( gvk 1/22/10 ) FIXME: this block is never entered, so there may be a bug somewhere
+                                                    // I've done some debugging like checking to see if array_obj is undefined, but have not
+                                                    // tracked down the behavior that will result in this block being entered.  I believe the
+                                                    // intent was to have this block entered if the upload button is clicked on the upload
+                                                    // form but no file was selected.
+                                                    upload_error = true;
+                                                    upload_form_error( 'No data was entered in the upload form.  You may choose to upload a file, paste some data directly in the data box, or enter URL(s) to fetch data.' );
+                                                }
+                                            }
+                            } );
+                            if (upload_error == true) {
+                                return false;
+                            } else {
+                                $(this).find("input[name=async_datasets]").val( async_datasets );
+                                $(this).append("<input type='hidden' name='ajax_upload' value='true'>");
+                            }
+                            // iframe submit is required for nginx (otherwise the encoding is wrong)
+                            $(this).ajaxSubmit( { iframe:   true,
+                                                  complete: function (xhr, stat) {
+                                                                uploads_in_progress--;
+                                                                if (uploads_in_progress == 0) {
+                                                                    window.onbeforeunload = null;
+                                                                }
+                                                            }
+                                                 } );
+                            uploads_in_progress++;
+                            window.onbeforeunload = function() { return "Navigating away from the Galaxy analysis interface will interrupt the file upload(s) currently in progress.  Do you really want to do this?"; }
+                            if ( $(this).find("input[name='folder_id']").val() != undefined ) {
+                                var library_id = $(this).find("input[name='library_id']").val();
+                                var show_deleted = $(this).find("input[name='show_deleted']").val();
+                                if ( location.pathname.indexOf( 'admin' ) != -1 ) {
+                                    $("iframe#galaxy_main").attr("src","/library_common/browse_library?username=jeremy&slug=galaxy-rna-seq-analysis-exercise?cntrller=library_admin&id=" + library_id + "&created_ldda_ids=" + async_datasets + "&show_deleted=" + show_deleted);
+                                } else {
+                                    $("iframe#galaxy_main").attr("src","/library_common/browse_library?username=jeremy&slug=galaxy-rna-seq-analysis-exercise?cntrller=library&id=" + library_id + "&created_ldda_ids=" + async_datasets + "&show_deleted=" + show_deleted);
+                                }
+                            } else {
+                                $("iframe#galaxy_main").attr("src","/tool_runner/upload_async_message?username=jeremy&slug=galaxy-rna-seq-analysis-exercise");
+                            }
+                            return false;
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <!--[endif]-->
+
+
+</body></html>
