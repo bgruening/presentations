@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Basic Galaxy Introduction" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="Retreat, Workshop" />  
+        <title>Analyze more, process less: Galaxy in Freiburg</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="9">
+                <div class="title">
+                    <font size=60>Galaxy in Freiburg</font><br><em>Exom-Seq</em>
+                </div>
+                <!--<div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>-->
+                <div id="slide_details">
+                    <p>September 2014&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+            <!-- What is needed? -->
+            <div id="what_is_needed" class="step slide" data-x="9000" data-y="-4000" data-scale="5">
+                    <div class="slide-title">What do we offer?</div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    <em>reproducible</em> one click pipelines
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>easy access</em> to data, tools and protocols<br>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    easy <em>deployment</em> of tools and protocols
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>data</em> integration and managment<br>
+                                    <i>+SRA, Genbank upload, UniProt ...</i>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    data <em>visualisation</em>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>training</em>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    compute ressources
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            <!-- EOF Motivation -->
+
+            <!-- What is the Galaxy framework? -->
+            <div id="genVAST" class="step slide" data-x="12000" data-y="-1400" data-scale="3">
+                <div class="section-title with_logo">
+                    <h3>genVAST</h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/genVAST.png" alt="genVAST" width="50%" height="50%" />
+                        </figure>
+                </div>
+            </div>
+
+                <div id="genvast-pre" class="step slide" data-x="12000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>pre</em> - processing
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/genVAST-pre-processing.png" alt="Data Pre-processing" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="genevast-calling" class="step slide" data-x="10000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        variant <em>calling</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/genVAST-variant-calling.png" alt="Variant Calling" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gatk" class="step slide" data-x="10000" data-y="0" data-scale="3">
+                    <div class="slide-title">
+                        Genome Analysis Toolkit (<em>GATK</em>)
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/gatk-best-practise.png" width="80%" height="80%" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div id="slide_details">
+                        <p>McKenna A. et al.; The Genome Analysis Toolkit; Genome Research; 2010</p>
+                    </div>
+                </div>
+
+                <div id="genevast-calling-repeat" class="step slide" data-x="10000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        variant <em>calling</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/genVAST-variant-calling.png" alt="Variant Calling" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <!--div id="freebayes" class="step slide" data-x="12000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Freebayes</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    Bayesian genetic variant detector
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Haplotype based
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Part of <em>GMOD</em>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>Garrison E, Marth G. Haplotype-based variant detection from short-read sequencing. 2012</p>
+                    </div>
+                </div-->
+
+
+                <div id="genevast-post" class="step slide" data-x="8000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>post</em> - processing
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/genVAST-post-processing.png" alt="Data Post-processing" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gemini-annotation" class="step slide" data-x="8000" data-y="3400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        <em>dbSNP</em>, UCSC, OMIM, KEGG, Pfam,
+                        ClinVar, Ensembl, ESP, 1000G, CADD,
+                        COSMIC, HPRD, ENCODE, SIFT, Polyphen,
+                        GERP, FitCons, VISTA, CpG, ...
+                    </div>
+                    <div id="slide_details">
+                        <p>http://www.ncbi.nlm.nih.gov/SNP/</p>
+                    </div>
+                </div>
+
+                <div id="gemini-annotation2" class="step slide" data-x="8000" data-y="3400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        dbSNP, UCSC, <em>OMIM</em>, KEGG, Pfam,
+                        ClinVar, Ensembl, ESP, 1000G, CADD,
+                        COSMIC, HPRD, ENCODE, SIFT, Polyphen,
+                        GERP, FitCons, VISTA, CpG, ...
+                    </div>
+                    <div>
+                        <font size=tiny>OMIM is a comprehensive, authoritative compendium of human genes and genetic phenotypes that is freely available and updated daily.</font>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://www.ncbi.nlm.nih.gov/omim</p>
+                    </div>
+                </div>
+
+
+                <div id="gemini-annotation3" class="step slide" data-x="8000" data-y="3400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        dbSNP, UCSC, OMIM, <em>KEGG</em>, Pfam,
+                        ClinVar, Ensembl, ESP, 1000G, CADD,
+                        COSMIC, HPRD, ENCODE, SIFT, Polyphen,
+                        GERP, FitCons, VISTA, CpG, ...
+                    </div>
+                    <div id="slide_details">
+                        <p>http://www.genome.jp/kegg/</p>
+                    </div>
+                </div>
+
+                <div id="gemini-annotation4" class="step slide" data-x="8000" data-y="3400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        dbSNP, UCSC, OMIM, KEGG, <em>Pfam</em>,
+                        ClinVar, Ensembl, ESP, 1000G, CADD,
+                        COSMIC, HPRD, ENCODE, SIFT, Polyphen,
+                        GERP, FitCons, VISTA, CpG, ...
+                    </div>
+                    <div>
+                        <font size=tiny>Protein families and domains.</font>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://pfam.xfam.org/</p>
+                    </div>
+                </div>
+
+                <div id="gemini-annotation5" class="step slide" data-x="8000" data-y="3400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        dbSNP, UCSC, OMIM, KEGG, Pfam,
+                        ClinVar, Ensembl, <em>ESP</em>, 1000G, CADD,
+                        COSMIC, HPRD, ENCODE, SIFT, Polyphen,
+                        GERP, FitCons, VISTA, CpG, ...
+                    </div>
+                    <div>
+                        <font size=tiny>Variants from the Exome Sequencing Project (ESP); European American and African American populations ...</font>
+                    </div>
+                    <div id="slide_details">
+                        <p>https://esp.gs.washington.edu</p>
+                    </div>
+                </div>
+
+                <div id="gemini-annotation6" class="step slide" data-x="8000" data-y="3400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        dbSNP, UCSC, OMIM, KEGG, Pfam,
+                        ClinVar, Ensembl, ESP, 1000G, <em>CADD</em>,
+                        COSMIC, HPRD, ENCODE, SIFT, Polyphen,
+                        GERP, FitCons, VISTA, CpG, ...
+                    </div>
+                    <div>
+                        <font size=tiny>Combined Annotation-Dependent Depletion Score</font>
+                    </div>
+                    <div id="slide_details">
+                        <p>Kircher M, et al.; Nat Genet. 2014</p>
+                    </div>
+                </div>
+
+                <div id="gemini-annotation7" class="step slide" data-x="8000" data-y="3400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        dbSNP, UCSC, OMIM, KEGG, Pfam,
+                        ClinVar, Ensembl, ESP, 1000G, CADD,
+                        COSMIC, HPRD, <em>ENCODE</em>, SIFT, Polyphen,
+                        GERP, FitCons, VISTA, CpG, ...
+                    </div>
+                    <div>
+                        <font size=tiny>transcription factors, Dnase I hypersensitivity, CTCF-enriched elements ...</font>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://www.ensembl.org/</p>
+                    </div>
+                </div>
+
+
+                <div id="gemini" class="step slide" data-x="8000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        <em>GEMINI</em> - genome mining
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/gemini_overview.png" alt="GEMINI processing" width="80%" height="80%" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div id="slide_details">
+                        <p>Paila U, Chapman BA, Kirchner R, Quinlan AR; PLoS Comput Biol 2013</p>
+                    </div>
+                </div>
+
+
+                <div id="gemini-tools" class="step slide" data-x="10000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        <em>non complicated</em> tools
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    recessive/dominant variants
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    de novo identification
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Map genes and variants to KEGG
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    compound heterozygotes
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    variants in interaction partners
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    RoH identification (cystic fibrosis)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    pathway identification
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div id="other-features" class="step slide" data-x="12000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        More <em>features</em>!
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    exon-capture, whole-genome, targeted-capture
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    calling RNA-seq data
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    CpG islands?
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    filtering of low complexity regions
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    scalability
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    free & Open Source
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details-small">
+                        <p>Li H., Toward better understanding of artifacts in variant calling from high-coverage samples. Bioinformatics 2014</p>
+                    </div>
+                </div>
+
+
+                <div id="power" class="step slide" data-x="14000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        The real <em>power</em>!
+                    </div>
+                    <div class="slide-content" align="center">
+                        <table><tr><td>
+                            <div id="wrap">
+                                <figure id="galaxy_main_view">
+                                    <img src="./resources/img/genVAST-pre-processing.png" alt="Variant Calling" />
+                                </figure>
+                            </div>
+                            </td><td>&nbsp;&nbsp;&nbsp;
+                            </td><td>
+                            </td></tr></table>
+                    </div>
+                </div>
+
+                <div id="power2" class="step slide" data-x="14000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        The real <em>power</em>!
+                    </div>
+                    <div class="slide-content" align="center">
+                        <table><tr><td>
+                            <div id="wrap">
+                                <figure id="galaxy_main_view">
+                                    <img src="./resources/img/genVAST-pre-processing.png" alt="Variant Calling" />
+                                </figure>
+                            </div>
+                            </td><td>&nbsp;&nbsp;&nbsp;
+                            </td><td>
+                                <em>ExchangeAbility</em>
+                            </td></tr></table>
+                    </div>
+                </div>
+
+
+                <div id="power2" class="step slide" data-x="14000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        The real <em>power</em>!
+                    </div>
+                    <div class="slide-content-small" align="center">
+                        <table><tr><td>
+                                <div id="wrap">
+                                    <figure id="galaxy_main_view">
+                                        <img src="./resources/img/genVAST-variant-calling.png" alt="Variant Calling" width="100%" height="100%" />
+                                    </figure>
+                                </div>
+                            </td><td>&nbsp;&nbsp;&nbsp;
+                            </td><td>
+                                <ul class="lv0_indent">
+                                    <li>
+                                        <p>
+                                            trio calling
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            pooled population calling
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            incremental joint discovery calling
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            single-sample calling followed by backfilling?
+                                        </p>
+                                    </li>
+                                </ul>
+                        </td></tr></table>
+                    </div>
+                </div>
+
+                <div id="future-work" class="step slide" data-x="16400" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Future</em> work
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    Integration of other pipelines
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    workflows, workflows, workflows
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Maintaining and Training
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://galaxy.uni-freiburg.de</p>
+                    </div>
+                </div>
+                <!-- EOF  -->
+
+
+            <!-- Questions? -->
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                </div>
+            </div>
+            <!-- EOF Questions? -->
+            
+            <!-- Thank You -->
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    <h3>Thank you!</h3>
+                </div>
+                <div class="slide-content-small">
+                    <br>
+                    <p id="name" text-align="left">
+                        Kousik Kundu, Torsten Houwaart, Aaron Quinlan, Brad Chapman, Geraldine Van der Auwera, Anton Nekrutenko, Jeremy Goecks, Nicola Soranzo, Daniel Blankenberg, James Taylor, Jim Johnson, Rolf Backofen
+                    </p>
+                </div>
+                    <div id="slide_details">
+                        <p>bjoern.gruening@gmail.com</p>
+                    </div>
+            </div>
+            <!-- EOF Thank You -->
+
+
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
