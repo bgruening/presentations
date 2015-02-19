@@ -33,13 +33,13 @@
             <!-- Title -->
             <div id="title" class="step slide with_height" data-scale="9">
                 <div class="title">
-                    A guide through the <em>Galaxy</em>
+                    A guide through the <i>RNA</i> <em>Galaxy</em>
                 </div>
                 <!--<div align=center>
                 That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
                 </div>-->
                 <div id="slide_details">
-                    <p>April 2014&nbsp;&bull;&nbsp;Björn Grüning</p>
+                    <p>February 2015&nbsp;&bull;&nbsp;Björn Grüning</p>
                 </div>
             </div>
             <!-- EOF Title -->
@@ -78,43 +78,6 @@
                         </ul>
                     </div>
             </div>
-
-            <div id="what_is_needed-2" class="step slide" data-x="9000" data-y="-4000" data-scale="5">
-                    <div class="slide-title">What is needed?</div>
-                    <div class="slide-content">
-                        <ul class="lv0_indent">
-                            <li>
-                                <p>
-                                    <em>reproducible</em> pipelines
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <em>easy access</em> to tools and protocols<br><h1 style='font-size: 20pt;'>(not to forget the annoying file format problems)</h1>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    easy <em>deployment</em> of tools and protocols
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <em>data</em> managment
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    data <em>visualisation</em>
-                                </p>
-                            </li>
-                        </ul>
-                        <br>
-                        <img src="./resources/img/kopf_sand.png" alt="Galaxy" width="360" height="100" />
-                    </div>
-            </div>
-
-            <!-- EOF Motivation -->
 
             <!-- What is the Galaxy framework? -->
             <div id="galaxy-framework" class="step slide" data-x="9000" data-y="-1500" data-scale="3">
@@ -361,6 +324,33 @@
                     </div>
                 </div>
 
+                <div id="rna_tools" class="step slide" data-x="-900" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>RNA tools</em>
+                    </div>
+                    <div class="slide-content-small" align="center">
+
+                        <table width=90%><tr><td width=50%>
+                        <ul class="lv0_indent">
+                            <li>tRNA prediction</li>
+                            <li>RNABob</li>
+                            <li>mirDeep</li>
+                            <li>ViennaRNA tools</li>
+                            <li>RNAshapes</li>
+                        </ul>
+                        </td><td>
+                        <ul class="lv0_indent">
+                            <li>RNAz</li>
+                            <li>RNAammer</li>
+                            <li>Cofold</li>
+                            <li>BlockClust</li>
+                            <li>infernal</li>
+                        </ul>
+                        </td></tr></table>
+                    </div>
+                </div>
+
+
                 <!-- Administration -->
                 
                 <div id="cluster" class="step slide" data-x="2000" data-y="11000" data-scale="3">
@@ -404,37 +394,7 @@
                     </div>
                 </div>
 
-                <div id="toolshed" class="step slide" data-x="-2000" data-y="11000" data-scale="3">
-                    <div class="slide-title">
-                        Galaxy <em>API</em>
-                    </div>
-                    <div class="slide-content">
-                        <ul class="lv0_indent">
-                            <li>
-                                <p>
-                                    script the Galaxy
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    workflows, datasets, histories ...
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    running, deleting, retrieving ...
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    REST interface, python library
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div id="object-store" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                <div id="object-store" class="step slide" data-x="-2000" data-y="11000" data-scale="3">
                     <div class="slide-title">
                         Galaxy <em>Object Store</em>
                     </div>
@@ -464,7 +424,154 @@
                     </div>
                 </div>
 
-                <div id="jobs" class="step slide" data-x="-6000" data-y="11000" data-scale="3">
+                <div id="data_manager" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Data <em>Mangers</em>
+                    </div>
+                    <div class="slide-content">
+                        <figure>
+                            <img src="./resources/img/data_managers_figure_S1_schematic_overview.png" alt="cluster" width="800" height="411" />
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="visualisation_scatterplot" class="step slide" data-x="-4300" data-y="5200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - Scatterplot
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_scatterplot">
+                                <img src="./resources/img/scatterplot-partialscreen.png" alt="Scatterplot" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="visualisation_charts" class="step slide" data-x="-4300" data-y="7200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - Charts
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_scatterplot">
+                                <img src="./resources/img/charts_main.png" alt="Scatterplot" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="visualisation_charts" class="step slide" data-x="-4300" data-y="7200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - Charts
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_scatterplot">
+                                <img src="./resources/img/charts_bar.png" alt="Scatterplot" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="visualisation_charts" class="step slide" data-x="-4300" data-y="7200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - Charts
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_scatterplot">
+                                <img src="./resources/img/charts_bar_stacked.png" alt="Scatterplot" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="visualisation_trackster" class="step slide" data-x="-4300" data-y="9200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - Trackster
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_trackster">
+                                <img src="./resources/img/GalaxyMainTrackster.png" alt="Trackster" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="ie" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Interactive <em>Environment</em>
+                    </div>
+                    <div class="slide-content">
+                        <figure>
+                            <img src="./resources/img/ie.png" alt="cluster" width="800" height="411" />
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="ie2" class="step slide" data-x="-6000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Interactive <em>Environment</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    Isolated container
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Data transfer from and to Galaxy
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Dev tools are pre-installed
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Shell access
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Python, Perl, Ruby, R ...
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Save and share notebooks
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="api" class="step slide" data-x="-8000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy <em>API</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    script the Galaxy
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    workflows, datasets, histories ...
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    running, deleting, retrieving ...
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    REST interface, python library
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="jobs" class="step slide" data-x="-10000" data-y="11000" data-scale="3">
                     <div class="slide-title">
                         Galaxy <em>Jobs</em>
                     </div>
@@ -477,7 +584,7 @@
                             </li>
                             <li>
                                 <p>
-                                    combining different OS  
+                                    combining different OS
                                 </p>
                             </li>
                             <li>
@@ -499,7 +606,7 @@
                     </div>
                 </div>
 
-                <div id="CloudMan" class="step slide" data-x="-8000" data-y="11000" data-scale="3">
+                <div id="CloudMan" class="step slide" data-x="-12000" data-y="11000" data-scale="3">
                     <div class="slide-title">
                         Galaxy <em>CloudMan</em>
                     </div>
@@ -524,9 +631,19 @@
                     </div>
                 </div>
 
+                <div id="docker" class="step slide" data-x="-14000" data-y="11000" data-scale="1">
+                    <div class="section-title with_logo">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/docker-logo.png" alt="de.NBI" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>docker run -p 8080:80 -p 8800:8800 --privileged bgruening/galaxy-rna-workbench-extra</p>
+                    </div>
+                </div>
 
                 <!-- end of administration -->
-                <div id="community" class="step slide" data-x="3800" data-y="9200" data-scale="3">
+                <div id="community" class="step slide" data-x="-10000" data-y="9200" data-scale="3">
                     <div class="slide-title">
                         <em>community</em> is key
                     </div>
@@ -534,17 +651,17 @@
                         <ul>
                             <li>
                                 <p>
-                                    ~1000 additional tools
+                                    ~1500 additional tools
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    ~1200 publications since 2010, 501 in 2013
+                                    ~2000 publications since 2010, 700 in 2014
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    29 known public instances
+                                    70 known public instances
                                 </p>
                             </li>
                             <li>
