@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Basic Galaxy Introduction" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="Retreat, Workshop" />  
+        <title>Analyze more, process less: Big Data with Galaxy in Freiburg</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./resources/css/jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+            <div id="impress" class="impress-not-supported">
+                <div class="fallback-message">
+                    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                    <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+                </div>
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="9">
+                <div class="title">
+                    <font size=60>Analyze more, process less:</font><br><em>Galaxy</em> in Freiburg
+                </div>
+                <!--<div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>-->
+                <div id="slide_details">
+                    <p>May 2015&nbsp;&bull;&nbsp;Björn Grüning and the Galaxy Team Freiburg</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+            <div id="big_data1" class="step slide" data-x="6000" data-y="1000" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    Wir &#x1f49c; Open Data!<br>
+                    <br>
+                </div>
+            </div>
+
+            <div id="big_data2" class="step slide" data-x="6000" data-y="1000" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    Wir &#x1f49c; Open Data!<br>
+                    Wir produzieren Open Data!<br>
+                </div>
+            </div>
+
+
+            <div id="big_data3" class="step slide" data-x="6000" data-y="1000" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    Wir &#x1f49c; Open Data!<br>
+                    Wir produzieren Open Data!<br>
+                    Aber ...
+                </div>
+            </div>
+
+            <div id="big_data4" class="step slide" data-x="6000" data-y="2000" data-scale="3">
+                <div class="slide-title">Big <em>data</em></div>
+                <div class="slide-content" align="center">
+                    <figure id="galaxy_logo">
+                        <img src="./resources/img/big_data.jpg" alt="Big Data" />
+                    </figure>
+                </div>
+            </div>
+
+            <div id="bioinf" class="step slide" data-x="6000" data-y="3000" data-scale="3">
+                <div class="slide-title"><em>Bio</em>informatik</div>
+                <div class="slide-content" align="center">
+                    <table><tr><td>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/dna_human.jpeg" alt="Binformatik" />
+                        </figure>
+                    </td><td>&nbsp;&nbsp;</td><td>
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    Krebs
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Ebola
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Alzheimer
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Herz-Kreislauf-Erkrankungen
+                                </p>
+                            </li>
+                        </ul>
+                    </td>
+                    </table>
+                </div>
+            </div>
+
+            <div id="big_data5" class="step slide" data-x="6000" data-y="4000" data-scale="3">
+                <div class="slide-title">Big <em>data</em></div>
+                <div class="slide-content">
+                    <ul class="lv0_indent">
+                        <li>
+                            <p>
+                                alle <em>2 Tage</em> = &#x1f31f; &#x27a1; 2003
+                            </p>
+                        </li>
+                        <!--li>
+                            <p>
+                                2,5 <em>10<sup>30</sup></em> bytes täglich
+                            </p>
+                        </li-->
+                        <li>
+                            <p>
+                                <em>90%</em> aller Daten in den letzten 2 Jahren
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <em>bio</em>informatische Analyse kostet mehr als Datenerhebung
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="bioinf_big_bang" class="step slide" data-x="6000" data-y="5000" data-scale="3">
+                <div class="slide-title">Science <em>Big Bang</em></div>
+                <div class="slide-content" align="center">
+                    <figure id="galaxy_logo">
+                        <img src="./resources/img/bioinf_big_bang.jpg" alt="Binf Big Bang" />
+                    </figure>
+                </div>
+            </div>
+
+
+            <!-- What is needed? -->
+                <div id="what_is_needed" class="step slide" data-x="8000" data-y="6000" data-scale="3">
+                    <div class="slide-title">Was wir anbieten?</div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    <em>einfacher Zugang</em> zu Daten und Tools
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Visualisierung der Daten
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>Training</em>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Rechenleistung
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>Open Source</em>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="toolbox" class="step slide" data-x="10000" data-y="7000" data-scale="3">
+                    <div class="slide-title">Werkzeugbox für <em>Open Data</em> Analyse</div>
+                    <div class="slide-content" align="center">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/toolbox.jpg" alt="Big Data" />
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="accessible-webinterace" class="step slide" data-x="12000" data-y="5000" data-scale="3">
+                    <div class="slide-title">
+                        <em>einfach</em> benutzbar
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/galaxy_main_view.png" alt="Galaxy Main View" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="visualisation" class="step slide" data-x="14000" data-y="5000" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em>
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                        <figure>
+                            <img src="./resources/img/visualisation.png" alt="share"  />
+                        </figure> 
+                    </div>
+                </div>
+
+                <div id="visualisation2" class="step slide" data-x="14000" data-y="5000" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/deepTools.png" alt="share"  />
+                        </figure> 
+                    </div>
+                </div>
+
+                <div id="reproducible-workflow" class="step slide" data-x="16000" data-y="5000" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproduzierbar</em> & frei kombinierbar
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure id="galaxy_main_view">
+                            <img src="./resources/img/workflow_example.png" alt="reloaded tool" />
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="galaxy_robotics" class="step slide with_height" data-scale="9">
+                    <div class="title">
+                        Galaxy Roboter Projekt
+                    </div>
+                    <div id="slide_details">
+                        <p>Cameron Smith, Torsten Houwaart, Michael Röttger,<br> Paul Kremser, Bjoern Gruening</p>
+                    </div>
+                </div>
+
+                <div id="aim" class="step slide" data-x="4400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>Ziel:</em> Open Data Feedback Loop
+                    </div>
+                    <div class="slide-content" align="center">
+                        <br><br>
+                        <figure id="galaxy_main_view">
+                            <img src="./resources/img/microscope.jpg" alt="Microscope" />
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="ev3" class="step slide" data-x="6400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>Ev3:</em> Anwendungsbeispiel
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure id="galaxy_main_view">
+                            <img src="./resources/img/eve_annot.png" alt="Ev3" width="40%" height="40%" />
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Questions? -->
+                <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                    <div class="section-title">
+                        <h3>Fragen?</h3>
+                    </div>
+                </div>
+                <!-- EOF Questions? -->
+
+                <!-- Thank You -->
+                <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                    <div id="ty" class="slide-title">
+                        <h3>Danke!</h3>
+                    </div>
+                    <div class="slide-content">
+                        <br>
+                        <p id="name">
+                            <em>Freiburg Galaxy Team</em>
+                        </p>
+                        <p id="email">
+                            <a href="galaxy.uni-freiburg.de">http://galaxy.uni-freiburg.de</a>
+                        </p>
+                        <p id="email">
+                            <a href="www.bioinf-uni-freiburg.org">http://www.bioinf.uni-freiburg.de</a>
+                        </p>
+                        <p id="email">
+                            <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                        </p>
+                        
+                    </div>
+                </div>
+                <!-- EOF Thank You -->
+
+                <div id="ethik" class="step slide" data-x="18500" data-y="6500" data-scale="5" data-z="1000">
+                    <div class="slide-title">
+                        <em>Ethikrat</em> Big Data und Gesundheit
+                    </div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    21.05.2015 in Berlin
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Ethikrat Jahrestagung
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
