@@ -51,7 +51,7 @@ body{
 }
 
 .step:not(.active){
-    opacity: 0.05;
+    opacity: 0.00;
 }
 
 
