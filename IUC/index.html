@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="My presentation at Bled 2014" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="Retreat, Workshop" />
+        <title>de.NBI</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./resources/css/jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div>
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="5">
+                <div class="title">
+                    <em>IUC</em> <br> Intergalactic Utilities Commission
+                </div>
+                <div id="slide_details">
+                    <p>July 2015&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+            <div id="iuc_github1" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                    <div class="slide-title"> <em>IUC</em> on github</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/tools-iuc_github.png" alt="mail" width="100%" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        https://github.com/galaxyproject/tools-iuc
+                    </div>
+            </div>
+
+
+            <div id="iuc_members" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                <div class="slide-title"> <em>Who? </em></div>
+                <div class="slide-content-small">
+                    <ul class="lv0_indent">
+                        <li>Daniel Blankenberg, Galaxy Team, Penn State University</li>
+                        <li>Dave Bouvier, Galaxy Team, Penn State University</li>
+                        <li>Brad Chapman, Harvard School of Public Health</li>
+                        <li>Peter Cock, The James Hutton Institute</li>
+                        <li>Nate Coraor, Galaxy Team, Penn State University</li>
+                        <li>Björn Grüning, University of Freiburg</li>
+                        <li>James Johnson, University of Minnesota</li>
+                        <li>Edward Kirton, U.S. Department of Energy</li>
+                        <li>Ross Lazarus, Galaxy Team, Baker IDI</li>
+                        <li>Nicola Soranzo, TGAC</li>
+                        <li>Eric Rasche, Texas A&M University</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="iuc_github2" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                <div class="slide-title"> <em>IUC</em> on github</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/iuc_pr.png" alt="mail" width="100%" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        https://github.com/galaxyproject/tools-iuc
+                    </div>
+            </div>
+
+            <div id="iuc_tools" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                    <div class="slide-title"> <em>IUC</em> Tools</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/iuc_tools.png" alt="mail" width="100%"  />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        https://github.com/galaxyproject/tools-iuc
+                    </div>
+            </div>
+
+            <div id="iuc_bpg" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                    <div class="slide-title"> <em>IUC</em> Standards</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/best_practice_guidelines.png" alt="mail" width="100%"  />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        https://github.com/galaxy-iuc/standards
+                    </div>
+            </div>
+
+            <div id="iuc_members1" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                    <div class="slide-title"> <em>New</em> members!</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/eric_nicola_iuc_mail.png" alt="mail" width="100%"  />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        September 2014
+                    </div>
+            </div>
+
+            <div id="iuc_members2" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                <div class="slide-title"> <em>New</em> members!</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/eric_nicola_iuc_mail_with_pictures.png" alt="mail" width="100%" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        September 2014
+                    </div>
+            </div>
+
+            <!-- Questions? -->
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Join us!</h3>
+                </div>
+            </div>
+            <!-- EOF Questions? -->
+
+            <!-- Thank You -->
+            <div id="thank-you" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div class="section-title">
+                    <h3>Thank you!</h3>
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Thank You -->
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    contact
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+                    <p id="email">
+                        <a href="www.pharmaceutical-bioinformatics.org">http://www.bioinf.uni-freiburg.de</a>
+                    </p>
+                    <p id="email">
+                        <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                        <a href="https://bitbucket.org/BjoernGruening">https://bitbucket.org/BjoernGruening</a>
+                    </p>
+
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
