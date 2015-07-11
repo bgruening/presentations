@@ -174,7 +174,7 @@ body{
 .slide-content-small{
     /*height: 473px;*/    
     font-size: 23pt;
-    line-height: 40pt;
+    line-height: 30pt;
 }
 
 
@@ -205,6 +205,13 @@ em{
 
 #slide_details{
     font-size: 25px;
+    position: absolute;
+    bottom: 40px;
+    right: 5px;
+}
+
+#slide_details_tiny{
+    font-size: 15px;
     position: absolute;
     bottom: 40px;
     right: 5px;
