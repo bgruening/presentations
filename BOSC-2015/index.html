@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="My presentation at Bled 2014" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="Retreat, Workshop" />
+        <title>Galaxy flavours</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./resources/css/jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div>
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="3">
+                <div class="title">
+                    The perfect fit for reproducible, interactive research:
+                    <br><em>Galaxy</em>,<em>Docker</em>, <em>IPython</em>
+                </div>
+                <!--<div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>-->
+                <div id="slide_details">
+                    <p>July 2015&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+            <div id="motivation" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                    <div class="slide-title"> Galaxy <em>Visualisations</em></div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/galaxy_with_examples.png" alt="Galaxy-Docker" width="100%" />
+                        </figure>
+                    </div>
+            </div>
+            <!-- What is needed? -->
+            <div id="ie" class="step slide" data-x="1000" data-y="1000" data-scale="1">
+                    <div class="slide-title"> Galaxy <em>Interactive Environment</em></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Interact with data, w/o leaving Galaxy</li>
+                            <li>Flexible, extensible, and interactive</li>
+                            <li>Teaching, Research, and Development</li>
+                            <li>Exploratory research!</li>
+                            <li>Literate programming</li>
+                        </ul>
+            </div>
+            </div>
+
+            <div id="ie" class="step slide" data-x="1000" data-y="1500" data-scale="1">
+                    <div class="slide-title"> Galaxy <em>Interactive Environment</em></div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/gx-ie.png" alt="Galaxy-Docker" width="100%" />
+                        </figure>
+                    </div>
+            </div>
+            <div id="ie2" class="step slide" data-x="1000" data-y="2250" data-scale="1">
+                    <div class="slide-title"> Galaxy <em>IE</em> :: IPython</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/ipy-gx.png" alt="Galaxy-Docker" width="100%" />
+                        </figure>
+                    </div>
+            </div>
+            <div id="ie3" class="step slide" data-x="1000" data-y="2500" data-scale="1">
+                    <div class="slide-title"> Galaxy <em>IE</em> :: RStudio</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/r-gx.png" alt="Galaxy-Docker" width="100%" />
+                        </figure>
+                    </div>
+            </div>
+            <div id="ie4" class="step slide" data-x="1000" data-y="2750" data-scale="1">
+                    <div class="slide-title"> Galaxy <em>IE</em> :: RStudio</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/webapollo.png" alt="Galaxy-Docker" width="100%" />
+                        </figure>
+                    </div>
+            </div>
+
+
+            <div id="galaxy_docker" class="step slide" data-x="1000" data-y="3000" data-scale="1">
+                    <div class="slide-title"><em>Galaxy</em> Docker Container</div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/galaxy-docker.png" alt="flavours" width="90%"/>
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>docker run -p 8080:80 bgruening/galaxy-stable</p>
+                    </div>
+            </div>
+
+            <div id="stack" class="step slide" data-x="1000" data-y="3500" data-scale="1">
+                    <div class="slide-title"><em>Ingredients</em></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Galaxy (stable, dev)</li>
+                            <li>powered by ansible</li>
+                            <li>FTP Server</li>
+                            <li>Webserver</li>
+                            <li>Scheduler</li>
+                            <li>Galaxy Reports</li>
+                            <li>Tool Shed install script</li>
+                            <li>BioJS install script</li>
+                            <li>Supervisord Webapp</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="galaxy_flavours_intro" class="step slide" data-x="1000" data-y="4000" data-scale="1">
+                <div class="section-title">
+                    <h3>Galaxy flavours</h3>
+                </div>
+            </div>
+
+
+            <div id="rna-workbench" class="step slide" data-x="1000" data-y="4500" data-scale="1">
+                            <div class="slide-title">
+                            Galaxy <em>flavours</em>
+                            </div>
+                            <div class="section-title with_logo">
+                                <figure id="galaxy_logo">
+                                    <img src="./resources/img/rna-workbench-chart.png" width="100%" height="100%" alt="RNA workbench" />
+                                </figure>
+                            </div>
+                            <div id="slide_details">
+                                <p>docker run -p 8080:80 bgruening/galaxy-rna-workbench</p>
+                            </div>
+                        </div>
+
+
+            <div id="flavours_list" class="step slide" data-x="1000" data-y="5000" data-scale="1">
+                    <div class="slide-title"> example <em>flavours</em></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Proteomics</li>
+                            <li>Cheminformatics</li>
+                            <li>Exom-Seq</li>
+                            <li>BLAST+</li>
+                            <li>deepTools - ChiP-Seq</li>
+                            <li>Imaging (ImageJ)</li>
+                            <li>Metabolomics</li>
+                            <li>Genome Annotation</li>
+                            <li>RNA workbench</li>
+                            <li>Ballaxy</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="creation" class="step slide" data-x="1000" data-y="5500" data-scale="1">
+                    <div class="slide-title">creating <em>flavours</em></div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/creating_flavours.png" alt="flavours" width="120%"/>
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>docker build -t image_name .</p>
+                    </div>
+            </div>
+
+            <div id="results" class="step slide" data-x="1000" data-y="6000" data-scale="1">
+                <div class="slide-title"><em>Results</em></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>self-assembled Galaxy instances for everyone</li>
+                            <li>moving software to the data</li>
+                            <li>reproducible training instances</li>
+                            <li>Isolation between Galaxy and the OS</li>
+                            <li>better and faster testing, upgrades</li>
+                        </ul>
+                    </div>
+            </div>
+
+                <div id="sensitive_data" class="step slide" data-x="1000" data-y="6500" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy Docker for <em>sensitive</em> data
+                    </div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Tjenester for Sensitive Data 2.0 Norway</li>
+                            <li>Tryggve - Nordic platform for<br> collaboration on sensitive data</li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>https://github.com/bgruening/docker-galaxy-stable</p>
+                    </div>
+                </div>
+
+                <div id="vision" class="step slide" data-x="1000" data-y="7500" data-scale="1">
+                    <div class="slide-title">
+                        <em>vision</em> and <em>commitment</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Regular releases in-sync with Galaxy</li>
+                            <li>Integration into the Tool Shed</li>
+                            <li>Assembly website</li>
+                            <li>easier container managment</li>
+                            <li>bundling with training material</li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>https://github.com/bgruening/docker-galaxy-stable</p>
+                    </div>
+                </div>
+
+            <!-- Thank You -->
+            <div id="thank-you" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div class="slide-title">
+                    <h3>Thank you!</h3>
+                </div>
+                <div class="slide-content" align="center">
+                    <ul class="lv0_indent">
+                        <li>Eric Rasche</li>
+                        <li>John Chilton</li>
+                        <li>Dannon Baker</li>
+                        <li>Nate Coraor</li>
+                        <li>Camon Smith</li>
+                        <li>Torsten Houwaart</li>
+                        <li>Kyle Ellrott</li>
+                        <li>Devon Ryan</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Thank You -->
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    contact
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+                    <p id="email">
+                        <a href="http://www.bioinf.uni-freiburg.de">http://www.bioinf.uni-freiburg.de</a>
+                    </p>
+                    <p id="email">
+                        <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                    </p>
+
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
