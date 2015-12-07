@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Basic Galaxy Introduction" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="Retreat, Workshop" />  
+        <title>Analyze more, process less: Galaxy in Freiburg</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./resources/css/jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="9">
+                <div class="title">
+                    <font size=60>Analyze more, process less:</font><br><em>Galaxy</em> in Freiburg
+                </div>
+                <!--<div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>-->
+                <div id="slide_details">
+                    <p>October 2015&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+            <div id="what_is_needed" class="step slide" data-x="5000" data-y="-4000" data-scale="5">
+                <div class="section-title with_logo">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/big_data.jpg" alt="Big Data" />
+                        </figure>
+                </div>
+            </div>
+
+
+            <!-- What is needed? -->
+            <div id="what_is_needed" class="step slide" data-x="9000" data-y="-4000" data-scale="5">
+                    <div class="slide-title">What do we offer?</div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    <em>reproducible</em> one click pipelines
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>easy access</em> to data, tools and protocols<br>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    easy <em>deployment</em> of tools and protocols
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>data</em> integration and managment<br>
+                                    <i>+SRA, Genbank upload, UniProt ...</i>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    data <em>visualisation</em>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>training</em>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    compute ressources
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            <!-- EOF Motivation -->
+
+            <!-- What is the Galaxy framework? -->
+            <div id="galaxy-framework" class="step slide" data-x="9000" data-y="-1500" data-scale="3">
+                <div class="section-title with_logo">
+                    <h3>What is</h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/galaxyLogo360.png" alt="Galaxy" width="360" height="100" />
+                        </figure>
+                    <h3>?</h3>
+                </div>
+            </div>
+
+                <!--  -->
+                <div id="galaxy_meaning" class="step slide" data-x="3400" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    An <em>analysis and data integration</em> tool
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>Open source</em>, <em>community</em> driven software that makes integrating our favourite tools simple
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Part of <em>GMOD</em>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://galaxyproject.org</p>
+                    </div>
+                </div>
+                <!-- EOF  -->
+
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable <em>accessible</em>, <em>reproducible</em>, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+
+                <div id="accessible-webinterace" class="step slide" data-x="9000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>accessible</em> - Webinterface
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <!--<iframe name='iframe-webinterace' id="iframe" src="http://localhost:8080/" 
+                                frameborder="0" cellspacing="0" style=" width: 1200px; height: 1000px;">
+                            </iframe>-->
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/galaxy_main_view.png" alt="Galaxy Main View" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="accessible-uscs" class="step slide" data-x="12000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>accessible</em> - get your data
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/ucsc_data_integration.png" alt="UCSC Data integration" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent2" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable accessible, <em>reproducible</em>, and transparent computational research."
+                    </div>
+                </div>
+
+
+
+                <div id="reproducible" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Reload experiments
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <!--<iframe name='iframe-history' id="iframe" src="http://127.0.0.1:8080/history" 
+                                frameborder="0" cellspacing="0" style=" width: 30%; height: 1000px;">
+                            </iframe>-->
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/history.png" alt="History panel" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="reproducible-blast" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Reload experiments
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <table border=0><tr><td>
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/history.png" alt="History panel" />
+                            </figure>
+                            </td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/reload_tool.png" alt="reloaded tool" />
+                            </figure>
+                            </td></tr></table>
+                        </div>
+                </div>
+
+                <div id="reproducible-versioning" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Tool versioning
+                    </div>
+                        <div id="wrap" style="text-align:center">
+                            <br><br>
+                            <table border=0 width="70%"><tr><td>
+                                <figure id="galaxy_tool_versioning">
+                                    <img src="./resources/img/versioning.png" alt="History panel" />
+                                </figure>
+                            </td></tr><tr><td><br>
+                            </td></tr><tr><td>
+                                <figure id="galaxy_main_view">
+                                    <img src="./resources/img/filter_tool_new_version.png" alt="reloaded tool" />
+                                </figure>
+                            </td></tr></table>
+                        </div>
+                </div>
+
+                <div id="reproducible-workflow" class="step slide" data-x="4400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Workflows
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <!--<iframe name='iframe-workflow' id="iframe" src="http://127.0.0.1:8080/workflow/editor?id=f2db41e1fa331b3e" 
+                                frameborder="0" cellspacing="0" style=" width: 1200px; height: 800px;">
+                            </iframe>-->
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/workflow_example.png" alt="reloaded tool" />
+                            </figure>
+                        </div>
+                </div>
+                <div id="reproducible-workflow2" class="step slide" data-x="4400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Workflows
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/large_workflow.png" alt="reloaded tool" />
+                            </figure>
+                        </div>
+                </div>
+
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent3" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable accessible, reproducible, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+                <div id="transparent-share" class="step slide" data-x="4400" data-y="3000" data-scale="3">
+                    <div class="slide-title">
+                        <em>transparent</em> - sharing everything
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/share.png" alt="share"  />
+                        </figure> 
+                    </div>
+                </div>
+
+                <div id="transparent-explain" class="step slide" data-x="4400" data-y="4500" data-scale="3">
+                    <div class="slide-title">
+                        <em>transparent</em> for other researchers
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/citation.png" alt="transparent"  />
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent4" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable <em>accessible</em>, <em>reproducible</em>, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+                <div id="section-title-tools" class="step slide" data-x="-900" data-y="2200" data-scale="7">
+                    <div class="section-title with_logo">
+                        <h3>Tools, Tools, Tools</h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/lego_box.jpg" alt="Bioinformatics"/>
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="tools" class="step slide" data-x="-900" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>tools</em>
+                    </div>
+                    <div class="slide-content-small" align="center">
+                        <table width=80%><tr><td width=50%>
+                        <ul class="lv0_indent">
+                            <li>Text Manipulation</li>
+                            <li>Format Converters</li>
+                            <li>Filtering and Sorting</li>
+                            <li>Join, Subtract, Group</li>
+                            <li>Unix Tools</li>
+                            <li>Alignment Tools</li>
+                            <li>Mapping</li>
+                            <li>Statistics</li>
+                            <li>Plotting</li></ul>
+                        </td><td>
+                            <ul class="lv0_indent">
+                            <li>EMBOSS</li>
+                            <li>MethylC-Seq</li>
+                            <li>RNA-seq</li>
+                            <li>ChIP-seq</li>
+                            <li>WES/WGAS</li>
+                            <li>Proteomics/Metabolomics</li>
+                            <li>NCBI Blast+</li>
+                            <li>Blast2GO</li>
+                            <li>ChemicalToolBoX</li>
+                            ...and many more (1000+)
+                            </ul>
+                        </td></tr></table>
+                    </div>
+                </div>
+
+
+            <div id="genVAST" class="step slide" data-x="-900" data-y="6200" data-scale="3">
+                <div class="slide-title">
+                    <em>genVAST</em>
+                </div>
+                <div class="slide-content-small" align="center">
+                    <figure id="galaxy_logo">
+                        <img src="./resources/img/genVAST.png" alt="genVAST" width="50%" height="50%" />
+                    </figure>
+                </div>
+            </div>
+
+            <div id="workflow_blast" class="step slide" data-x="-900" data-y="6200" data-scale="3">
+                <div class="slide-title">
+                    <em>BLAST+</em> and Genome Annotation
+                </div>
+                    <div class="slide-content-small" align="center">
+
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/workflow_blast.png" alt="BLAST+ workflow" width="80%" />
+                        </figure>
+                </div>
+            </div>
+
+
+            <div id="dataset_collection" class="step slide" data-x="-900" data-y="8200" data-scale="3">
+                <div class="slide-title">
+                    <em>Cheminformatics</em> or <em>Metabolomics</em>
+                </div>
+                    <div class="slide-content-small" align="center">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/large_compound_databases.png" alt="Big Molecules" width="70%" />
+                        </figure>
+                </div>
+            </div>
+
+            <div id="proteomics" class="step slide" data-x="-900" data-y="8200" data-scale="3">
+                <div class="slide-title">
+                    <em>Proteomics</em>
+                </div>
+                    <div class="slide-content-small" align="center">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/proteomics.png" alt="genVAST" width="90%" />
+                        </figure>
+                </div>
+            </div>
+
+
+                <div id="visualisation" class="step slide" data-x="6000" data-y="7400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/visualisation.png" alt="share"  />
+                        </figure> 
+                    </div>
+                </div>
+
+                <div id="visualisation2" class="step slide" data-x="4000" data-y="7400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> :: Charts
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/charts_galaxy.png" alt="share"  />
+                        </figure> 
+                    </div>
+                </div>
+
+                <div id="visualisation3" class="step slide" data-x="1000" data-y="7400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> :: deepTools
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/deepTools.png" alt="share" />
+                        </figure> 
+                    </div>
+                </div>
+
+
+                <div id="galaxy_with_examples" class="step slide" data-x="-2000" data-y="7400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/galaxy_with_examples.png" alt="share" width="90%"  />
+                        </figure> 
+                    </div>
+                </div>
+
+
+                <div id="more" class="step slide" data-x="1000" data-y="4200" data-scale="3">
+                    <div class="section-title with_logo">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/what_else.png" alt="What else?" width="800" height="334" />
+                            </figure>
+                        </div>
+                    <div id="slide_details">
+                        <p>https://wiki.galaxyproject.org/Community/GalaxyAdmins</p>
+                    </div>
+                </div>
+
+                <!-- end of administration -->
+                <div id="community" class="step slide" data-x="3800" data-y="9200" data-scale="3">
+                    <div class="slide-title">
+                        <em>community</em> is key
+                    </div>
+                    <div class="slide-content-small">
+                        <ul>
+                            <li>
+                                <p>
+                                    ~1000 additional tools
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~2500 publications since 2010, 704 in 2014
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    80 known public instances
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~6000 registered users (galaxy-users Mailinglist)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    https://biostar.usegalaxy.org
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~1000 registered developers (galaxy-dev Mailinglist)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~ 400 mails per month
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    annual international community conference
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    2 positions for community related questions
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            <!-- Questions? -->
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                </div>
+            </div>
+            <!-- EOF Questions? -->
+            
+            <!-- Thank You -->
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    <h3>Thank you!</h3>
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+                    <p id="email">
+                        <a href="www.bioinf-uni-freiburg.org">http://www.bioinf.uni-freiburg.de</a>
+                    </p>
+                    <p id="email">
+                        <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                        <a href="https://bitbucket.org/BjoernGruening">https://bitbucket.org/BjoernGruening</a>
+                    </p>
+                    
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+
+                <div id="more" class="step slide" data-x="4400" data-y="-2700" data-scale="3">
+                    <div class="section-title with_logo">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/dependencies_graph.png"/>
+                            </figure>
+                        </div>
+                </div>
+
+
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
