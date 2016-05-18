@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Genomic Revolution talk @ SGBM" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="Retreat, Workshop, Galaxy, NGS, SGBM" />
+        <title>A Guide through the Galaxy</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./resources/css/jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="9">
+                <div class="title">
+                    <em>FAIRDOM </em>&<em> Galaxy</em>
+                </div>
+                <!--<div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>-->
+                <div id="slide_details">
+                    <p>April 2016&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+            <div id="reproducible" class="step slide" data-x="4400" data-y="4500" data-scale="3">
+
+                <div class="slide-content" align="center">
+                    "Enable <em>accessible</em>, <em>reproducible</em>, and <em>transparent</em> computational research."<br>
+                    <figure>
+                        <img src="./resources/img/citation.png" alt="transparent"  />
+                    </figure>
+                </div>
+            </div>
+
+
+            <div id="data_sources" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Data <em>Sources</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    UCSC
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    SRA / ENA
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Dorina
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    GenomeSpace
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    BioMart ...
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="ucsc" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                        <div class="slide-title"><em>UCSC</em></div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/ucscmain_with.png" alt="UCSC main" width="100%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="dorina" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                        <div class="slide-title"><em>Dorina</em></div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/dorina_with.png" alt="Dorina" width="100%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="fairdom" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                        <div class="slide-title"><em>Fairdom</em> :: mockup</div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/fairdom_with.png" alt="Fairdom" width="100%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="object-store" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy <em>Object Store</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    S3
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Irods
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Swift
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    distributed, hierarchical
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    openBIS ?
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="ie" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                        <div class="slide-title"> Galaxy <em>Interactive Environment</em></div>
+                        <div class="slide-content">
+                            <ul class="lv0_indent">
+                                <li>Interact with data, w/o leaving Galaxy</li>
+                                <li>Flexible, extensible, and interactive</li>
+                                <li>Teaching, Research, and Development</li>
+                                <li>Exploratory research!</li>
+                                <li>Literate programming</li>
+                            </ul>
+                        </div>
+                </div>
+
+                <div id="ie2" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                        <div class="slide-title"> Galaxy <em>IE</em> :: IPython/Jupyter</div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/ie.png" alt="Galaxy-Docker" width="100%" />
+                            </figure>
+                        </div>
+                </div>
+                <div id="ie3" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                        <div class="slide-title"> Galaxy <em>IE</em> :: RStudio</div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/r-gx.png" alt="Galaxy-Docker" width="100%" />
+                            </figure>
+                        </div>
+                </div>
+
+
+                <div id="datatypes1" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="slide-title"><em>Datatypes</em></div>
+                        <div class="slide-content">
+                            <ul class="lv0_indent">
+                                <li>converters</li>
+                                <li>visualisations</li>
+                                <li>split/merge</li>
+                                <li>blastdb, BAM, imzML, csv, BED ...</li>
+                                <li>data providers</li>
+                                <li>associated Metadata (EDAM ...)</li>
+                            </ul>
+                        </div>
+                </div>
+
+                <div id="api" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Galaxy <em>API</em>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    script the Galaxy
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    REST interface, python library
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    workflows, datasets, histories ...
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    running, deleting, retrieving ...
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    get Data and Metadata from Galaxy
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="ideas-title" class="step slide with_height" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="section-title">
+                    </div>
+                    <div class="section-title with_logo">
+                        <h3>Integration <em>Ideas</em></h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/what_else.jpg" alt="Other ideas" width="100%"/>
+                        </figure>
+                    </div>
+                </div>
+
+
+                <div id="tool_level" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="section-title with_logo">
+                        <h3>The Tool level</h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/lego_box.jpg" alt="Bioinformatics"/>
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="workflow_level" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="section-title with_logo">
+                        <h3>The workflow level</h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/proteomics.png" alt="Workflows"  width="100%"/>
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="sync_level" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        <h3>Synchronisation</h3>
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Register Galaxy instances</li>
+                            <li>API for syncronisation</li>
+                            <li>EDAM ontology for tools and types</li>
+                            <li>FAIRDOM as Galaxy Hub?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="technical_problems" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                    <div class="slide-title">
+                        Technical problems?
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Authentification (OpenID ...)</li>
+                            <li>Sensitive data</li>
+                        </ul>
+                    </div>
+                </div>
+
+            <!-- Questions? -->
+            <div id="questions" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                    <h3>Thank <em>you</em>  !</h3>
+                </div>
+            </div>
+            <!-- EOF Questions? -->
+
+            <!-- Thank You -->
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    contact
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+                    <p id="email">
+                        <a href="www.pharmaceutical-bioinformatics.org">http://www.bioinf.uni-freiburg.de</a>
+                    </p>
+                    <p id="email">
+                        <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                        <a href="https://bitbucket.org/BjoernGruening">https://bitbucket.org/BjoernGruening</a>
+                    </p>
+                    
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
