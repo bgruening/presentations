@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Projects and Visions from the Freiburg Galaxy Team" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="Retreat, Workshop" />  
+        <title>Projects and Visions from the Freiburg Galaxy Team</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./resources/css/jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="5">
+                <div class="section-title">
+                    <em>Analyze</em> more, <em>process</em> less
+                    <div style="font-size:30pt">
+                    A short story about Galaxy<br>
+                    </div>
+                </div>
+
+                <div id="slide_details">
+                    <p>February 2016&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+            <div id="what" class="step slide" data-x="1000" data-y="500" data-scale="1">
+                <div class="slide-title"> <em>What? </em></div>
+                <div class="slide-content">
+                    <ul>
+                        <li>Users, Users, Users !!!</li>
+                        <li>Enable biologists in taking part in the processing and analysis of their <em>own</em> data</li>
+                        <li>We &#x1f49c; Galaxy!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="what2" class="step slide" data-x="1000" data-y="1000" data-scale="1">
+                    <div class="slide-title"> <em>What? </em></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Offering Support</li>
+                            <li><em>Maintaining</em> Software/Databases</li>
+                            <li>Documentation</li>
+                            <li>Workshops/Training</li>
+                            <li>Central Contact Point for <br><em>Bioinformatics</em></li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="aims" class="step slide" data-x="1000" data-y="2000" data-scale="1">
+                    <div class="slide-title"><em>Aims</em> :: <em>Visions</em></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>accessible <em>tools</em> and <em>workflows</em></li>
+                            <li>foster cooperation</li>
+                            <li>bridging gaps bewteen OMICS</li>
+                            <li>raise the awareness of <br>HPC related problems</li>
+                            <li>involve Universities in <br>Galaxy development</li>
+                            <li>training, workshops, support</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="outreach" class="step slide" data-x="1000" data-y="2500" data-scale="1">
+                    <div class="slide-title">de.<em>N</em>BI - <em>Networking</em></div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/rbc-outreach-diagramm-centers.png" alt="de.NBI" />
+                        </figure>
+                    </div>
+            </div>
+
+
+
+            <!-- What is the Galaxy framework? -->
+            <div id="galaxy-framework" class="step slide" data-x="9000" data-y="-1500" data-scale="3">
+                <div class="section-title with_logo">
+                    <h3>What is</h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/galaxyLogo360.png" alt="Galaxy" width="360" height="100" />
+                        </figure>
+                    <h3>?</h3>
+                </div>
+            </div>
+
+                <!--  -->
+                <div id="galaxy_meaning" class="step slide" data-x="3400" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    An <em>analysis and data integration</em> tool
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>Open source</em>, <em>community</em> driven software that makes integrating our favourite tools simple
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Part of <em>GMOD</em>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://galaxyproject.org</p>
+                    </div>
+                </div>
+                <!-- EOF  -->
+
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable <em>accessible</em>, <em>reproducible</em>, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+
+                <div id="accessible-webinterace" class="step slide" data-x="9000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>accessible</em> - Webinterface
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <!--<iframe name='iframe-webinterace' id="iframe" src="http://localhost:8080/" 
+                                frameborder="0" cellspacing="0" style=" width: 1200px; height: 1000px;">
+                            </iframe>-->
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/galaxy_main_view.png" alt="Galaxy Main View" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="accessible-uscs" class="step slide" data-x="12000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>accessible</em> - get your data
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/ucsc_data_integration.png" alt="UCSC Data integration" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent2" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable accessible, <em>reproducible</em>, and transparent computational research."
+                    </div>
+                </div>
+
+
+
+                <div id="reproducible" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Reload experiments
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <!--<iframe name='iframe-history' id="iframe" src="http://127.0.0.1:8080/history" 
+                                frameborder="0" cellspacing="0" style=" width: 30%; height: 1000px;">
+                            </iframe>-->
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/history.png" alt="History panel" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="reproducible-blast" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Reload experiments
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <table border=0><tr><td>
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/history.png" alt="History panel" />
+                            </figure>
+                            </td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/reload_tool.png" alt="reloaded tool" />
+                            </figure>
+                            </td></tr></table>
+                        </div>
+                </div>
+
+                <div id="reproducible-versioning" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Tool versioning
+                    </div>
+                        <div id="wrap" style="text-align:center">
+                            <br><br>
+                            <table border=0 width="70%"><tr><td>
+                                <figure id="galaxy_tool_versioning">
+                                    <img src="./resources/img/versioning.png" alt="History panel" />
+                                </figure>
+                            </td></tr><tr><td><br>
+                            </td></tr><tr><td>
+                                <figure id="galaxy_main_view">
+                                    <img src="./resources/img/filter_tool_new_version.png" alt="reloaded tool" />
+                                </figure>
+                            </td></tr></table>
+                        </div>
+                </div>
+
+                <div id="reproducible-workflow" class="step slide" data-x="4400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Workflows
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <!--<iframe name='iframe-workflow' id="iframe" src="http://127.0.0.1:8080/workflow/editor?id=f2db41e1fa331b3e" 
+                                frameborder="0" cellspacing="0" style=" width: 1200px; height: 800px;">
+                            </iframe>-->
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/workflow_example.png" alt="reloaded tool" />
+                            </figure>
+                        </div>
+                </div>
+                <div id="reproducible-workflow2" class="step slide" data-x="4400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Workflows
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/large_workflow.png" alt="reloaded tool" />
+                            </figure>
+                        </div>
+                </div>
+
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent3" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable accessible, reproducible, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+                <div id="transparent-share" class="step slide" data-x="4400" data-y="3000" data-scale="3">
+                    <div class="slide-title">
+                        <em>transparent</em> - sharing everything
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/share.png" alt="share"  />
+                        </figure> 
+                    </div>
+                </div>
+
+                <div id="transparent-explain" class="step slide" data-x="4400" data-y="4500" data-scale="3">
+                    <div class="slide-title">
+                        <em>transparent</em> for other researchers
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/citation.png" alt="transparent"  />
+                        </figure>
+                    </div>
+                </div>
+
+
+
+<!-- GenVAST -->
+
+            <div id="genvast-title" class="step slide with_height" data-x="12000" data-y="-1400" data-scale="7">
+                <div class="section-title">
+                    <em>Variant</em> calling inside the Galaxy
+                </div>
+            </div>
+
+            <div id="genVAST" class="step slide" data-x="12000" data-y="-1400" data-scale="3">
+                <div class="section-title with_logo">
+                    <h3>genVAST</h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/genVAST.png" alt="genVAST" width="50%" height="50%" />
+                        </figure>
+                </div>
+            </div>
+
+                <div id="genvast-pre" class="step slide" data-x="12000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>pre</em> - processing
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/genVAST-pre-processing.png" alt="Data Pre-processing" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="genevast-calling" class="step slide" data-x="10000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        variant <em>calling</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/genVAST-variant-calling.png" alt="Variant Calling" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="genevast-post" class="step slide" data-x="8000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>post</em> - processing
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/genVAST-post-processing.png" alt="Data Post-processing" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gemini-annotation" class="step slide" data-x="8000" data-y="3400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content">
+                        <em>dbSNP</em>, UCSC, OMIM, KEGG, Pfam,
+                        ClinVar, Ensembl, ESP, 1000G, CADD,
+                        COSMIC, HPRD, ENCODE, SIFT, Polyphen,
+                        GERP, FitCons, VISTA, CpG, ...
+                    </div>
+                    <div id="slide_details">
+                        <p>http://www.ncbi.nlm.nih.gov/SNP/</p>
+                    </div>
+                </div>
+
+                <div id="gemini" class="step slide" data-x="8000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        <em>GEMINI</em> - genome mining
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/gemini_overview.png" alt="GEMINI processing" width="80%" height="80%" />
+                            </figure>
+                        </div>
+                    </div>
+                    <div id="slide_details">
+                        <p>Paila U, Chapman BA, Kirchner R, Quinlan AR; PLoS Comput Biol 2013</p>
+                    </div>
+                </div>
+
+
+                <div id="gemini-tools" class="step slide" data-x="10000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        <em>non complicated</em> tools
+                    </div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    recessive/dominant variants
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    de novo identification
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+
+                                    Map genes and variants to KEGG
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    compound heterozygotes
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    variants in interaction partners
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    RoH identification (cystic fibrosis)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    pathway identification
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ...
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div id="power" class="step slide" data-x="14000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        The real <em>power</em>!
+                    </div>
+                    <div class="slide-content" align="center">
+                        <table><tr><td>
+                            <div id="wrap">
+                                <figure id="galaxy_main_view">
+                                    <img src="./resources/img/genVAST-pre-processing.png" alt="Variant Calling" />
+                                </figure>
+                            </div>
+                            </td><td>&nbsp;&nbsp;&nbsp;
+                            </td><td>
+                            </td></tr></table>
+                    </div>
+                </div>
+
+
+                <div id="power2" class="step slide" data-x="14000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        The real <em>power</em>!
+                    </div>
+                    <div class="slide-content" align="center">
+                        <table><tr><td>
+                            <div id="wrap">
+                                <figure id="galaxy_main_view">
+                                    <img src="./resources/img/genVAST-pre-processing.png" alt="Variant Calling" />
+                                </figure>
+                            </div>
+                            </td><td>&nbsp;&nbsp;&nbsp;
+                            </td><td>
+                                <em>ExchangeAbility</em>
+                            </td></tr></table>
+                    </div>
+                </div>
+
+
+                <div id="power2" class="step slide" data-x="14000" data-y="6400" data-scale="3">
+                    <div class="slide-title">
+                        The real <em>power</em>!
+                    </div>
+                    <div class="slide-content-small" align="center">
+
+                        <table><tr><td>
+                                <div id="wrap">
+                                    <figure id="galaxy_main_view">
+                                        <img src="./resources/img/genVAST-variant-calling.png" alt="Variant Calling" width="100%" height="100%" />
+                                    </figure>
+                                </div>
+                            </td><td>&nbsp;&nbsp;&nbsp;
+                            </td><td>
+                                <ul class="lv0_indent">
+                                    <li>
+                                        <p>
+                                            trio calling
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            pooled population calling
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            incremental joint discovery calling
+                                        </p>
+                                    </li>
+
+                                    <li>
+                                        <p>
+                                            single-sample calling followed by backfilling?
+                                        </p>
+                                    </li>
+                                </ul>
+                        </td></tr></table>
+                    </div>
+                </div>
+<!-- GenVAST end -->
+
+                <div id="visualisation_deeptools" class="step slide" data-x="14000" data-y="8400" data-scale="3">
+                    <div class="slide-title">
+                        <em>deepTools</em> - QC, normalistion, VIS
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/deeptools.png" alt="deepTools" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="genome_annotation" class="step slide" data-x="14000" data-y="9400" data-scale="3">
+                    <div class="slide-title">
+                        Genome <em>annotation</em>
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/workflow_blast.png" alt="BLAST" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="antismash" class="step slide" data-x="14000" data-y="10400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Cluster</em> prediction
+                    </div>
+                    <div id="wrap" style="text-align:left">
+                        <figure id="galaxy_main_view">
+                            <img src="./resources/img/antismash.png" alt="antismash" />
+                        </figure>
+                    </div>
+                </div>
+
+
+
+
+
+<!-- CTB -->
+
+
+            <div id="ctb-title" class="step slide with_height" data-scale="9">
+                <div class="section-title">
+                    <em>ChemicalToolBoX</em> Cheminformatics inside the Galaxy
+                </div>
+            </div>
+
+            <!-- was ist cheminformatics -->
+            <!--div id="what_is_cheminformatics" class="step slide" data-x="6000" data-y="2400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    "Cheminformatics is the use of computer and informational techniques, applied to a range of problems in the field of <em>chemistry</em>. 
+                    These <em>in silico</em> techniques are used in <em>pharmaceutical</em> companies in the process of <em>drug discovery</em>."
+                    <table width=100% align=right><tr><td align=right>Wikipedia</td></tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+            <!-- Paint a structure -->
+            <div id="features_01" class="step slide" data-x="6000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    <table width=100% align=right><tr>
+                        <td width=50% align=center valign=center>
+                            <img src="./resources/img/pencil.png"><br>
+                            <img src="./resources/img/morphine_2d.png">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 10px;">
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        paint your structure
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        upload molecule files
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        download pubchem
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+
+            <!-- was ist cheminformatics -->
+            <div id="features_02" class="step slide" data-x="5000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top align=center>
+                            <img src="./resources/img/morphine_2d.png" style="height:auto; width:40%">
+                            <img src="./resources/img/morphine_3d.png" style="height:auto; width:40%"><br>
+                            <font size="2">
+                            SMILES: CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O<br>
+                            InChI-Key: BQJCRHHNABKAKU-KBQPJGBKSA-N</font>
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;" align=left>
+                            molecule datatypes are first class citizen<br><br>
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        SMILES
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        InChI
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        MOL/SDF
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        MOL2
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        CML
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </td>
+                        
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- was ist cheminformatics -->
+            <div id="features_03" class="step slide" data-x="4000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top align=center>
+                            <img src="./resources/img/fingerprint.png">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;">
+                            fingerprint generation<br><br>
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        Daylight Fingerprint
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        PubChem Fingerprint
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        MACCS
+                                    </p>
+                                </li>
+                                <li>
+                                    <p align=left>
+                                        12 more
+                                    </p>
+                                </li>
+                            </ul>
+                            
+                        </td>
+                        
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+            <!-- was ist cheminformatics -->
+            <div id="features_04" class="step slide" data-x="3000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top>
+                            <img src="./resources/img/compounds.png" style="height:auto; width:90%">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;">
+                            large scale<br>
+                            postgresql :: pgchem
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- filtering -->
+            <div id="features_05" class="step slide" data-x="2000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top>
+                            <img src="./resources/img/compounds_filtered.png" style="height:auto; width:90%">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;" align=center>
+                            filtering
+                            <img src="./resources/img/slider.png" style="height:auto; width:90%">
+                            <div align=left width=100%>
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        predefined rules (drug-like, lead-like, lipinski-conform ...)
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        physicochemical properties
+                                    </p>
+                                </li>
+                            </ul>
+                            </div>
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- searching -->
+            <div id="features_06" class="step slide" data-x="1000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top>
+                            <img src="./resources/img/compounds_search.png" style="height:auto; width:90%">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;">
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        Similarity Search
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Substructure Search
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Pharmacophore Search
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Spectrophore Search
+                                    </p>
+                                </li>
+                            </ul>
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- searching -->
+            <div id="features_07" class="step slide" data-x="1000" data-y="3400" data-scale="3">
+                <div class="slide-title">the <em>big</em> picture</div>
+                <div class="slide-content" align="center">
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        32 different tools
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        powered by open source projects
+                                        <ul class="lv1_indent">
+                                            <li>
+                                                <p>
+                                                    Open Babel
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    RDKit
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Galaxy
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    numpy, matplotlib ...
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        offer a community starting point
+                                    </p>
+                                </li>
+                            </ul>
+                   
+                </div>
+            </div>
+            <!-- EOF  -->
+<!-- Proteomics -->
+
+            <div id="tools_proteomics" class="step slide" data-x="-900" data-y="4200" data-scale="3">
+                <div id="ty" class="slide-title">
+                    <em>Proteomics</em>
+                </div>
+                <div class="slide-content-small" align="center">
+                    <table width=80%><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td width=50%>
+                    <ul class="lv0_indent">
+                        <li>OMSSA</li>
+                        <li>MassSpecAccess</li>
+                        <li>X!TANDEM</li>
+                        <li>Trans Proteomic Pipeline</li>
+                        <li>PeptideShaker</li>
+                        <li>OpenMS (110 Tools)</li>
+                        <li>MSConvert</li>
+                        <li>Bumbershoot</li></ul>
+                    </td><td>
+                        <ul class="lv0_indent">
+                        <li>Mascot</li>
+                        <li>MSGF+</li>
+                        <li>ms2preproc</li></ul>
+                        <li>digestdb</li>
+                        <li>Bumbershoot</li>
+                        <li>MaxQuant</li>
+                        <li>SearchGUI</li>
+                        <li>MyriMatch</li>
+                        <li>ms2preproc</li></ul>
+                    </td></tr></table>
+                </div>
+            </div>
+
+            <div id="proteomics" class="step slide" data-x="-900" data-y="5200" data-scale="3">
+                <div class="slide-title">
+                    <em>Workflows</em>
+                </div>
+                    <div class="slide-content-small" align="center">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/proteomics.png" alt="genVAST" width="90%" />
+                        </figure>
+                </div>
+            </div>
+
+                <div id="pride" class="step slide" data-x="-900" data-y="6200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Pride</em> - get your data
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/pride_biomart.png" alt="Pride BioMart integration" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="visualisation_peptides" class="step slide" data-x="-900" data-y="7200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - PepXML Visualisation
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_trackster">
+                                <img src="./resources/img/peptide_visualisation.png" alt="Peptide Visualisation" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="visualisation_proteins" class="step slide" data-x="-900" data-y="8200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> - ProtXML Visualisation
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_trackster">
+                                <img src="./resources/img/peptide_improviser.png" alt="Protein Visualisation" />
+                            </figure>
+                        </div>
+                </div>
+
+
+                <div id="galaxy_with_examples" class="step slide" data-x="-900" data-y="9200" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/galaxy_with_examples.png" alt="share" width="90%"  />
+                        </figure> 
+                    </div>
+                </div>
+
+
+<!-- END of proteomics-->
+
+
+
+
+<!-- EVE -->
+
+            <div id="eve-title" class="step slide with_height" data-scale="9">
+                <div class="section-title">
+                    The <em>automated lab</em> powered by Galaxy
+                </div>
+            </div>
+
+            <div id="big_data4" class="step slide" data-x="6000" data-y="2000" data-scale="3">
+                <div class="slide-title">Big <em>data</em></div>
+                <div class="slide-content" align="center">
+                    <figure id="galaxy_logo">
+                        <img src="./resources/img/big_data.jpg" alt="Big Data" />
+                    </figure>
+                </div>
+            </div>
+
+                <div id="aim" class="step slide" data-x="4400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>Aim:</em> Analysis Feedback Loop
+                    </div>
+                    <div class="slide-content" align="center">
+                        <br><br>
+                        <figure id="galaxy_main_view">
+                            <img src="./resources/img/microscope.jpg" alt="Microscope" />
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="ev3" class="step slide" data-x="6400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>Ev3 </em> - our prototype
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure id="galaxy_main_view">
+                            <img src="./resources/img/eve_annot.png" alt="Ev3" width="40%" height="40%" />
+                        </figure>
+                    </div>
+                </div>
+
+
+
+<!-- EVE end -->
+
+                <div id="docker-title" class="step slide with_height" data-x="7000" data-y="-3000" data-scale="3">
+                    <div class="section-title">
+                        The Paralyzing Problem of <em>Too Many Choices</em>
+                    </div>
+                </div>
+
+
+                <div id="galaxy_docker" class="step slide" data-x="7000" data-y="-2000" data-scale="1">
+                        <div class="slide-title"><em>Galaxy</em> Docker Container</div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/galaxy-docker.png" alt="flavours" width="90%"/>
+                            </figure>
+                        </div>
+                        <div id="slide_details">
+                            <p>docker run -p 8080:80 bgruening/galaxy-stable</p>
+                        </div>
+                </div>
+
+                <div id="stack" class="step slide" data-x="7000" data-y="-2000" data-scale="1">
+                        <div class="slide-title"><em>Ingredients</em></div>
+                        <div class="slide-content">
+                            <ul class="lv0_indent">
+                                <li>Galaxy (stable, dev)</li>
+                                <li>powered by ansible</li>
+                                <li>FTP Server</li>
+                                <li>Webserver</li>
+                                <li>Scheduler</li>
+                                <li>Galaxy Reports</li>
+                                <li>Tool Shed install script</li>
+                                <li>BioJS install script</li>
+                                <li>Supervisord Webapp</li>
+                            </ul>
+                        </div>
+                </div>
+
+                    <div id="galaxy_flavours_intro" class="step slide" data-x="7000" data-y="-2000" data-scale="1">
+                        <div class="section-title">
+                            <h3>Galaxy flavours</h3>
+                        </div>
+                    </div>
+
+
+                    <div id="rna-workbench" class="step slide" data-x="7000" data-y="-2000" data-scale="1">
+                            <div class="slide-title">
+                            Galaxy <em>flavours</em>
+                            </div>
+                            <div class="section-title with_logo">
+                                <figure id="galaxy_logo">
+                                    <img src="./resources/img/rna-workbench-chart.png" width="100%" height="100%" alt="RNA workbench" />
+                                </figure>
+                            </div>
+                            <div id="slide_details">
+                                <p>docker run -p 8080:80 bgruening/galaxy-rna-workbench</p>
+                            </div>
+                        </div>
+
+
+                        <div id="flavours_list" class="step slide" data-x="7000" data-y="-2000" data-scale="1">
+                            <div class="slide-title"> example <em>flavours</em></div>
+                            <div class="slide-content">
+                                <ul class="lv0_indent">
+                                    <li>Proteomics</li>
+                                    <li>Cheminformatics</li>
+                                    <li>Exom-Seq</li>
+                                    <li>BLAST+</li>
+                                    <li>deepTools - ChiP-Seq</li>
+                                    <li>Imaging (ImageJ)</li>
+                                    <li>Metabolomics</li>
+                                    <li>Genome Annotation</li>
+                                    <li>RNA workbench</li>
+                                    <li>Ballaxy</li>
+                                    <li>...</li>
+                                </ul>
+                            </div>
+                           </div>
+
+
+                    <div id="results" class="step slide" data-x="7000" data-y="-2000" data-scale="1">
+                        <div class="slide-title"><em>Results</em></div>
+                            <div class="slide-content">
+                                <ul class="lv0_indent">
+                                    <li>self-assembled Galaxy instances for everyone</li>
+                                    <li>moving software to the data</li>
+                                    <li>reproducible training instances</li>
+                                    <li>Isolation between Galaxy and the OS</li>
+                                    <li>better and faster testing, upgrades</li>
+                                </ul>
+                            </div>
+                    </div>
+
+                    <div id="vision" class="step slide" data-x="7000" data-y="-2000" data-scale="1">
+                        <div class="slide-title">
+                            <em>vision</em> and <em>commitment</em>
+                        </div>
+                        <div class="slide-content" align="center">
+                            <ul class="lv0_indent">
+                                <li>Regular releases in-sync with Galaxy</li>
+                                <li>Integration into the Tool Shed</li>
+                                <li>Assembly website</li>
+                                <li>easier container managment</li>
+                                <li>bundling with training material</li>
+                            </ul>
+                        </div>
+                        <div id="slide_details">
+                            <p>https://github.com/bgruening/docker-galaxy-stable</p>
+                        </div>
+                    </div>
+
+
+
+                    <div id="sensitive_data" class="step slide" data-x="7000" data-y="-2000" data-scale="1">
+                        <div class="slide-title">
+                            beyond University of <em>Freiburg</em>
+                        </div>
+                        <div class="slide-content" align="center">
+                            <ul class="lv0_indent">
+                                <li>6000+ downloads</li>
+                                <li>MPI of Immunobiologie and Epigenetics</li>
+                                <li>Tjenester for Sensitive Data 2.0 Norway</li>
+                                <li>Tryggve - Nordic platform for<br> collaboration on sensitive data</li>
+                                <li>Leibniz computing center (Munich)</li>
+                            </ul>
+                        </div>
+                        <div id="slide_details">
+                            <p>https://github.com/bgruening/docker-galaxy-stable</p>
+                        </div>
+                    </div>
+
+
+                <div id="ie-title" class="step slide with_height" data-x="7000" data-y="-3000" data-scale="2">
+                    <div class="section-title">
+                        Everything in our hands <br> but we lost the <em>bioinformatician</em>
+                    </div>
+                </div>
+
+                <div id="ie" class="step slide" data-x="7000" data-y="-3000" data-scale="1">
+                        <div class="slide-title"> Galaxy <em>Interactive Environment</em></div>
+                        <div class="slide-content">
+                            <ul class="lv0_indent">
+                                <li>Interact with data, w/o leaving Galaxy</li>
+                                <li>Flexible, extensible, and interactive</li>
+                                <li>Teaching, Research, and Development</li>
+                                <li>Exploratory research!</li>
+                                <li>Literate programming</li>
+                            </ul>
+                </div>
+                </div>
+
+                <div id="ie" class="step slide" data-x="7000" data-y="-3000" data-scale="1">
+                        <div class="slide-title"> Galaxy <em>Interactive Environment</em></div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/gx-ie.png" alt="Galaxy-Docker" width="100%" />
+                            </figure>
+                        </div>
+                </div>
+                <div id="ie2" class="step slide" data-x="7000" data-y="-3000" data-scale="1">
+                        <div class="slide-title"> Galaxy <em>IE</em> :: IPython</div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/ipy-gx.png" alt="Galaxy-Docker" width="100%" />
+                            </figure>
+                        </div>
+                </div>
+                <div id="ie3" class="step slide" data-x="7000" data-y="-3000" data-scale="1">
+                        <div class="slide-title"> Galaxy <em>IE</em> :: RStudio</div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/r-gx.png" alt="Galaxy-Docker" width="100%" />
+                            </figure>
+                        </div>
+                </div>
+
+
+                <div id="training-title" class="step slide with_height" data-x="7000" data-y="-3000" data-scale="2">
+                    <div class="section-title">
+                        Training and interacting with <em>users</em>
+                    </div>
+                </div>
+
+                <div id="training" class="step slide" data-x="7000" data-y="-3000" data-scale="1">
+                    <div class="slide-title">
+                        <em>Training</em>
+                    </div>
+                    <div id="wrap" style="text-align:left">
+                        <ul class="lv0_indent">
+                            <li>Galaxy flavours (e.g. RNA workbench extra!)</li>
+                            <li>Bioinformaticians training</li>
+                            <li>Interactive Environments next to your data</li>
+                            <li>NGS/Galaxy Freiburg training</li>
+                               <ul class="lv0_indent">
+                                <li>5 days hands-on</li>
+                                <li>Galaxy, ChIP-seq, RNA-seq, Methyl-C, GWAS</li>
+                                <li>~ 200 participants in 2 years</li>
+                            </ul>
+                            <li>part of GOBLET</li>
+                            <ul class="lv0_indent">
+                                <li>Global Organisation for Bioinformatics Learning, Education & Training</li>
+                            </ul>
+                            <li>Galaxy tours</li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://software-carpentry.org/</p>
+                    </div>
+                </div>
+
+
+            <!-- Questions?
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                </div>
+            </div>
+            EOF Questions? -->
+
+
+            <!-- Thank You -->
+            <div id="thank-you" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div class="section-title">
+                    <h3>Thank you!</h3>
+                    And the entire Galaxy + associated communities!
+                </div><!--
+                <div class="slide-content" align="center">
+                    <ul class="lv0_indent">
+                        <li>BMBF!</li>
+                        <li>RNA commun</li>
+                        <li></li>
+                        <li>Tryggve - Nordic platform for<br> collaboration on sensitive data</li>
+                        <li>University of Carlifornia</li>
+                    </ul>
+                </div>-->
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Thank You
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    contact
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+                    <p id="email">
+                        <a href="www.pharmaceutical-bioinformatics.org">http://www.bioinf.uni-freiburg.de</a>
+                    </p>
+                    <p id="email">
+                        <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                        <a href="https://bitbucket.org/BjoernGruening">https://bitbucket.org/BjoernGruening</a>
+                    </p>
+                    
+                </div>
+            </div>
+            EOF Thank You -->
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
