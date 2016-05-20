@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="My presentation at Bled 2014" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="Retreat, Workshop" />  
+        <title>de.NBI</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./resources/css/jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="5">
+                <div class="title">
+                    <em>RBC</em> <br> RNA Bioinformatics Centre
+                </div>
+                <!--<div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>-->
+                <div id="slide_details">
+                    <p>May 2015&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+            <div id="rbc" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                <div class="slide-title"> <em>Who?</em></div>
+                <div class="slide-content">
+                    <ul class="lv0_indent">
+                        <li>Peter F. Stadler (Leipzig)</li>
+                        <li>Uwe Ohler (Berlin)</li>
+                        <li>Nikolaus Rajewsky (Berlin)</li>
+                        <li>Rolf Backofen (Freiburg - Coordination)</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="what_is_needed" class="step slide" data-x="1000" data-y="0" data-scale="1">
+                    <div class="slide-title">part of the <em>de.NBI</em></div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/de.NBI_structure.png" alt="de.NBI" />
+                        </figure>
+                    </div>
+            </div>
+
+
+            <div id="what" class="step slide" data-x="1000" data-y="500" data-scale="1">
+                    <div class="slide-title"> <em>What? </em></div>
+                    <div class="slide-content">
+                        <table border="0"><tr><td>
+                        Users, Users, Users !!!</td></tr><tr><td align="right">
+                        <font size="6">(Rolf Apweiler, ELIXIR, 2014)</font></td></tr></table>
+                    </div>
+            </div>
+
+            <div id="what2" class="step slide" data-x="1000" data-y="1000" data-scale="1">
+                    <div class="slide-title"> <em>What? </em></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Offering Support</li>
+                            <li><em>Maintaining</em> Software/Databases</li>
+                            <li>Documentation</li>
+                            <li>Workshops/Training</li>
+                            <li>Central Contact Point for <br><em>RNA Bioinformatics</em></li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="aims" class="step slide" data-x="1000" data-y="2000" data-scale="1">
+                    <div class="slide-title"><em>Aims</em> :: <em>Visions</em></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <li>Raise the awareness of <br>RNA-based regulation</li>
+                            <li>accessible <em>RNA tools</em></li>
+                            <li>integrate <em>RNA tools</em> into NGS pipelines</li>
+                            <li>training, workshops, support</li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="outreach" class="step slide" data-x="1000" data-y="2500" data-scale="1">
+                    <div class="slide-title">de.<em>N</em>BI - <em>Networking</em></div>
+                    <div class="slide-content">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/rbc-outreach-diagramm-centers.png" alt="de.NBI" />
+                        </figure>
+                    </div>
+            </div>
+
+            <div id="tools" class="step slide" data-x="1000" data-y="3000" data-scale="1">
+                    <div class="slide-title">RBC <em>Tools</em></div>
+                    <div class="slide-content">
+                        <ul class="lv0_indent">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/rbc-tools2.png" alt="de.NBI-Tools" />
+                            </figure>
+                        </ul>
+                    </div>
+            </div>
+
+
+<!--
+            <div id="measuring_success" class="step slide" data-x="1000" data-y="3000" data-scale="1">
+                <div class="title"><em>Measuring</em> and <em>Tracking</em> Success</div>
+            </div>
+
+            <div id="matriken01" class="step slide" data-x="1000" data-y="3500" data-scale="1">
+                <div class="slide-title"><em>Tools/Workflows for download</em></div>
+                <div class="slide-content" align="center">
+                    <ul class="lv0_indent">
+                        <li>Number of downloads</li>
+                        <li>Citations/website link/acknowledgement</li>
+                        <li>Number of users on mailing lists</li>
+                        <li>Grant applications</li>
+                        <li>Satisfaction</li>
+                    </ul>
+                </div>
+            </div>
+
+                <div id="matriken02" class="step slide" data-x="1000" data-y="4000" data-scale="1">
+                    <div class="slide-title"><em>running Applications/Workflows</em></div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Number of projects</li>
+                            <li>Datavolume (Storage)</li>
+                            <li>CPU hours</li>
+                            <li>Number of users on mailing lists</li>
+                            <li>Recurring users</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="matriken03" class="step slide" data-x="1000" data-y="4500" data-scale="1">
+                    <div class="slide-title"><em>Webapplications</em></div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Number of projects</li>
+                            <li>Number of jobs processed</li>
+                            <li>Registrations/active users</li>
+                            <li>Number of users on mailing lists</li>
+                            <li>Hits/visits/unique users</li>
+                            <li>Citations/website link/acknowledgement</li>
+                            <li>Number of users on mailing lists</li>
+                            <li>Recurring users</li>
+                            <li>Satisfaction</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="matriken04" class="step slide" data-x="1000" data-y="5000" data-scale="1">
+                    <div class="slide-title"><em>Databases</em></div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Number of downloads</li>
+                            <li>Hits/visits/unique users</li>
+                            <li>Citations/website/acknowledgement</li>
+                            <li>Grant applications</li>
+                            <li>Number of users on mailing lists</li>
+                            <li>Recurring users</li>
+                            <li>Satisfaction</li>
+                            <li>Number of primary resources parsed -> curated entries (mobilisation) (monitors the internal progress)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="metriken05" class="step slide" data-x="1000" data-y="5000" data-scale="1">
+                    <div class="slide-title"><em>Services/Support/Training</em></div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Person hours</li>
+                            <li>Support requests</li>
+                            <li>Documentation</li>
+                            <li>Satisfaction (e.g. evaluation of training courses or workshops)</li>
+                        </ul>
+                    </div>
+                </div>
+-->
+                <div id="accessible_research" class="step slide" data-x="1000" data-y="5500" data-scale="1">
+                    <div class="title"><em>accessible</em> research</div>
+                </div>
+
+                <!-- What is the Galaxy framework? -->
+                <div id="accessible_research_what_is1" class="step slide" data-x="1000" data-y="6000" data-scale="1">
+                    <div class="slide-title"><em>Accessible?</em></div>
+                    <br/>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>easy deployment</li>
+                            <ul class="lv0_indent">
+                                <li>make tools available to users</li>
+                                <li>moving tools to data</li>
+                                <li>as less installation as possible</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- What is the Galaxy framework? -->
+                <div id="accessible_research_what_is2" class="step slide" data-x="1000" data-y="6500" data-scale="1">
+                    <div class="slide-title"><em>Accessible?</em></div>
+                    <br/>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>easy deployment</li>
+                            <li>scaleable</li>
+                            <ul class="lv0_indent">
+                                <li>workstation</li>
+                                <li>clusters</li>
+                                <li>cloud providers</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- What is the Galaxy framework? -->
+                <div id="accessible_research_what_is3" class="step slide" data-x="1000" data-y="6500" data-scale="1">
+                    <div class="slide-title"><em>Accessible?</em></div>
+                    <br/>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>easy deployment</li>
+                            <li>scaleable</li>
+                            <li>enable reproducibility</li>
+                            <ul class="lv0_indent">
+                                <li>capture an experiment in sufficient detail</li>
+                                <li>save storage space</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- What is the Galaxy framework? -->
+                <div id="accessible_research_what_is4" class="step slide" data-x="1000" data-y="6500" data-scale="1">
+                    <div class="slide-title"><em>Accessible?</em></div>
+                    <br/>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>easy deployment</li>
+                            <li>scaleable</li>
+                            <li>enable reproducibility</li>
+                            <li>user friendly</li>
+                            <ul class="lv0_indent">
+                                <li>run everything via webbrowser</li>
+                                <li>offer access via API</li>
+                                <li>installation paths for genomes,<br> indices, tools ...</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- What is the Galaxy framework? -->
+                <div id="galaxy-framework" class="step slide" data-x="1000" data-y="8000" data-scale="1">
+                    <div class="section-title with_logo">
+                        <h3>The</h3>
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/galaxyLogo360.png" alt="Galaxy" />
+                            </figure>
+                        <h3>Tool Shed</h3>
+                    </div>
+                        <div id="slide_details">
+                            <p>http://galaxyproject.org</p>
+                        </div>
+                </div>
+
+                <div id="docker" class="step slide" data-x="1000" data-y="8500" data-scale="1">
+                    <div class="section-title with_logo">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/docker-logo.png" alt="de.NBI" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>or rocket or systemd-nspawn ...</p>
+                        <p>https://www.docker.io/</p>
+                    </div>
+                </div>
+                <!-- EOF  -->
+<!--
+                <div id="accessible-webinterace" class="step slide" data-x="1000" data-y="8000" data-scale="1">
+                    <div class="slide-title">
+                        build on <em>Linux</em> kernel features
+                    </div>
+                    <div class="slide-content" align="center">
+                        <table width=80%><tr><td width=50%>
+                        <ul class="lv0_indent">
+                            <li>Linux Containers (LXC)</li>
+                            <li>cgroups</li>
+                            <li>namespaces</li>
+                            <li>union filesystem</li>
+                        </td></tr></table>
+                    </div>
+                </div>
+-->
+                <div id="rna-workbench" class="step slide" data-x="1000" data-y="9000" data-scale="1">
+                    <div class="slide-title">
+                        Flavours: <em>RNA</em> workbench
+                    </div>
+                    <div class="section-title with_logo">
+                        <br/>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/rna-workbench-chart.png" width="100%" height="100%" alt="de.NBI" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>docker run -p 8080:80 bgruening/galaxy-rna-workbench-extra</p>
+                    </div>
+                </div>
+
+                <div id="ipython" class="step slide" data-x="1000" data-y="9500" data-scale="1">
+                    <div class="slide-title">
+                        <em>Interactive Environments</em> - IPython
+                    </div>
+                        <div id="wrap" style="text-align:left;">
+                            <figure id="galaxy_main_view" >
+                                <img src="./resources/img/ipython_in_galaxy.png" alt="IPython" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="dorina" class="step slide" data-x="2000" data-y="9500" data-scale="1">
+                    <div class="slide-title">
+                        <em>doRiNA</em>
+                    </div>
+                        a database of RNA interactions in post-transcriptional regulation
+                        <div id="wrap" style="text-align:left;">
+                            <br>
+                            <figure id="galaxy_main_view" >
+                                <img src="./resources/img/dorina_galaxy_integration.png" alt="doRiNA" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="protein_viewer" class="step slide" data-x="3000" data-y="9500" data-scale="1">
+                    <div class="slide-title">
+                        <em>NGL</em>
+                    </div>
+                        a 3D Protein Viewer in Galaxy
+                        <div id="wrap" style="text-align:left;">
+                            <br>
+                            <figure id="galaxy_main_view" >
+                                <img src="./resources/img/protein_viewer.png" alt="Protein Viewer" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="training" class="step slide" data-x="1000" data-y="10000" data-scale="1">
+                    <div class="slide-title">
+                        <em>Training</em>
+                    </div>
+                    <div id="wrap" style="text-align:left">
+                        <ul class="lv0_indent">
+                            <li>RNA workbench extra!</li>
+                            <li>Interactive Environments next to your data</li>
+                            <li>Bioinformaticians Training</li>
+                            <li>NGS/Galaxy Freiburg training</li>
+                            <ul class="lv0_indent">
+                                <li>5 days hands-on</li>
+                                <li>Galaxy, ChIP-seq, RNA-seq, Methyl-C, GWAS</li>
+                                <li>~ 150 participants in 2 years</li>
+                                <li>Internships</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://software-carpentry.org/</p>
+                    </div>
+                </div>
+
+                <div id="training2" class="step slide" data-x="1000" data-y="10000" data-scale="1">
+                    <div class="slide-title">
+                        <em>Training</em>
+                    </div>
+                    <div id="wrap" style="text-align:left">
+                        <ul class="lv0_indent">
+                            <li>RNA workbench extra!</li>
+                            <li>Interactive Environments next to your data</li>
+                            <li>Bioinformaticians Training</li>
+                            <li>NGS/Galaxy Freiburg training</li>
+                            <ul class="lv0_indent">
+                                <li>5 days hands-on</li>
+                                <li>Galaxy, ChIP-seq, RNA-seq, Methyl-C, GWAS</li>
+                                <li>~ 150 participants in 2 years</li>
+                                <li>Internships</li>
+                            </ul>
+                            <li>part of GOBLET</li>
+                            <ul class="lv0_indent">
+                                <li>Global Organisation for Bioinformatics Learning, Education & Training</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>http://software-carpentry.org/</p>
+                    </div>
+                </div>
+
+                <div id="RBC-projects01" class="step slide" data-x="1000" data-y="10500" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy <em>RBC</em> Projects
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/rbc-outreach-01.png" alt="RBC projects" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="RBC-projects02" class="step slide" data-x="1000" data-y="10500" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy <em>RBC</em> Projects
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/rbc-outreach-02.png" alt="RBC projects" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="RBC-projects03" class="step slide" data-x="1000" data-y="10500" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy <em>RBC</em> Projects
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/rbc-outreach-03.png" alt="RBC projects" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="RBC-projects04" class="step slide" data-x="1000" data-y="10500" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy <em>RBC</em> Projects
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/rbc-outreach-04.png" alt="RBC projects" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="RBC-projects05" class="step slide" data-x="1000" data-y="10500" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy <em>RBC</em> Projects
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/rbc-outreach-05.png" alt="RBC projects" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="RBC-projects06" class="step slide" data-x="1000" data-y="10500" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy <em>RBC</em> Projects
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/rbc-outreach-06.png" alt="RBC projects" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="RBC-projects07" class="step slide" data-x="1000" data-y="10500" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy <em>RBC</em> Projects
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/rbc-outreach-07.png" alt="RBC projects" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+                <div id="RBC-projects08" class="step slide" data-x="1000" data-y="10500" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy <em>RBC</em> Projects
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/rbc-outreach-08.png" alt="RBC projects" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+                <div id="RBC-projects09" class="step slide" data-x="1000" data-y="10500" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy <em>RBC</em> Projects
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/rbc-outreach-09.png" alt="RBC projects" width="95%" height="95%" />
+                            </figure>
+                        </div>
+                </div>
+
+
+                <div id="sensitive_data" class="step slide" data-x="1000" data-y="11000" data-scale="1">
+                    <div class="slide-title">
+                        beyond <em>RBC</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>1200+ downloads</li>
+                            <li>MPI of Immunobiologie and Epigenetics</li>
+                            <li>Tjenester for Sensitive Data 2.0 Norway</li>
+                            <li>Tryggve - Nordic platform for<br> collaboration on sensitive data</li>
+                            <li>University of Carlifornia</li>
+                            <li>University of Munich</li>
+                            <li>Cancer Center Amsterdam, <br>VU University Medical Center</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>https://github.com/bgruening/docker-galaxy-stable</p>
+                    </div>
+                </div>
+
+
+<!--
+                <div id="accessible-uscs" class="step slide" data-x="1000" data-y="8500" data-scale="1">
+                    <div class="slide-title">
+                        <em>docker</em> example
+                    </div>
+                    <div class="slide-content-small" align="left">
+                                > docker search debian<br>
+                                > docker pull bgruening/debian<br>
+                                > docker run bgruening/debian echo "hello world"<br>
+                                > docker run bgruening/debian apt-get install ping<br>
+                                > docker commit 6982a9948422 bgruening/ping<br>
+                                > docker run bgruening/ping ping google.com<br>
+                                > docker push bgruening/ping
+                    </div>
+                </div>
+-->
+
+            <!-- Questions?
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                </div>
+            </div>
+            EOF Questions? -->
+
+
+            <!-- Thank You -->
+            <div id="thank-you" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div class="section-title">
+                    <h3>Thank you!</h3>
+                </div><!--
+                <div class="slide-content" align="center">
+                    <ul class="lv0_indent">
+                        <li>BMBF!</li>
+                        <li>RNA commun</li>
+                        <li></li>
+                        <li>Tryggve - Nordic platform for<br> collaboration on sensitive data</li>
+                        <li>University of Carlifornia</li>
+                    </ul>
+                </div>-->
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Thank You
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    contact
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+                    <p id="email">
+                        <a href="www.pharmaceutical-bioinformatics.org">http://www.bioinf.uni-freiburg.de</a>
+                    </p>
+                    <p id="email">
+                        <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                        <a href="https://bitbucket.org/BjoernGruening">https://bitbucket.org/BjoernGruening</a>
+                    </p>
+                    
+                </div>
+            </div>
+            EOF Thank You -->
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->

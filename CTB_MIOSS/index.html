@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+
+<!-- http://galaxy.pharmaceutical-bioinformatics.de http://galaxy.pharmaceutical-bioinformatics.de -->
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="CTB presentation at MIOSS 2016" />
+        <meta name="author" content="Bjoern Gruening" />
+        <meta name="keywords" content="MIOSS" />  
+        <title>Keeping track of Life Science Data</title>
+        <link rel="shortcut icon" href="./resources/img/favicon.ico" />
+        <link rel="stylesheet" href="./resources/css/style.css" />
+
+        <!-- JS plotting -->
+
+        <script type="text/javascript" src="./jqplot/src/jquery.min.js"></script>
+        <script type="text/javascript" src="./jqplot/src/jquery.jqplot.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.barRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.categoryAxisRenderer.js"></script>
+        <script type="text/javascript" src="./jqplot/src/plugins/jqplot.pointLabels.js"></script>
+        <link rel="stylesheet" href="./resources/css/jquery.jqplot.css" />
+
+    </head>
+    <body>
+
+        <div id="impress" class="impress-not-supported">
+            <div class="fallback-message">
+                <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+                <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser.</p>
+            </div> 
+
+
+            <!-- Title -->
+            <div id="title" class="step slide with_height" data-scale="9">
+                <div class="title">
+                    <em>ChemicalToolBoX</em> HPC Cheminformatics with Galaxy
+                </div>
+                <!--<div align=center>
+                That presentation was meant as live presentation. So the live parts will not be shown. Sorry for that.
+                </div>-->
+                <div id="slide_details">
+                    <p>May 2016&nbsp;&bull;&nbsp;Björn Grüning</p>
+                </div>
+            </div>
+            <!-- EOF Title -->
+
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable <em>accessible</em>, <em>reproducible</em>, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+
+                <div id="accessible-webinterace" class="step slide" data-x="9000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>accessible</em> - Webinterface
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <!--<iframe name='iframe-webinterace' id="iframe" src="http://localhost:8080/" 
+                                frameborder="0" cellspacing="0" style=" width: 1200px; height: 1000px;">
+                            </iframe>-->
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/ctb_galaxy.png" width="100%" alt="Galaxy Main View" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="accessible-uscs" class="step slide" data-x="12000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>accessible</em> - get your data
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/ucsc_data_integration.png" alt="UCSC Data integration" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="integrating_toolkits" class="step slide" data-x="12000" data-y="1400" data-scale="3">
+                    <div class="slide-title">
+                        <em>accessible</em> - care about usability!
+                    </div>
+                    <div class="slide-content" align="center">
+                        <div id="wrap">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/chemfp_galaxy.png" alt="ChemFP" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent2" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable accessible, <em>reproducible</em>, and transparent computational research."
+                    </div>
+                </div>
+
+
+
+                <div id="reproducible" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Reload experiments
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <!--<iframe name='iframe-history' id="iframe" src="http://127.0.0.1:8080/history" 
+                                frameborder="0" cellspacing="0" style=" width: 30%; height: 1000px;">
+                            </iframe>-->
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/history.png" alt="History panel" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="reproducible-blast" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Reload experiments
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <table border=0><tr><td>
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/history.png" alt="History panel" />
+                            </figure>
+                            </td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/reload_tool.png" alt="reloaded tool" />
+                            </figure>
+                            </td></tr></table>
+                        </div>
+                </div>
+
+                <div id="reproducible-versioning" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Tool versioning
+                    </div>
+                        <div id="wrap" style="text-align:center">
+                            <br><br>
+                            <table border=0 width="70%"><tr><td>
+                                <figure id="galaxy_tool_versioning">
+                                    <img src="./resources/img/versioning.png" alt="History panel" />
+                                </figure>
+                            </td></tr><tr><td><br>
+                            </td></tr><tr><td>
+                                <figure id="galaxy_main_view">
+                                    <img src="./resources/img/filter_tool_new_version.png" alt="reloaded tool" />
+                                </figure>
+                            </td></tr></table>
+                        </div>
+                </div>
+
+                <div id="reproducible-workflow" class="step slide" data-x="4400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Workflows
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <!--<iframe name='iframe-workflow' id="iframe" src="http://127.0.0.1:8080/workflow/editor?id=f2db41e1fa331b3e" 
+                                frameborder="0" cellspacing="0" style=" width: 1200px; height: 800px;">
+                            </iframe>-->
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/workflow_example.png" alt="reloaded tool" />
+                            </figure>
+                        </div>
+                </div>
+                <div id="reproducible-workflow2" class="step slide" data-x="4400" data-y="-2700" data-scale="3">
+                    <div class="slide-title">
+                        <em>reproducible</em> - Workflows
+                    </div>
+                        <div id="wrap" style="text-align:left">
+                            <figure id="galaxy_main_view">
+                                <img src="./resources/img/large_workflow.png" alt="reloaded tool" />
+                            </figure>
+                        </div>
+                </div>
+
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent3" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable accessible, reproducible, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+                <div id="transparent-share" class="step slide" data-x="4400" data-y="3000" data-scale="3">
+                    <div class="slide-title">
+                        <em>transparent</em> - sharing everything
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/share.png" alt="share"  />
+                        </figure> 
+                    </div>
+                </div>
+
+                <div id="transparent-explain" class="step slide" data-x="4400" data-y="4500" data-scale="3">
+                    <div class="slide-title">
+                        <em>transparent</em> for other researchers
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/citation.png" alt="transparent"  />
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- accessible, reproducible, transparent -->
+                <div id="accessible-reproducible-transparent4" class="step slide" data-x="6000" data-y="1400" data-scale="3">
+                    <div class="no-title"></div>
+                    <div class="slide-content" align="center">
+                        "Enable <em>accessible</em>, <em>reproducible</em>, and <em>transparent</em> computational research."
+                    </div>
+                </div>
+
+
+
+
+                <div id="section-title-tools" class="step slide" data-x="-900" data-y="2200" data-scale="7">
+                    <div class="section-title with_logo">
+                        <h3>Tools, Tools, Tools</h3>
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/lego_box.jpg" alt="Bioinformatics"/>
+                        </figure>
+                    </div>
+                </div>
+
+                <div id="tools" class="step slide" data-x="-900" data-y="4200" data-scale="3">
+                    <div class="slide-title">
+                        <em>tools</em>
+                    </div>
+                    <div class="slide-content-small" align="center">
+                        <table width=80%><tr><td width=50%>
+                        <ul class="lv0_indent">
+                            <li>Text Manipulation</li>
+                            <li>Format Converters</li>
+                            <li>Filtering and Sorting</li>
+                            <li>Join, Subtract, Group</li>
+                            <li>Unix Tools</li>
+                            <li>Imaging</li>
+                            <li>Mapping</li>
+                            <li>Statistics</li>
+                            <li>Natural Language Processing</li></ul>
+                        </td><td>
+                            <ul class="lv0_indent">
+                            <li>EMBOSS</li>
+                            <li>RNA-seq</li>
+                            <li>ChIP-seq</li>
+                            <li>WES/WGAS</li>
+                            <li>Proteomics/Metabolomics</li>
+                            <li>NCBI Blast+</li>
+                            <li>GO</li>
+                            <li>BALL (Biochem Alg Library)</li>
+                            <li>Galton's problem solver :)</li>
+                            <li>ChemicalToolBoX</li>
+                            ...and many more (1000+)
+                            </ul>
+                        </td></tr></table>
+                    </div>
+                </div>
+
+
+            <div id="subtitel" class="step slide with_height" data-scale="3" data-x="-900" data-y="4200">
+                <div class="section-title">
+                    <em>ChemicalToolBoX</em> Cheminformatics inside the Galaxy
+                </div>
+            </div>
+
+
+            <!-- Paint a structure -->
+            <div id="features_01" class="step slide" data-x="6000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    <table width=100% align=right><tr>
+                        <td width=50% align=center valign=center>
+                            <img src="./resources/img/pencil.png"><br>
+                            <img src="./resources/img/morphine_2d.png">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 10px;">
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        paint your structure
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        upload molecule files
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        download pubchem
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+
+            <!-- was ist cheminformatics -->
+            <div id="features_02" class="step slide" data-x="5000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top align=center>
+                            <img src="./resources/img/morphine_2d.png" style="height:auto; width:40%">
+                            <img src="./resources/img/morphine_3d.png" style="height:auto; width:40%"><br>
+                            <font size="2">
+                            SMILES: CN1CCC23C4C1CC5=C2C(=C(C=C5)O)OC3C(C=C4)O<br>
+                            InChI-Key: BQJCRHHNABKAKU-KBQPJGBKSA-N</font>
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;" align=left>
+                            molecule datatypes are first class citizen<br><br>
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        SMILES
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        InChI
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        MOL/SDF
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        MOL2
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        CML
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </td>
+                        
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+
+
+            <!-- was ist cheminformatics -->
+            <div id="features_03" class="step slide" data-x="4000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top align=center>
+                            <img src="./resources/img/fingerprint.png">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;">
+                            fingerprint generation<br><br>
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        Daylight Fingerprint
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        PubChem Fingerprint
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        MACCS
+                                    </p>
+                                </li>
+                                <li>
+                                    <p align=left>
+                                        :: insert your chemical fingerprint here ::
+                                    </p>
+                                </li>
+                            </ul>
+                            
+                        </td>
+                        
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+            <!-- was ist cheminformatics -->
+            <div id="features_04" class="step slide" data-x="3000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top>
+                            <img src="./resources/img/compounds.png" style="height:auto; width:90%">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;">
+                            large scale<br>
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- filtering -->
+            <div id="features_05" class="step slide" data-x="2000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top>
+                            <img src="./resources/img/compounds_filtered.png" style="height:auto; width:90%">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;" align=center>
+                            filtering
+                            <img src="./resources/img/slider.png" style="height:auto; width:90%">
+                            <div align=left width=100%>
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        predefined rules (drug-like, lead-like, lipinski-conform ...)
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        physicochemical properties
+                                    </p>
+                                </li>
+                            </ul>
+                            </div>
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- searching -->
+            <div id="features_06" class="step slide" data-x="1000" data-y="3400" data-scale="3">
+                <div class="no-title"></div>
+                <div class="slide-content" align="center">
+                    <table width=100% align=right><tr>
+                        <td width=50% valign=top>
+                            <img src="./resources/img/compounds_search.png" style="height:auto; width:90%">
+                        </td>
+                        <td style="border-left: 1px solid #ff7700; padding: 15px;">
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        Similarity Search
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Substructure Search
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Pharmacophore Search
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Spectrophore Search
+                                    </p>
+                                </li>
+                            </ul>
+                        </td>
+                        </tr></table>
+                </div>
+            </div>
+            <!-- EOF  -->
+
+
+            <!-- searching -->
+            <div id="features_07" class="step slide" data-x="1000" data-y="3400" data-scale="3">
+                <div class="slide-title">the <em>big</em> picture</div>
+                <div class="slide-content" align="center">
+                            <ul class="lv0_indent">
+                                <li>
+                                    <p>
+                                        ~40 different tools
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        powered by open source projects
+                                        <ul class="lv1_indent">
+                                            <li>
+                                                <p>
+                                                    Open Babel
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    RDKit
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    CDK
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    chemfp
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Galaxy
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    Python, R, Julia ...
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        offer a community starting point
+                                    </p>
+                                </li>
+                            </ul>
+                   
+                </div>
+            </div>
+ 
+                <div id="usecases" class="step slide" data-x="3400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        some <em>use cases</em> from our lab
+                    </div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>
+                                <p align=left>
+                                    building comprehensive and specialised compound libraries
+                                </p>
+                            </li>
+                            <li>
+                                <p align = left>
+                                    screening libraries for new drug candidates
+                                </p>
+                            </li>
+                            <li>
+                                <p align=left>
+                                    exploring of the chemical universe
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div id="chemicalbox" class="step slide" data-x="4400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>ChemicalBoX</em>
+                    </div>
+                    <div>
+                       "... is a <em>comprehensive</em> collection of small compounds, consisting of data from other repositories. 
+                       The focus of ChemicalBoX is to offer a ready- and <em>easy-to-use</em> compound library that extends current freely available compilations."
+                       <br><br>
+
+                            <img src="./resources/img/large_compound_databases.png" style="height:auto; width:70%">
+
+                        <div id="slide_details">
+                            <p>https://github.com/bgruening/galaxytools/tree/master/workflows</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="pbox" class="step slide" data-x="5400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        <em>PurchasableBoX</em>
+                    </div>
+                    <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="./resources/img/purchaseable_box.gif" style="height:auto; :60%">
+                            </td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td>
+                                "... is a comprehensive collection of small compounds, <br>consisting of data from various <em>vendors</em>."
+                            </td>
+                         </tr>
+                     </table>
+
+                        <div id="slide_details">
+                            <p>X. Lucas et al. "The Purchasable Chemical Space: A Detailed Picture";<br>J. Chem. Inf. Model., 2015</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div id="fragmenter-merger" class="step slide" data-x="7400" data-y="-500" data-scale="3">
+                    <div class="slide-title">
+                        Exploring new areas ...
+                    </div>
+                    <div>
+                            <ul class="lv0_indent">
+                            <li>
+                                <p>
+                                    <em>fragmentation</em> of 1.425 drugs
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    1.895 fragments
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>182.360</em> unique, merged compounds
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <em>150.642</em> are druglike (QED > 0,3)
+                                </p>
+                            </li>
+                            </ul>
+                        <div id="slide_details">
+                            <p>QED: G. R. Bickerton et al. "Quantifying the chemical beauty of drugs";<br>Nature Chemistry 2012</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div id="visualisation" class="step slide" data-x="6000" data-y="7400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/visualisation.png" alt="share"  />
+                        </figure> 
+                    </div>
+                </div>
+
+                <div id="visualisation2" class="step slide" data-x="4000" data-y="7400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> :: Charts
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/charts_galaxy.png" alt="share"  />
+                        </figure> 
+                    </div>
+                </div>
+
+                <div id="visualisation3" class="step slide" data-x="1000" data-y="7400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em> :: deepTools
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/deepTools.png" alt="share" />
+                        </figure> 
+                    </div>
+                </div>
+
+
+                <div id="galaxy_with_examples" class="step slide" data-x="-2000" data-y="7400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Visualisation</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/galaxy_with_examples.png" alt="share" width="90%"  />
+                        </figure> 
+                    </div>
+                </div>
+
+
+                <div id="more" class="step slide" data-x="1000" data-y="4200" data-scale="3">
+                    <div class="section-title with_logo">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/what_else.png" alt="What else?" width="800" height="334" />
+                            </figure>
+                        </div>
+                    <div id="slide_details">
+                        <p>https://wiki.galaxyproject.org/Community/GalaxyAdmins</p>
+                    </div>
+                </div>
+
+
+                <div id="ie" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                        <div class="slide-title"> Galaxy <em>Interactive Environment</em></div>
+                        <div class="slide-content">
+                            <ul class="lv0_indent">
+                                <li>Interact with data, w/o leaving Galaxy</li>
+                                <li>Flexible, extensible, and interactive</li>
+                                <li>Teaching, Research, and Development</li>
+                                <li>Exploratory research!</li>
+                                <li>Literate programming</li>
+                            </ul>
+                        </div>
+                </div>
+
+                <div id="ie2" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                        <div class="slide-title"> Galaxy <em>IE</em> :: IPython/Jupyter</div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/ie.png" alt="Galaxy-Docker" width="100%" />
+                            </figure>
+                        </div>
+                </div>
+
+                <div id="ie3" class="step slide" data-x="-4000" data-y="11000" data-scale="3">
+                        <div class="slide-title"> Galaxy <em>IE</em> :: RStudio</div>
+                        <div class="slide-content">
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/r-gx.png" alt="Galaxy-Docker" width="100%" />
+                            </figure>
+                        </div>
+                </div>
+
+
+
+                <div id="deployment" class="step slide" data-x="1000" data-y="7400" data-scale="3">
+                    <div class="slide-title">
+                        <em>Deployment</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                        <figure>
+                            <img src="./resources/img/Universe_In_Hand.jpg" alt="share" />
+                        </figure> 
+                    </div>
+                </div>
+
+                <!--  -->   
+                <div id="docker" class="step slide" data-x="1000" data-y="6000" data-scale="1">
+                    <div class="section-title with_logo">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/docker-logo.png" alt="de.NBI" /><br>
+                            <img src="./resources/img/bioconda.png" width="50%" alt="de.NBI" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>https://www.docker.io <br> https://github.com/bioconda/bioconda-recipes</p>
+                    </div>
+                </div>
+                <!-- EOF  -->
+
+
+               <div id="galaxy-framework" class="step slide" data-x="1000" data-y="6500" data-scale="1">
+                    <div class="section-title with_logo">
+                        <h3>The</h3>
+                            <figure id="galaxy_logo">
+                                <img src="./resources/img/galaxyLogo360.png" alt="de.NBI" />
+                            </figure>
+                        <h3>Tool Shed</h3>
+                    </div>
+                        <div id="slide_details">
+                            <p>Blankenberg et al., Dissemination of scientific software with Galaxy ToolShed; Genome Biology</p>
+                        </div>
+                </div>
+
+
+                <div id="flavours" class="step slide" data-x="1000" data-y="7000" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy <em>Flavours</em>
+                    </div>
+                    <div class="section-title with_logo">
+                        <figure id="galaxy_logo">
+                            <img src="./resources/img/rna-workbench-chart.png" width="90%" alt="de.NBI" />
+                        </figure>
+                    </div>
+                    <div id="slide_details">
+                        <p>docker run -p 8080:80 bgruening/galaxy-stable</p>
+                    </div>
+                </div>
+
+                <div id="sensitive_data" class="step slide" data-x="1000" data-y="8000" data-scale="1">
+                    <div class="slide-title">
+                        Galaxy Docker for <em>sensitive</em> data
+                    </div>
+                    <div class="slide-content" align="center">
+                        <ul class="lv0_indent">
+                            <li>Tjenester for Sensitive Data 2.0 Norway</li>
+                            <li>Tryggve - Nordic platform for<br> collaboration on sensitive data</li>
+                        </ul>
+                    </div>
+                    <div id="slide_details">
+                        <p>https://github.com/bgruening/docker-galaxy-stable</p>
+                    </div>
+                </div>
+
+
+               <div id="case-study" class="step slide" data-x="1000" data-y="8500" data-scale="1">
+                    <div class="slide-title">
+                    Case study: <em>Open Molecule Generator</em>
+                    </div>
+                    <div class="slide-content" align="center">
+                           <ul style="font-size:24px";>
+                            <li>
+                                <p>
+                                    BioConda: <br>https://github.com/bioconda/bioconda-recipes/pull/1599
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Docker Container: <br>https://github.com/mulled/mulled/pull/103
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Galaxy Integration: <br>https://github.com/bgruening/galaxytools/pull/344
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Galaxy OMG Flavour: <br>https://github.com/bgruening/galaxy-open-molecule-generator
+                                </p>
+                            </li>
+                        </ul>
+
+                    </div>
+                        <div id="slide_details">
+                            <p>Julio E Peironcely et al., OMG: Open Molecule Generator; Journal of Cheminformatics</p>
+                        </div>
+                </div>
+
+
+
+                <div id="community" class="step slide" data-x="3800" data-y="9200" data-scale="3">
+                    <div class="slide-title">
+                        <em>community</em> is key
+                    </div>
+                    <div class="slide-content-small">
+                        <ul>
+                            <li>
+                                <p>
+                                    ~2500 additional tools
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~3000 publications since 2010, 530 in 2013
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    84 known public instances
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~4000 active users on biostars (total: 7909)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ~1000 registered developers (galaxy-dev Mailinglist)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    28.216 commits from 218 committers 
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    500.000 clones from the ToolShed
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    annual international community conference
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    2 positions for community related questions
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Community Training!
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+                        
+            <!-- Questions? -->
+            <div id="questions" class="step slide" data-x="18500" data-y="3000" data-scale="7">
+                <div class="section-title">
+                    <h3>Questions?</h3>
+                </div>
+            </div>
+            <!-- EOF Questions? -->
+            
+            <!-- Thank You -->
+            <div id="thank-you" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    Thank You!
+                </div>
+
+<table border="0" height="50%">
+  <tr>
+    <td width="20%" align="center"><img src="./resources/img/bioconda.png" width="100%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/biojs.png" width="100%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/conda-forge.png" width="100%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/docker-logo.png" width="80%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/galaxy.png" width="100%"/></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><img src="./resources/img/vagrant.png" width="60%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/github-logo.png" width="100%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/mulled.png" width="60%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/open-source-logo.png" width="80%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/travis.png" width="60%"/></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><img src="./resources/img/open_babel.png" width="60%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/cdk.png" width="60%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/chemfp.png" width="60%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/rdkit.png" width="60%"/></td>
+    <td width="20%" align="center"><img src="./resources/img/projects/postgresql.png" width="60%"/></td>
+    
+  </tr>
+</table>
+
+
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Thank You -->
+            <div id="mycontact" class="step slide" data-x="18500" data-y="3900" data-scale="5" data-z="1000">
+                <div id="ty" class="slide-title">
+                    contact
+                </div>
+                <div class="slide-content">
+                    <br>
+                    <p id="name">
+                        <em>Björn Grüning</em>
+                    </p>
+                    <p id="email">
+                        <a href="mailto:bjoern@gruenings.eu">bjoern.gruening@gmail.com</a>
+                    </p>
+
+                    <p id="email">
+                        <a href="https://github.com/bgruening">https://github.com/bgruening</a>
+                    </p>
+                    
+                </div>
+            </div>
+            <!-- EOF Thank You -->
+
+            <!-- Overview -->
+            <div id="overview" class="step" data-x="1500" data-y="2000" data-scale="15"></div>
+            <!-- EOF Overview -->
+        </div>
+        <!--<div id="os_logo" title="Open Source Logo"></div>-->
+        <div id="badge" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D & Effects, and Semantics."></div>
+        <script src="./resources/js/impress.min.js"></script>
+
+    </body>
+</html>                                            <!-- Could use a select (yes, no, other) where other allows setting 'level window linker' -->
